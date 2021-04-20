@@ -125,6 +125,7 @@
       <list>
         <option value="$PROJECT_DIR$/Assets/CameraScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Player/PlayerScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Enemies/EnemyMovement.cs" />
       </list>
     </option>
   </component>
@@ -172,6 +173,7 @@
       <workItem from="1618337566607" duration="37000" />
       <workItem from="1618649274813" duration="10297000" />
       <workItem from="1618666238863" duration="261000" />
+      <workItem from="1618943252454" duration="673000" />
     </task>
     <servers />
   </component>
