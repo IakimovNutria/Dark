@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AliveEntity : MonoBehaviour
 {
-    private float health;
+    private float health = 1;
     private float maxHealth = 1;
     public Animator animator;
     public Rigidbody2D body;
@@ -12,14 +12,15 @@ public class AliveEntity : MonoBehaviour
 
     protected void AliveUpdate()
     {
-        Move();
+        if (health == 0) return;
         TakeDamage();
+        Move();
     }
     
     protected void Move()
     {
-        var horizontalVelocity = GetHorizontalVelocity();
-        var verticalVelocity = GetVerticalVelocity();
+        var horizontalVelocity = health == 0 ? 0 : GetHorizontalVelocity();
+        var verticalVelocity = health == 0 ? 0 : GetVerticalVelocity();
         
         animator.SetBool("isWalk", !(horizontalVelocity == 0 && verticalVelocity == 0));
         animator.SetBool("isWalkLeft", horizontalVelocity < 0);
@@ -45,7 +46,10 @@ public class AliveEntity : MonoBehaviour
     protected void ChangeHealthAmount(float change)
     {
         if (change + health <= 0)
+        {
             health = 0;
+            animator.SetBool("isDied", true);
+        }
         else if (health + change >= maxHealth)
             health = maxHealth;
         else

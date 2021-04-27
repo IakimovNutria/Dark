@@ -58,6 +58,11 @@
      <Compile Include="Assets\HealthBar\HealthBar.cs" />
      <Compile Include="Assets\Scripts\AliveEntity.cs" />
      <Compile Include="Assets\Scripts\UnAliveEntity.cs" />
+     <Compile Include="Assets\Light2D\Core\Light2DRenderer.cs" />
+     <Compile Include="Assets\Light2D\SampleScenes\Scripts\Light2D_EventTest.cs" />
+     <Compile Include="Assets\Light2D\Core\Light2DEmitter.cs" />
+     <Compile Include="Assets\Light2D\SampleScenes\Scripts\RotateObject.cs" />
+     <Compile Include="Assets\Light2D\SampleScenes\Scripts\Light2D_UVRotation.cs" />
  <Reference Include="UnityEngine">
  <HintPath>/Applications/Unity/Hub/Editor/2020.3.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
