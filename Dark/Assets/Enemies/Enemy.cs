@@ -1,27 +1,35 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : AliveEntity
 {
-    // Start is called before the first frame update
-    private GameObject player;
+    public GameObject player;
+    public HeatBox heatBox;
 
-    void Start()
+    private float maxEnemyHealth = 100;
+    private void Start()
     {
-        body = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
-        player = GameObject.FindGameObjectWithTag("Player");
+        SetMaxHealth(maxEnemyHealth);
     }
 
-    // Update is called once per frame
     void Update()
     { 
-        Move();
+        AliveUpdate();
     }
 
+    protected override void TakeDamage()
+    {
+        ChangeHealthAmount(-heatBox.GetDamage());
+    }
+    
     protected override float GetHorizontalVelocity()
     {
+        /*var enemyPlayerVector = player.transform.position.x - body.position.x;
+        var direction = enemyPlayerVector / Math.Abs(enemyPlayerVector);
+        return direction * 2 + 
+               body.velocity.x / 10 */
         return (player.transform.position.x - body.position.x) / 2 + 
                body.velocity.x / 10 /*для плавного перехода между анимациями ходьбы*/;
     }

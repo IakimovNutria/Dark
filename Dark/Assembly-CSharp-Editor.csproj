@@ -52,8 +52,8 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Light2D\Core\Editor\Light2DEditor.cs" />
      <Compile Include="Assets\Light2D\Core\Editor\Light2DMenu.cs" />
+     <Compile Include="Assets\Light2D\Core\Editor\Light2DEditor.cs" />
  <Reference Include="UnityEngine">
  <HintPath>/Applications/Unity/Hub/Editor/2020.3.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>

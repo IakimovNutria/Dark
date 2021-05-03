@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,16 +9,29 @@ public class AliveEntity : MonoBehaviour
     private float maxHealth = 1;
     public Animator animator;
     public Rigidbody2D body;
-    public HealthBar healthBar;
+    public Bar healthBar;
+    private bool haveHealthBar;
+
+    private void Start()
+    {
+        
+    }
 
     protected void AliveUpdate()
     {
-        if (health == 0) return;
-        TakeDamage();
-        Move();
+        if (health == 0)
+        {
+            gameObject.tag = "Died";
+            body.velocity = new Vector2(0, 0);
+        }
+        else
+        {
+            TakeDamage();
+            Move();
+        }
     }
-    
-    protected void Move()
+
+    private void Move()
     {
         var horizontalVelocity = health == 0 ? 0 : GetHorizontalVelocity();
         var verticalVelocity = health == 0 ? 0 : GetVerticalVelocity();
@@ -40,7 +54,14 @@ public class AliveEntity : MonoBehaviour
     {
         maxHealth = maxHealthValue;
         ChangeHealthAmount(maxHealth);
-        healthBar.SetMaxHealth(maxHealth);
+        try
+        {
+            healthBar.SetMaxValue(maxHealth);
+        }
+        catch
+        {
+            // ignored
+        }
     }
 
     protected void ChangeHealthAmount(float change)
@@ -54,7 +75,15 @@ public class AliveEntity : MonoBehaviour
             health = maxHealth;
         else
             health += change;
-        healthBar.SetHealth(health);
+
+        try
+        {
+            healthBar.SetValue(health);
+        }
+        catch
+        {
+            // ignored
+        }
     }
 
     protected virtual float GetHorizontalVelocity()

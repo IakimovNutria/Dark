@@ -2,23 +2,26 @@ using System;
 using System.Collections.Generic;
 using UnityEditor.Animations;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Player
 {
     public class Player : AliveEntity
     {
         private GameObject[] enemies;
-        
+
         // не const, чтобы можно было менять управление в настройках
         private string keyUp = "w";
         private string keyLeft = "a";
         private string keyDown = "s";
         private string keyRight = "d";
+        public string keyLight = "Fire1";
         
         //не const чтобы можно было менять сложность в настройках
         private float speed = 1;
         private float maxPlayerHealth = 1000;
         private float damageRadius = 0.5f;
+        
         private void Start()
         {
             enemies = GameObject.FindGameObjectsWithTag("Enemy");
@@ -46,6 +49,8 @@ namespace Player
         {
             foreach (var enemy in enemies)
             {
+                if (!enemy.CompareTag("Enemy"))
+                    return;
                 var enemyPosition = enemy.transform.position;
                 var playerPosition = body.position;
                 var length = GetLength(enemyPosition.x, enemyPosition.y, 
