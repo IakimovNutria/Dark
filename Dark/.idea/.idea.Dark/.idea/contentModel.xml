@@ -2,17 +2,42 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="$PROJECT_DIR$" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Bars" t="Include">
+          <e p="Bar.cs" t="Include" />
+        </e>
         <e p="Enemies" t="Include">
-          <e p="EnemyMovement.cs" t="Include" />
+          <e p="Enemy.cs" t="Include" />
+        </e>
+        <e p="Light2D" t="Include">
+          <e p="Core" t="Include">
+            <e p="Editor" t="Include">
+              <e p="Light2DEditor.cs" t="Include" />
+              <e p="Light2DMenu.cs" t="Include" />
+            </e>
+            <e p="Light2DEmitter.cs" t="Include" />
+            <e p="Light2DRenderer.cs" t="Include" />
+          </e>
+          <e p="SampleScenes" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="Light2D_EventTest.cs" t="Include" />
+              <e p="Light2D_UVRotation.cs" t="Include" />
+              <e p="RotateObject.cs" t="Include" />
+            </e>
+          </e>
         </e>
         <e p="Player" t="Include">
-          <e p="PlayerMovementScript.cs" t="Include" />
+          <e p="Player.cs" t="Include" />
         </e>
         <e p="Scripts" t="Include">
-          <e p="Camera.cs" t="Include" />
-          <e p="Spotlight.cs" t="Include" />
+          <e p="AliveEntity.cs" t="Include" />
+          <e p="Flashlight.cs" t="Include" />
+          <e p="FollowedToObjectByXY.cs" t="Include" />
+          <e p="FollowedToObjectByZ.cs" t="Include" />
+          <e p="HeatBox.cs" t="Include" />
+          <e p="UnaliveEntity.cs" t="Include" />
         </e>
       </e>
       <e p="Dark.sln" t="IncludeFlat" />
