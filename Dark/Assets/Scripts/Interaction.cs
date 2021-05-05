@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Interaction : MonoBehaviour
 {
-    public GameObject enterText;
+    //public GameObject enterText;
     public bool isAbleToInteract;
     // Start is called before the first frame update
     void Start()
     {
-        enterText.SetActive(false);
+        //enterText.SetActive(false);
     }
 
     // Update is called once per frame
@@ -22,7 +22,7 @@ public class Interaction : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            enterText.SetActive(true);
+            //enterText.SetActive(true);
             isAbleToInteract = true;
         }
     }
@@ -31,7 +31,7 @@ public class Interaction : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            enterText.SetActive(false);
+            //enterText.SetActive(false);
             isAbleToInteract = false;
         }
     }

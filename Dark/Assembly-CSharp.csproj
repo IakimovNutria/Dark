@@ -54,6 +54,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\FollowedToObjectByXY.cs" />
      <Compile Include="Assets\Light2D\SampleScenes\Scripts\Light2D_EventTest.cs" />
+     <Compile Include="Assets\Scripts\ActivationCode.cs" />
      <Compile Include="Assets\Scripts\Flashlight.cs" />
      <Compile Include="Assets\Scripts\HealthCheat.cs" />
      <Compile Include="Assets\Enemies\Enemy.cs" />
@@ -69,7 +70,8 @@
      <Compile Include="Assets\Light2D\SampleScenes\Scripts\Light2D_UVRotation.cs" />
      <Compile Include="Assets\Light2D\Core\Light2DRenderer.cs" />
      <Compile Include="Assets\Scripts\EasterEgg.cs" />
-     <Compile Include="Assets\Scripts\ActivationCode.cs" />
+     <Compile Include="Assets\Scripts\Interaction.cs" />
+     <Compile Include="Assets\Scripts\Dialogue.cs" />
  <Reference Include="UnityEngine">
  <HintPath>/Applications/Unity/Hub/Editor/2020.3.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
