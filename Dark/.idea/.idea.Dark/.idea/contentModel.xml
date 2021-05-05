@@ -32,10 +32,14 @@
           <e p="Player.cs" t="Include" />
         </e>
         <e p="Scripts" t="Include">
+          <e p="ActivationCode.cs" t="Include" />
           <e p="AliveEntity.cs" t="Include" />
+          <e p="ChargeCheat.cs" t="Include" />
+          <e p="EasterEgg.cs" t="Include" />
           <e p="Flashlight.cs" t="Include" />
           <e p="FollowedToObjectByXY.cs" t="Include" />
           <e p="FollowedToObjectByZ.cs" t="Include" />
+          <e p="HealthCheat.cs" t="Include" />
           <e p="HeatBox.cs" t="Include" />
           <e p="UnaliveEntity.cs" t="Include" />
         </e>

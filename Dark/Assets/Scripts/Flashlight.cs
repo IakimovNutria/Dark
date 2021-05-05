@@ -9,14 +9,25 @@ public class Flashlight : MonoBehaviour
     public Player.Player player;
     public GameObject flashLight;
     public Bar chargeBar;
-    public Text batteryCountText;
+    public Text batteriesCountText;
     
     private Light2DEmitter lightParameters;
-    private bool isLightOn;
+    private bool isLightDamageOn;
+    private bool isLightHealOn;
     private float flashlightCharge;
     private uint batteriesCount = 2;
-    private float lightSize = 5;
+    private float damageLightSize = 5;
     private float maxFlashlightCharge = 1000;
+    private float damageLightConeAngle = 30;
+    private float healPower = 1;
+    
+    private static readonly Color HealLightColor = new Color(0.37f,0.29f,0.545f,0.5f);
+    private static readonly Color DamageLightColor = new Color(1,1,1,0.1f);
+
+    private const float HealLightSize = 0.75f;
+    private const float HealLightConeAngle = 360;
+    private const string DamageLightEventFilter = "DamageEnemy";
+    private const string HealLightEventFilter = "";
     
     // Start is called before the first frame update
     void Start()
@@ -27,72 +38,127 @@ public class Flashlight : MonoBehaviour
         flashlightCharge = maxFlashlightCharge;
         chargeBar.SetValue(flashlightCharge);
         
-        UpdateBatteryCountText();
+        UpdateBatteriesCountText();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (player.Health == 0)
+        {
+            TurnOffFlashlight();
+            return;
+        }
+
         if (flashlightCharge != 0)
             FlashLightUpdate();
         else if (batteriesCount != 0)
         {
-            batteriesCount--;
-            UpdateBatteryCountText();
+            ChangeBatteriesCount(-1);
             flashlightCharge = maxFlashlightCharge;
         }
         else
-            lightParameters.lightSize = 0;
+            lightParameters.lightSize = 0; 
     }
     
     private void FlashLightUpdate()
-    { 
-        if (Input.GetButtonDown(player.keyLight)) 
-            isLightOn = !isLightOn;
-        if (!isLightOn) 
+    {
+        if (isLightHealOn)
         {
-            lightParameters.lightSize = 0; 
-            return;
+            ChangeLightParameters(HealLightConeAngle, HealLightSize, HealLightColor, HealLightEventFilter);
+            player.ChangeHealthAmount(healPower);
         }
-    
-        flashlightCharge--;
+        
+        else if (isLightDamageOn)
+        {
+            ChangeLightParameters(damageLightConeAngle, damageLightSize, DamageLightColor, DamageLightEventFilter);
+            ChangeFlashlightTransform();
+        }
+        
+        if (Input.GetButtonDown(player.keyDamageLight) && !isLightHealOn)
+            isLightDamageOn = !isLightDamageOn;
+        else if (Input.GetButtonDown(player.keyHealLight) && !isLightDamageOn)
+            isLightHealOn = !isLightHealOn;
+        
+        if (!isLightDamageOn && !isLightHealOn)
+            TurnOffFlashlight();
+        else
+            ChangeCharge(-1);
+    }
+
+    public void ChangeCharge(float change)
+    {
+        if (change + flashlightCharge <= 0)
+            flashlightCharge = 0;
+        else if (flashlightCharge + change >= maxFlashlightCharge)
+            flashlightCharge = maxFlashlightCharge;
+        else
+            flashlightCharge += change;
         chargeBar.SetValue(flashlightCharge);
+    }
+    private void TurnOffFlashlight()
+    {
+        lightParameters.lightSize = 0;
+    }
     
-        lightParameters.lightSize = lightSize;
-        var coneAngle = lightParameters.coneAngle;
+    private void ChangeFlashlightTransform()
+    {
         var animatorStateInfo = player.animator.GetCurrentAnimatorStateInfo(0);
-                
+        float rotation;
+        var position = new Vector3();
         if (animatorStateInfo.IsName("PlayerLeftWalkAnimation") ||
             animatorStateInfo.IsName("PlayerLeftStandAnimation"))
         {
-            flashLight.transform.rotation = Quaternion.Euler(0,0,coneAngle / 2 + 90);
+            rotation = damageLightConeAngle / 2 + 90;
+            position.y = -0.06f;
         }
+
         else if (animatorStateInfo.IsName("PlayerRightWalkAnimation") ||
-                 animatorStateInfo.IsName("PlayerRightStandAnimation"))
+            animatorStateInfo.IsName("PlayerRightStandAnimation"))
         {
-            flashLight.transform.rotation = Quaternion.Euler(0,0,coneAngle / 2 - 90);
+            rotation = damageLightConeAngle / 2 - 90;
+            //position. = ...
         }
+
         else if (animatorStateInfo.IsName("PlayerBackWalkAnimation") ||
-                 animatorStateInfo.IsName("PlayerBackStandAnimation"))
+            animatorStateInfo.IsName("PlayerBackStandAnimation"))
         {
-            flashLight.transform.rotation = Quaternion.Euler(0,0,coneAngle / 2 + 180);
+            rotation = damageLightConeAngle / 2 + 180;
+            //position. = ...
         }
+
         else if (animatorStateInfo.IsName("PlayerForwardWalkAnimation") ||
-                 animatorStateInfo.IsName("PlayerForwardStandAnimation"))
+            animatorStateInfo.IsName("PlayerForwardStandAnimation"))
         {
-            flashLight.transform.rotation = Quaternion.Euler(0,0,coneAngle / 2);
+            rotation = damageLightConeAngle / 2;
+            //position. = ...
         }
-        else if (animatorStateInfo.IsName("PlayerRightDie") ||
-                 animatorStateInfo.IsName("PlayerLeftDie") || 
-                 animatorStateInfo.IsName("PlayerBackDie") ||
-                 animatorStateInfo.IsName("PlayerForwardDie"))
-            lightParameters.lightSize = 0;
         else 
             throw new NotImplementedException();
+        flashLight.transform.rotation = Quaternion.Euler(0,0,rotation);
+        flashLight.transform.position = position + player.transform.position;
+    }
+    
+    public void ChangeBatteriesCount(int change)
+    {
+        if (change + batteriesCount <= 0)
+            batteriesCount = 0;
+        else
+            batteriesCount = (uint) (batteriesCount + change);
+        UpdateBatteriesCountText();
+    }
+    
+    private void UpdateBatteriesCountText()
+    {
+        batteriesCountText.text = batteriesCount.ToString();
     }
 
-    private void UpdateBatteryCountText()
+    private void ChangeLightParameters(float coneAngle, float lightSize, Color lightColor, string eventFilter)
     {
-        batteryCountText.text = batteriesCount.ToString();
+        lightParameters.coneAngle = coneAngle;
+        lightParameters.lightSize = lightSize;
+        lightParameters.lightColor = lightColor;
+        lightParameters.eventPassedFilter = eventFilter;
     }
+    
 }

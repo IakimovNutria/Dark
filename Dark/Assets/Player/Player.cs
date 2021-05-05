@@ -15,7 +15,8 @@ namespace Player
         private string keyLeft = "a";
         private string keyDown = "s";
         private string keyRight = "d";
-        public string keyLight = "Fire1";
+        public string keyDamageLight = "Fire1";
+        public string keyHealLight = "Fire2";
         
         //не const чтобы можно было менять сложность в настройках
         private float speed = 1;
