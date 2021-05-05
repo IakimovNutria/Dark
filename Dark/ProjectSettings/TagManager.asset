@@ -6,11 +6,12 @@ TagManager:
   tags:
   - Enemy
   - Died
+  - LeftLight
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Cast2DShadow
   - Water
   - UI
   - 
