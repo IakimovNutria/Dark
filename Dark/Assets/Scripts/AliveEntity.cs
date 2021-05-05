@@ -5,21 +5,17 @@ using UnityEngine;
 
 public class AliveEntity : MonoBehaviour
 {
-    private float health = 1;
+    public float Health { get; private set; } = 1;
+
     private float maxHealth = 1;
     public Animator animator;
     public Rigidbody2D body;
     public Bar healthBar;
     private bool haveHealthBar;
 
-    private void Start()
-    {
-        
-    }
-
     protected void AliveUpdate()
     {
-        if (health == 0)
+        if (Health == 0)
         {
             gameObject.tag = "Died";
             body.velocity = new Vector2(0, 0);
@@ -33,8 +29,8 @@ public class AliveEntity : MonoBehaviour
 
     private void Move()
     {
-        var horizontalVelocity = health == 0 ? 0 : GetHorizontalVelocity();
-        var verticalVelocity = health == 0 ? 0 : GetVerticalVelocity();
+        var horizontalVelocity = Health == 0 ? 0 : GetHorizontalVelocity();
+        var verticalVelocity = Health == 0 ? 0 : GetVerticalVelocity();
         
         animator.SetBool("isWalk", !(horizontalVelocity == 0 && verticalVelocity == 0));
         animator.SetBool("isWalkLeft", horizontalVelocity < 0);
@@ -54,36 +50,22 @@ public class AliveEntity : MonoBehaviour
     {
         maxHealth = maxHealthValue;
         ChangeHealthAmount(maxHealth);
-        try
-        {
-            healthBar.SetMaxValue(maxHealth);
-        }
-        catch
-        {
-            // ignored
-        }
+        healthBar.SetMaxValue(maxHealth);
     }
 
-    protected void ChangeHealthAmount(float change)
+    public void ChangeHealthAmount(float change)
     {
-        if (change + health <= 0)
+        if (change + Health <= 0)
         {
-            health = 0;
+            Health = 0;
             animator.SetBool("isDied", true);
         }
-        else if (health + change >= maxHealth)
-            health = maxHealth;
+        else if (Health + change >= maxHealth)
+            Health = maxHealth;
         else
-            health += change;
+            Health += change;
 
-        try
-        {
-            healthBar.SetValue(health);
-        }
-        catch
-        {
-            // ignored
-        }
+        healthBar.SetValue(Health);
     }
 
     protected virtual float GetHorizontalVelocity()

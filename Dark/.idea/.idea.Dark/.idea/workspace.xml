@@ -212,6 +212,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FollowedToObjectByZ.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/HeatBox.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ChargeCheat.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Flashlight.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Light2D/SampleScenes/Scripts/Light2D_EventTest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1DEA7270-097D-4B6A-B638-D7D9391AB81D/2e/119d4afe/Input.cs" root0="SKIP_HIGHLIGHTING" />
@@ -237,12 +238,18 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/FollowedToObjectByXY.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FollowedToObjectByZ.cs" />
         <option value="$PROJECT_DIR$/Assets/Light2D/Core/Light2DEmitter.cs" />
-        <option value="$PROJECT_DIR$/Assets/Enemies/Enemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HeatBox.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/AliveEntity.cs" />
         <option value="$PROJECT_DIR$/Assets/HealthBar/HealthBar.cs" />
         <option value="$PROJECT_DIR$/Assets/HealthBar/Bar.cs" />
         <option value="$PROJECT_DIR$/Assets/Player/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AliveEntity.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Cheat.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EasterEgg.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/HealthCheat.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CodeActivation.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ChargeCheat.cs" />
+        <option value="$PROJECT_DIR$/Assets/Enemies/Enemy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DialogEntity.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Flashlight.cs" />
       </list>
     </option>
@@ -300,6 +307,7 @@
       <workItem from="1619531237407" duration="7466000" />
       <workItem from="1619638908498" duration="1179000" />
       <workItem from="1619944360461" duration="18460000" />
+      <workItem from="1620076438943" duration="10461000" />
     </task>
     <servers />
   </component>

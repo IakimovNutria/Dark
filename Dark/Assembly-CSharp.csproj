@@ -52,20 +52,24 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\FollowedToObjectByXY.cs" />
      <Compile Include="Assets\Light2D\SampleScenes\Scripts\Light2D_EventTest.cs" />
+     <Compile Include="Assets\Scripts\Flashlight.cs" />
+     <Compile Include="Assets\Scripts\HealthCheat.cs" />
      <Compile Include="Assets\Enemies\Enemy.cs" />
      <Compile Include="Assets\Light2D\SampleScenes\Scripts\RotateObject.cs" />
+     <Compile Include="Assets\Scripts\FollowedToObjectByZ.cs" />
      <Compile Include="Assets\Player\Player.cs" />
      <Compile Include="Assets\Bars\Bar.cs" />
+     <Compile Include="Assets\Scripts\ChargeCheat.cs" />
      <Compile Include="Assets\Scripts\AliveEntity.cs" />
+     <Compile Include="Assets\Scripts\HeatBox.cs" />
      <Compile Include="Assets\Scripts\UnAliveEntity.cs" />
      <Compile Include="Assets\Light2D\Core\Light2DEmitter.cs" />
      <Compile Include="Assets\Light2D\SampleScenes\Scripts\Light2D_UVRotation.cs" />
      <Compile Include="Assets\Light2D\Core\Light2DRenderer.cs" />
-     <Compile Include="Assets\Scripts\FollowedToObjectByXY.cs" />
-     <Compile Include="Assets\Scripts\FollowedToObjectByZ.cs" />
-     <Compile Include="Assets\Scripts\HeatBox.cs" />
-     <Compile Include="Assets\Scripts\Flashlight.cs" />
+     <Compile Include="Assets\Scripts\EasterEgg.cs" />
+     <Compile Include="Assets\Scripts\ActivationCode.cs" />
  <Reference Include="UnityEngine">
  <HintPath>/Applications/Unity/Hub/Editor/2020.3.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
