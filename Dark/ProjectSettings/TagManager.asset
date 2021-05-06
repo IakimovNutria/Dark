@@ -6,7 +6,8 @@ TagManager:
   tags:
   - Enemy
   - Died
-  - LeftLight
+  - Flashlight
+  - Canvas
   layers:
   - Default
   - TransparentFX

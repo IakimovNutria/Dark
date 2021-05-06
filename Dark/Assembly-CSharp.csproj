@@ -56,8 +56,10 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Interaction.cs" />
     <Compile Include="Assets\Scripts\FollowedToObjectByXY.cs" />
     <Compile Include="Assets\Light2D\SampleScenes\Scripts\Light2D_EventTest.cs" />
+    <Compile Include="Assets\Scripts\SceneChange.cs" />
     <Compile Include="Assets\Scripts\Flashlight.cs" />
     <Compile Include="Assets\Enemies\Enemy.cs" />
     <Compile Include="Assets\Light2D\SampleScenes\Scripts\RotateObject.cs" />
@@ -70,8 +72,8 @@
     <Compile Include="Assets\Light2D\Core\Light2DEmitter.cs" />
     <Compile Include="Assets\Light2D\SampleScenes\Scripts\Light2D_UVRotation.cs" />
     <Compile Include="Assets\Light2D\Core\Light2DRenderer.cs" />
-    <Compile Include="Assets\Scripts\Interaction.cs" />
-    <Compile Include="Assets\Scripts\SceneChange.cs" />
+    <Compile Include="Assets\Scripts\SceneController.cs" />
+    <Compile Include="Assets\Scripts\SceneLoad.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

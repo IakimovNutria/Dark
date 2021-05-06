@@ -6,16 +6,17 @@ using UnityEngine.SceneManagement;
 public class SceneChange : Interaction
 {
     public string nextScene;
-    public static string prevScene;
-    public static string currentScene;
-    private GameObject light;
+    public GameObject light;
     private bool lightActive;
     // Start is called before the first frame update
     void Start()
     {
-        light = GameObject.FindGameObjectWithTag("LeftLight");
+        var canvas = GameObject.FindGameObjectWithTag("Canvas");
+        enterText = canvas.transform.GetChild(3).gameObject;
+        light = gameObject.transform.GetChild(0).gameObject;
         light.SetActive(false);
-        currentScene = SceneManager.GetActiveScene().name;
+        enterText.SetActive(false);
+        SceneController.currentScene = SceneManager.GetActiveScene().name;
     }
 
     // Update is called once per frame
@@ -33,7 +34,12 @@ public class SceneChange : Interaction
         }
         if (isAbleToInteract && Input.GetKeyDown("space"))
         {
-            prevScene = currentScene;
+            SceneController.prevScene = SceneController.currentScene;
+            SceneController.currentScene = nextScene;
+            DontDestroyOnLoad(GameObject.FindGameObjectWithTag("Player"));
+            DontDestroyOnLoad(GameObject.FindGameObjectWithTag("Canvas"));
+            DontDestroyOnLoad(GameObject.FindGameObjectWithTag("MainCamera"));
+            DontDestroyOnLoad(GameObject.FindGameObjectWithTag("Flashlight"));
             SceneManager.LoadScene(nextScene);
         }
     }
