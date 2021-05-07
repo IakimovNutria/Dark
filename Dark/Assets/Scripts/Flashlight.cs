@@ -95,4 +95,10 @@ public class Flashlight : MonoBehaviour
     {
         batteryCountText.text = batteriesCount.ToString();
     }
+
+    public void AddBattaries(int addedBattaries)
+    {
+        batteriesCount += (uint)addedBattaries;
+        UpdateBatteryCountText();
+    }
 }

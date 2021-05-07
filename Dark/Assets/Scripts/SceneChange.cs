@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class SceneChange : Interaction
 {
     public string nextScene;
-    public GameObject light;
     private bool lightActive;
     // Start is called before the first frame update
     void Start()
@@ -14,28 +13,19 @@ public class SceneChange : Interaction
         var canvas = GameObject.FindGameObjectWithTag("Canvas");
         enterText = canvas.transform.GetChild(3).gameObject;
         light = gameObject.transform.GetChild(0).gameObject;
+        canObjectBeInteracted = true;
         light.SetActive(false);
         enterText.SetActive(false);
-        SceneController.currentScene = SceneManager.GetActiveScene().name;
+        SceneLoad.currentScene = SceneManager.GetActiveScene().name;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (isAbleToInteract && !lightActive)
+        if (isPlayerReadyToInteract && Input.GetKeyDown("space"))
         {
-            lightActive = true;
-            light.SetActive(true);
-        }
-        if (!isAbleToInteract && lightActive)
-        {
-            lightActive = false;
-            light.SetActive(false);
-        }
-        if (isAbleToInteract && Input.GetKeyDown("space"))
-        {
-            SceneController.prevScene = SceneController.currentScene;
-            SceneController.currentScene = nextScene;
+            SceneLoad.prevScene = SceneLoad.currentScene;
+            SceneLoad.currentScene = nextScene;
             DontDestroyOnLoad(GameObject.FindGameObjectWithTag("Player"));
             DontDestroyOnLoad(GameObject.FindGameObjectWithTag("Canvas"));
             DontDestroyOnLoad(GameObject.FindGameObjectWithTag("MainCamera"));

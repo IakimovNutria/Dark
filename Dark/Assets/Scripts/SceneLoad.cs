@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SceneLoad : SceneController
+public class SceneLoad : MonoBehaviour
 {
+    public static string prevScene;
+    public static string currentScene;
     public Transform player;
     public string leftScene;
     public string rightScene;

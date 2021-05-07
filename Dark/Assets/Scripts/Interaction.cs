@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class Interaction : MonoBehaviour
 {
+    public GameObject light;
     public GameObject enterText;
-    public bool isAbleToInteract;
+    public bool canObjectBeInteracted;
+    public bool isPlayerReadyToInteract;
     // Start is called before the first frame update
     void Start()
     {
-        enterText.SetActive(false);
+
     }
 
     // Update is called once per frame
@@ -20,19 +22,20 @@ public class Interaction : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
-        {
-            enterText.SetActive(true);
-            isAbleToInteract = true;
-        }
+        if (collision.gameObject.tag == "Player" && canObjectBeInteracted)
+            SetAbilities(true);
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
-        {
-            enterText.SetActive(false);
-            isAbleToInteract = false;
-        }
+            SetAbilities(false);
+    }
+
+    private void SetAbilities(bool canInteract)
+    {
+        enterText.SetActive(canInteract);
+        light.SetActive(canInteract);
+        isPlayerReadyToInteract = canInteract;
     }
 }
