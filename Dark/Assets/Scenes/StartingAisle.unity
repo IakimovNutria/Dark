@@ -507,7 +507,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enterText: {fileID: 0}
   isAbleToInteract: 0
-  nextScene: 
+  nextScene: StartingBath
   light: {fileID: 0}
 --- !u!60 &332896303
 PolygonCollider2D:
@@ -2776,11 +2776,11 @@ MonoBehaviour:
   leftScene: 
   rightScene: StartingRoom
   topScene: 
-  bottomScene: 
+  bottomScene: StartingBath
   leftStart: {x: 0, y: 0}
   rightStart: {x: -4.1, y: -4.2}
   topStart: {x: 0, y: 0}
-  bottomStart: {x: 0, y: 0}
+  bottomStart: {x: -6.8, y: -4}
 --- !u!68 &1288595755
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -3279,11 +3279,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8174505182656584940, guid: 0214a174923e8d649965a43fd9cd4a5e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.336
+      value: -1.209
       objectReference: {fileID: 0}
     - target: {fileID: 8174505182656584940, guid: 0214a174923e8d649965a43fd9cd4a5e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.535
+      value: -0.497
       objectReference: {fileID: 0}
     - target: {fileID: 8174505182656584940, guid: 0214a174923e8d649965a43fd9cd4a5e, type: 3}
       propertyPath: m_LocalPosition.z

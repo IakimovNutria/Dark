@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/StartingAisle.unity
     guid: 30d9922e68045b4439a214af19c55f14
+  - enabled: 1
+    path: Assets/Scenes/StartingBath.unity
+    guid: acb75a2975ebb2e4e82ad1a9d9b7f222
   m_configObjects: {}
