@@ -30,8 +30,12 @@
         </e>
         <e p="PacMan" t="Include">
           <e p="Scripts" t="Include">
+            <e p="Algorithms.cs" t="Include" />
+            <e p="Blinky.cs" t="Include" />
             <e p="Coin.cs" t="Include" />
+            <e p="CoordsInTilemap.cs" t="Include" />
             <e p="Energizer.cs" t="Include" />
+            <e p="Ghost.cs" t="Include" />
             <e p="Mario.cs" t="Include" />
             <e p="Score.cs" t="Include" />
             <e p="Teleport.cs" t="Include" />

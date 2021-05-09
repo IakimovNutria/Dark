@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class Mario : MonoBehaviour
 {
-    public float speed = 0.4f;
-    private Vector2 destination = Vector2.zero;
+    private float speed = 0.1f;
+    public Vector2 destination = Vector2.zero;
     private Rigidbody2D _rigidbody2D;
     private Animator _animator;
     public Collider2D mazeCollider;
