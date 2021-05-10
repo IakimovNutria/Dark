@@ -12,11 +12,14 @@ public class Ghost : MonoBehaviour
     {
         var bounds = tilemap.cellBounds;
         maze = new bool[bounds.size.x, bounds.size.y];
-        var allTiles = tilemap.GetTilesBlock(bounds);
+        var posCounter = 0;
 
-        for (var x = 0; x < bounds.size.x; x++)
-        for (var y = 0; y < bounds.size.y; y++) 
-                maze[x, y] = allTiles[y + x * bounds.size.y] == null;
+        foreach (var pos in tilemap.cellBounds.allPositionsWithin)
+        {
+            if (!tilemap.HasTile(pos))
+                maze[posCounter % bounds.size.x, posCounter / bounds.size.x] = true;
+            posCounter++;
+        }
     }   
 
     
