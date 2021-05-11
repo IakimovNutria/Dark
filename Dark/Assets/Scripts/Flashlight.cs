@@ -75,9 +75,9 @@ public class Flashlight : MonoBehaviour
             ChangeFlashlightTransform();
         }
         
-        if (Input.GetButtonDown(player.keyDamageLight) && !isLightHealOn)
+        if (Input.GetButtonDown(Player.Player.KeyDamageLight) && !isLightHealOn)
             isLightDamageOn = !isLightDamageOn;
-        else if (Input.GetButtonDown(player.keyHealLight) && !isLightDamageOn)
+        else if (Input.GetButtonDown(Player.Player.KeyHealLight) && !isLightDamageOn)
             isLightHealOn = !isLightHealOn;
         
         if (!isLightDamageOn && !isLightHealOn)
