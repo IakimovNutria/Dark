@@ -4,63 +4,89 @@ using System.Collections.Generic;
 using System.Drawing;
 using UnityEditorInternal;
 using UnityEngine;
+using UnityEngine.Tilemaps;
+using Color = UnityEngine.Color;
 
-public class Blinky : Ghost
+public class Blinky : MonoBehaviour
 {
-    private GameObject mario;
-    private float speed = 1;
-    private Vector2 destination = Vector2.zero;
-    private Vector2 moveToMaze;
-    private Vector2 step;
-    private int countBound = 100;
-    public Rigidbody2D _rigidbody2D;
-
+    private Mario mario;
+    private const float Speed = 0.8f; // значение от 0 до 1 
+    private int countBound;
+    private Score score;
     private int count;
-    // Start is called before the first frame update
-    void Start()
+    public Tilemap tilemap;
+    private bool[,] maze;
+    private Collider2D mazeCollider;
+    private static readonly Color AttackColor = Color.white;
+    private static readonly Color DefendColor = Color.blue;
+    private SpriteRenderer spriteRenderer;
+
+    private void Start()
     {
-        GhostStart();
-        mario = GameObject.FindGameObjectWithTag("Player");
-        moveToMaze = new Vector2(0, 10);
-        step = new Vector2(0, 0);
-        destination = gameObject.transform.position;
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        GetMaze();
+        mario = (Mario) FindObjectOfType(typeof(Mario));
+        countBound = (int) ((1 - Speed) * 100);
+        score = (Score) FindObjectOfType(typeof(Score));
+        mazeCollider = (Collider2D)tilemap.GetComponent(typeof(Collider2D));
     }
+
     private void FixedUpdate()
     {
+        spriteRenderer.color = mario.IsEnergized ? DefendColor : AttackColor;
+        
         count++;
-        Vector2 position = transform.position;
-        Algorithms.SinglyLinkedList<Point> bestWay = null;
-        if (count == countBound)
+        if (count != countBound) return;
+        count = 0;
+        var positionInTilemap = gameObject.GetPositionInTilemap(tilemap);
+        var marioPositionInTilemap = mario.gameObject.GetPositionInTilemap(tilemap);
+
+        var bestWay = Algorithms.FindBestWay(maze,
+            new Point((int) positionInTilemap.x, (int) positionInTilemap.y),
+            new Point((int) marioPositionInTilemap.x, (int) marioPositionInTilemap.y));
+
+        var path = new Stack<Point>();
+
+        while (bestWay != null)
         {
-            var positionInTilemap = gameObject.GetPositionInTilemap(tilemap) + moveToMaze;
-            var marioPositionInTilemap = mario.GetPositionInTilemap(tilemap) + moveToMaze;
-            count = 0;
-            bestWay = Algorithms.FindBestWay(maze,
-                new Point((int)positionInTilemap.x, (int)positionInTilemap.y),
-                new Point((int)marioPositionInTilemap.x, (int)marioPositionInTilemap.y));
-
-            var path = new Stack<Point>();
-            while (bestWay != null)
-            {
-                path.Push(bestWay.Value);
-                bestWay = bestWay.Previous;
-            }
-
-            step = new Vector2(0, 0);
-            if (path.Count > 1)
-            {
-                var currentPos = path.Pop();
-                var nextPos = path.Peek();
-                step = new Vector2(nextPos.X - currentPos.X, nextPos.Y - currentPos.Y);
-                destination = (Vector2)position + step;
-                transform.Translate(step);
-            }
+            path.Push(bestWay.Value);
+            bestWay = bestWay.Previous;
         }
+
+        if (path.Count <= 1) return;
+
+        var currentPos = path.Pop();
+        var nextPos = path.Peek();
+        var translation = new Vector2(nextPos.X - currentPos.X, nextPos.Y - currentPos.Y);
+        if (mario.IsEnergized && gameObject.IsValid(-translation, mazeCollider))
+            transform.Translate(-translation);
+        else 
+            transform.Translate(translation);
     }
-    private bool Valid(Vector2 dir)
+
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        Vector2 pos = transform.position;
-        var hit = Physics2D.Linecast(pos + dir, pos);
-        return hit.collider != mazeCollider;
+        if (!other.CompareTag("Player")) return;
+        if (mario.IsEnergized)
+        {
+            Destroy(gameObject);
+            score.UpdateScore(100);
+        }
+        else
+            Destroy(mario.gameObject);
     }
+
+    private void GetMaze()
+    {
+        var bounds = tilemap.cellBounds;
+        maze = new bool[bounds.size.x, bounds.size.y];
+        var posCounter = 0;
+
+        foreach (var pos in tilemap.cellBounds.allPositionsWithin)
+        {
+            if (!tilemap.HasTile(pos))
+                maze[posCounter % bounds.size.x, posCounter / bounds.size.x] = true;
+            posCounter++;
+        }
+    }   
 }

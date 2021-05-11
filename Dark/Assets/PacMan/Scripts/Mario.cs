@@ -6,6 +6,9 @@ using UnityEngine;
 public class Mario : MonoBehaviour
 {
     private float speed = 0.1f;
+    public bool IsEnergized { get; private set; }
+    private const int EnergizedTime = 500;
+    private int currentEnergizedTime;
     public Vector2 destination = Vector2.zero;
     private Rigidbody2D _rigidbody2D;
     private Animator _animator;
@@ -23,6 +26,13 @@ public class Mario : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (currentEnergizedTime != 0)
+            currentEnergizedTime--;
+        else
+        {
+            IsEnergized = false;
+            currentEnergizedTime = EnergizedTime;
+        }
         if (Geometry.GetLength(transform.position.x, transform.position.y,
             destination.x, destination.y) > 5)
             destination = transform.position;
@@ -31,13 +41,13 @@ public class Mario : MonoBehaviour
 
         if ((Vector2) transform.position == destination)
         {
-            if (Input.GetKey(Player.Player.KeyUp) && Valid(Vector2.up))
+            if (Input.GetKey(Player.Player.KeyUp) && gameObject.IsValid(Vector2.up, mazeCollider))
                 destination = (Vector2) transform.position + Vector2.up;
-            if (Input.GetKey(Player.Player.KeyRight) && Valid(Vector2.right))
+            if (Input.GetKey(Player.Player.KeyRight) && gameObject.IsValid(Vector2.right, mazeCollider))
                 destination = (Vector2) transform.position + Vector2.right;
-            if (Input.GetKey(Player.Player.KeyDown) && Valid(-Vector2.up))
+            if (Input.GetKey(Player.Player.KeyDown) && gameObject.IsValid(-Vector2.up, mazeCollider))
                 destination = (Vector2) transform.position - Vector2.up;
-            if (Input.GetKey(Player.Player.KeyLeft) && Valid(-Vector2.right))
+            if (Input.GetKey(Player.Player.KeyLeft) && gameObject.IsValid(-Vector2.right, mazeCollider))
                 destination = (Vector2) transform.position - Vector2.right;
         }
         var dir = destination - (Vector2)transform.position;
@@ -46,11 +56,9 @@ public class Mario : MonoBehaviour
         _animator.SetBool(IsWalk, dir.x > 0.1 || dir.y > 0.1 || dir.x < -0.1 || dir.y < -0.1);
     }
 
-    private bool Valid(Vector2 dir)
+    public void Energize()
     {
-        Vector2 pos = transform.position;
-        var hit = Physics2D.Linecast(pos + dir, pos);
-        return hit.collider != mazeCollider;
+        IsEnergized = true;
     }
 }
     

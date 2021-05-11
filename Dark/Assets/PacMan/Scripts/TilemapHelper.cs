@@ -1,4 +1,5 @@
 using System;
+using System.Drawing;
 using UnityEngine;
 using UnityEngine.Tilemaps;
  
@@ -6,6 +7,7 @@ public static class GameObjectExtension
 {
     public static Vector2 GetPositionInTilemap(this GameObject obj, Tilemap tilemap)
     {
+        var moveToMaze = new Vector2(-1, 10);
         var position = obj.transform.position;
         var x = position.x;
         var y = position.y;
@@ -14,16 +16,13 @@ public static class GameObjectExtension
         positionInTilemap -= tilemap.origin;
         positionInTilemap.x = (int)Math.Floor(positionInTilemap.x);
         positionInTilemap.y = (int)Math.Floor(positionInTilemap.y);
-        return new Vector2(positionInTilemap.x, positionInTilemap.y);
+        return new Vector2(positionInTilemap.x, positionInTilemap.y) + moveToMaze;
     }
-}
-
-public static class TilemapCoords
-{
-    public static Vector2 GetWorldPositionFromTilemap(Tilemap tilemap, Vector2 pos)
+    
+    public static bool IsValid(this GameObject obj, Vector2 dir, Collider2D mazeCollider)
     {
-        var origin = tilemap.origin;
-        pos += new Vector2(origin.x, origin.y);
-        return new Vector2(pos.x, pos.y);
+        Vector2 pos = obj.transform.position;
+        var hit = Physics2D.Linecast(pos + dir, pos);
+        return hit.collider != mazeCollider;
     }
 }
