@@ -26,7 +26,7 @@ public class ChestScript : ObjectInteraction
         {
             enterText.SetActive(false);
             light.SetActive(false);
-            player.GetComponent<Flashlight>().AddBattaries(battaries);
+            player.GetComponent<Flashlight>().ChangeBatteriesCount(battaries);
             RefuseToInteract();
             chestVisitedField.SetValue(sceneController, true);
         }

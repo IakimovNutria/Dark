@@ -160,7 +160,7 @@ MonoBehaviour:
   player: {fileID: 194882281}
   flashLight: {fileID: 1165224363}
   chargeBar: {fileID: 300827244}
-  batteryCountText: {fileID: 879176903}
+  batteriesCountText: {fileID: 879176903}
 --- !u!50 &194882279
 Rigidbody2D:
   serializedVersion: 4
@@ -223,7 +223,6 @@ MonoBehaviour:
   animator: {fileID: 194882282}
   body: {fileID: 194882279}
   healthBar: {fileID: 403750350}
-  keyLight: Fire1
 --- !u!95 &194882282
 Animator:
   serializedVersion: 3
@@ -3975,10 +3974,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46611e9584b479148a22c1f5bc8915cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enterText: {fileID: 0}
-  isAbleToInteract: 0
-  nextScene: StartingAisle
   light: {fileID: 0}
+  enterText: {fileID: 0}
+  canObjectBeInteracted: 0
+  isPlayerReadyToInteract: 0
+  nextScene: StartingAisle
 --- !u!1 &1713878937
 GameObject:
   m_ObjectHideFlags: 0
