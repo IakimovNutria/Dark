@@ -6,6 +6,7 @@ public class SceneLoad : MonoBehaviour
 {
     public static string prevScene;
     public static string currentScene;
+
     public Transform player;
     public string leftScene;
     public string rightScene;
@@ -27,7 +28,7 @@ public class SceneLoad : MonoBehaviour
             Object.Destroy(GameObject.FindGameObjectsWithTag("Canvas")[1]);
             Object.Destroy(GameObject.FindGameObjectsWithTag("Flashlight")[1]);
         }
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        player = players[0].transform;
         if (prevScene == rightScene)
             player.position = rightStart;
         if (prevScene == leftScene)

@@ -2745,6 +2745,7 @@ MonoBehaviour:
   enterText: {fileID: 0}
   canObjectBeInteracted: 0
   isPlayerReadyToInteract: 0
+  chestName: firstRoom
   battaries: 3
 --- !u!60 &1956846717
 PolygonCollider2D:

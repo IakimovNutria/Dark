@@ -1,34 +1,48 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Reflection;
 using UnityEngine;
 
-public class ChestScript : Interaction
+public class ChestScript : ObjectInteraction
 {
     // Start is called before the first frame update
-    public int battaries = 3;
+    public string chestName;
+    public int battaries;
+
     private GameObject player;
+    private SceneController sceneController;
+    private FieldInfo chestVisitedField;
     void Start()
     {
+        InteractionInitialize();
         player = GameObject.FindGameObjectWithTag("Player");
-        var canvas = GameObject.FindGameObjectWithTag("Canvas");
-        enterText = canvas.transform.GetChild(3).gameObject;
-        light = gameObject.transform.GetChild(0).gameObject;
-        canObjectBeInteracted = true;
-        enterText.SetActive(false);
-        light.SetActive(false);
+        SetBattaries();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (isPlayerReadyToInteract && Input.GetKeyDown("space"))
+        if (battaries > 0 && Input.GetKeyDown("space"))
         {
             enterText.SetActive(false);
             light.SetActive(false);
             player.GetComponent<Flashlight>().AddBattaries(battaries);
-            battaries = 0;
-            canObjectBeInteracted = false;
-            isPlayerReadyToInteract = false;
+            RefuseToInteract();
+            chestVisitedField.SetValue(sceneController, true);
         }
+    }
+
+    private void SetBattaries()
+    {
+        sceneController = new SceneController();
+        chestVisitedField = typeof(SceneController).GetField(chestName + "ChestVisited");
+        if ((bool)chestVisitedField.GetValue(chestVisitedField))
+            RefuseToInteract();
+    }
+
+    private void RefuseToInteract()
+    {
+        canObjectBeInteracted = false;
+        battaries = 0;
     }
 }

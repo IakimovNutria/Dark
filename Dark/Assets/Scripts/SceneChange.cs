@@ -3,19 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneChange : Interaction
+public class SceneChange : ObjectInteraction
 {
     public string nextScene;
     private bool lightActive;
+
+
     // Start is called before the first frame update
     void Start()
     {
-        var canvas = GameObject.FindGameObjectWithTag("Canvas");
-        enterText = canvas.transform.GetChild(3).gameObject;
-        light = gameObject.transform.GetChild(0).gameObject;
-        canObjectBeInteracted = true;
-        light.SetActive(false);
-        enterText.SetActive(false);
+        InteractionInitialize();
         SceneLoad.currentScene = SceneManager.GetActiveScene().name;
     }
 

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SceneController : MonoBehaviour
 {
-    
+    public static bool firstRoomChestVisited;
     // Start is called before the first frame update
     void Start()
     {
