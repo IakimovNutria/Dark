@@ -11,11 +11,13 @@ namespace Player
         private GameObject[] enemies;
 
         // не const, чтобы можно было менять управление в настройках
-        private string keyUp = "w";
-        private string keyLeft = "a";
-        private string keyDown = "s";
-        private string keyRight = "d";
-        public string keyLight = "Fire1";
+        public static string KeyUp { get; private set; } = "w";
+        public static string KeyLeft { get; private set; } = "a";
+        public static string KeyDown { get; private set; } = "s";
+        public static string KeyRight { get; private set; } = "d";
+
+        public static string KeyDamageLight { get; private set; } = "Fire1";
+        public static string KeyHealLight { get; private set; } = "Fire2";
         
         //не const чтобы можно было менять сложность в настройках
         private float speed = 1;
@@ -31,17 +33,18 @@ namespace Player
         private void Update()
         {
             AliveUpdate();
+            
         }
 
         protected override float GetHorizontalVelocity()
         {
-            return (Input.GetKey(keyRight) ? speed : 0) + (Input.GetKey(keyLeft) ? -speed : 0) +
+            return (Input.GetKey(KeyRight) ? speed : 0) + (Input.GetKey(KeyLeft) ? -speed : 0) +
                    body.velocity.x / 10 /*для плавного перехода между анимациями ходьбы*/;
         }
 
         protected override float GetVerticalVelocity()
         {
-            return (Input.GetKey(keyUp) ? speed : 0) + (Input.GetKey(keyDown) ? -speed : 0) +
+            return (Input.GetKey(KeyUp) ? speed : 0) + (Input.GetKey(KeyDown) ? -speed : 0) +
                    body.velocity.y / 10 /*для плавного перехода между анимациями ходьбы*/;
         }
 
@@ -53,18 +56,13 @@ namespace Player
                     return;
                 var enemyPosition = enemy.transform.position;
                 var playerPosition = body.position;
-                var length = GetLength(enemyPosition.x, enemyPosition.y, 
+                var length = Geometry.GetLength(enemyPosition.x, enemyPosition.y, 
                     playerPosition.x, playerPosition.y);
                 if (length < damageRadius)
                 {
                     ChangeHealthAmount(-0.75f + length);
                 }
             }
-        }
-
-        private static float GetLength(float x1, float y1, float x2, float y2)
-        {
-            return (float)Math.Sqrt(Math.Pow(x1 - x2, 2) + Math.Pow(y1 - y2, 2));
         }
     }
 }
