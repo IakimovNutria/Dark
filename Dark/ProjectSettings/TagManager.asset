@@ -6,11 +6,13 @@ TagManager:
   tags:
   - Enemy
   - Died
+  - Flashlight
+  - Canvas
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Cast2DShadow
   - Water
   - UI
   - 

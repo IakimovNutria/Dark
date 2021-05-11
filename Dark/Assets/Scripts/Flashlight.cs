@@ -160,5 +160,10 @@ public class Flashlight : MonoBehaviour
         lightParameters.lightColor = lightColor;
         lightParameters.eventPassedFilter = eventFilter;
     }
-    
+
+    public void AddBattaries(int addedBattaries)
+    {
+        batteriesCount += (uint)addedBattaries;
+        UpdateBatteryCountText();
+    }
 }
