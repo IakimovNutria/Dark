@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneChange : ObjectInteraction
+public class SceneChange : Interaction
 {
     public string nextScene;
     private bool lightActive;
@@ -12,7 +12,7 @@ public class SceneChange : ObjectInteraction
     // Start is called before the first frame update
     void Start()
     {
-        InteractionInitialize();
+        InteractionInitialize(3);
         SceneLoad.currentScene = SceneManager.GetActiveScene().name;
     }
 

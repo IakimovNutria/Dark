@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using UnityEngine;
 
-public class ChestScript : ObjectInteraction
+public class ChestScript : Interaction
 {
     // Start is called before the first frame update
     public string chestName;
@@ -14,7 +14,7 @@ public class ChestScript : ObjectInteraction
     private FieldInfo chestVisitedField;
     void Start()
     {
-        InteractionInitialize();
+        InteractionInitialize(3);
         player = GameObject.FindGameObjectWithTag("Player");
         SetBattaries();
     }
@@ -25,7 +25,7 @@ public class ChestScript : ObjectInteraction
         if (battaries > 0 && Input.GetKeyDown("space"))
         {
             enterText.SetActive(false);
-            light.SetActive(false);
+            interactionIndicator.SetActive(false);
             player.GetComponent<Flashlight>().ChangeBatteriesCount(battaries);
             RefuseToInteract();
             chestVisitedField.SetValue(sceneController, true);
