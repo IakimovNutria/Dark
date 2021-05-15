@@ -5,15 +5,14 @@ using UnityEngine;
 public class SceneController : MonoBehaviour
 {
     public static bool firstRoomChestVisited;
-    // Start is called before the first frame update
-    void Start()
+    
+    public void FreezeGame()
     {
-        
+        Time.timeScale = 0;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ResumeGame()
     {
-        
+        Time.timeScale = 1;
     }
 }

@@ -6,8 +6,6 @@ using UnityEngine.SceneManagement;
 public class SceneChange : ObjectInteraction
 {
     public string nextScene;
-    private bool lightActive;
-
 
     // Start is called before the first frame update
     void Start()
