@@ -10,12 +10,14 @@ public class ChestScript : Interaction
     public int battaries;
 
     private GameObject player;
-    private SceneController sceneController;
     private FieldInfo chestVisitedField;
+    private SceneController sceneController;
     void Start()
     {
         InteractionInitialize(3);
         player = GameObject.FindGameObjectWithTag("Player");
+        var canvas = GameObject.FindGameObjectWithTag("Canvas");
+        sceneController = canvas.GetComponent<SceneController>();
         SetBattaries();
     }
 
@@ -34,7 +36,6 @@ public class ChestScript : Interaction
 
     private void SetBattaries()
     {
-        sceneController = new SceneController();
         chestVisitedField = typeof(SceneController).GetField(chestName + "ChestVisited");
         if ((bool)chestVisitedField.GetValue(chestVisitedField))
             RefuseToInteract();

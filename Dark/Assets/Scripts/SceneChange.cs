@@ -19,15 +19,18 @@ public class SceneChange : Interaction
     // Update is called once per frame
     void Update()
     {
-        if (isPlayerReadyToInteract && Input.GetKeyDown("space"))
-        {
-            SceneLoad.prevScene = SceneLoad.currentScene;
-            SceneLoad.currentScene = nextScene;
-            DontDestroyOnLoad(GameObject.FindGameObjectWithTag("Player"));
-            DontDestroyOnLoad(GameObject.FindGameObjectWithTag("Canvas"));
-            DontDestroyOnLoad(GameObject.FindGameObjectWithTag("MainCamera"));
-            DontDestroyOnLoad(GameObject.FindGameObjectWithTag("Flashlight"));
-            SceneManager.LoadScene(nextScene);
-        }
+        if (isPlayerReadyToInteract && Input.GetKeyDown("space") && nextScene != "")
+            ChangeScene();
+    }
+
+    private void ChangeScene()
+    {
+        SceneLoad.prevScene = SceneLoad.currentScene;
+        SceneLoad.currentScene = nextScene;
+        DontDestroyOnLoad(GameObject.FindGameObjectWithTag("Player"));
+        DontDestroyOnLoad(GameObject.FindGameObjectWithTag("Canvas"));
+        DontDestroyOnLoad(GameObject.FindGameObjectWithTag("MainCamera"));
+        DontDestroyOnLoad(GameObject.FindGameObjectWithTag("Flashlight"));
+        SceneManager.LoadScene(nextScene);
     }
 }
