@@ -8,6 +8,8 @@ TagManager:
   - Died
   - Flashlight
   - Canvas
+  - PauseMenu
+  - PauseButton
   layers:
   - Default
   - TransparentFX
