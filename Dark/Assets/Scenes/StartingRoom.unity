@@ -137,7 +137,6 @@ GameObject:
   - component: {fileID: 194882281}
   - component: {fileID: 194882280}
   - component: {fileID: 194882279}
-  - component: {fileID: 194882278}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -145,22 +144,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &194882278
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 194882277}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 932392183333344688bc65ed3b8bb908, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 194882281}
-  flashLight: {fileID: 1165224363}
-  chargeBar: {fileID: 300827244}
-  batteriesCountText: {fileID: 879176903}
 --- !u!50 &194882279
 Rigidbody2D:
   serializedVersion: 4
@@ -3421,6 +3404,7 @@ GameObject:
   - component: {fileID: 1165224366}
   - component: {fileID: 1165224365}
   - component: {fileID: 1165224364}
+  - component: {fileID: 1165224367}
   m_Layer: 0
   m_Name: FlashLight
   m_TagString: Flashlight
@@ -3453,7 +3437,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6318398eef0fde64e9430a4582e25dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PreviewThis: 1
+  PreviewThis: 0
   isStatic: 0
   enableEvents: 1
   assignedRenderers:
@@ -3484,6 +3468,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 195}
+--- !u!114 &1165224367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165224363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 932392183333344688bc65ed3b8bb908, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 194882281}
+  flashLight: {fileID: 1165224363}
+  chargeBar: {fileID: 300827244}
+  batteriesCountText: {fileID: 879176903}
 --- !u!1 &1174738441
 GameObject:
   m_ObjectHideFlags: 0
@@ -3772,8 +3772,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d4e50b404e6c4543b2dee746f539b02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  flashlightScript: {fileID: 0}
+  flashlight: {fileID: 0}
 --- !u!4 &1421414210 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8875976651215372544, guid: 181035a770e86cc418e8e2bb93614263, type: 3}

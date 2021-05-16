@@ -5,20 +5,22 @@ using UnityEngine;
 public class SceneController : MonoBehaviour
 {
     public static bool firstRoomChestVisited;
-    public GameObject player;
-    public Component flashlightScript;
+    public static GameObject flashlight;
 
     private void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
-        flashlightScript = player.GetComponent("Flashlight");
+        flashlight = GameObject.FindGameObjectWithTag("Flashlight");
     }
 
     public void FreezeGame()
     {
         Time.timeScale = 0;
-        flashlightScript.
+        flashlight.SetActive(false);
     }
 
-    public void ResumeGame() => Time.timeScale = 1;
+    public void ResumeGame()
+    {
+        Time.timeScale = 1;
+        flashlight.SetActive(true);
+    }
 }
