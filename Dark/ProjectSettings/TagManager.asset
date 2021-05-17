@@ -8,6 +8,9 @@ TagManager:
   - Died
   - Flashlight
   - Canvas
+  - PauseMenu
+  - LoadingBar
+  - HealthBar
   layers:
   - Default
   - TransparentFX

@@ -6,8 +6,6 @@ using UnityEngine.SceneManagement;
 public class SceneChange : Interaction
 {
     public string nextScene;
-    private bool lightActive;
-
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +17,7 @@ public class SceneChange : Interaction
     // Update is called once per frame
     void Update()
     {
-        if (isPlayerReadyToInteract && Input.GetKeyDown("space") && nextScene != "")
+        if (isPlayerReadyToInteract && Input.GetKeyDown(GameManager.GM.KeyObgectsInteraction) && nextScene != "")
             ChangeScene();
     }
 

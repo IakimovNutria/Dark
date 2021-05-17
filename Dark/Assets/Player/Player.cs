@@ -11,13 +11,6 @@ namespace Player
         private GameObject[] enemies;
 
         // не const, чтобы можно было менять управление в настройках
-        public static string KeyUp { get; private set; } = "w";
-        public static string KeyLeft { get; private set; } = "a";
-        public static string KeyDown { get; private set; } = "s";
-        public static string KeyRight { get; private set; } = "d";
-
-        public static string KeyDamageLight { get; private set; } = "Fire1";
-        public static string KeyHealLight { get; private set; } = "Fire2";
         
         //не const чтобы можно было менять сложность в настройках
         private float speed = 1;
@@ -33,18 +26,17 @@ namespace Player
         private void Update()
         {
             AliveUpdate();
-            
         }
 
         protected override float GetHorizontalVelocity()
         {
-            return (Input.GetKey(KeyRight) ? speed : 0) + (Input.GetKey(KeyLeft) ? -speed : 0) +
+            return (Input.GetKey(GameManager.GM.KeyRight) ? speed : 0) + (Input.GetKey(GameManager.GM.KeyLeft) ? -speed : 0) +
                    body.velocity.x / 10 /*для плавного перехода между анимациями ходьбы*/;
         }
 
         protected override float GetVerticalVelocity()
         {
-            return (Input.GetKey(KeyUp) ? speed : 0) + (Input.GetKey(KeyDown) ? -speed : 0) +
+            return (Input.GetKey(GameManager.GM.KeyUp) ? speed : 0) + (Input.GetKey(GameManager.GM.KeyDown) ? -speed : 0) +
                    body.velocity.y / 10 /*для плавного перехода между анимациями ходьбы*/;
         }
 
