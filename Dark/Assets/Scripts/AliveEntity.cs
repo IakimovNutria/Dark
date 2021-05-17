@@ -19,7 +19,8 @@ public class AliveEntity : MonoBehaviour
         {
             gameObject.tag = "Died";
             body.velocity = new Vector2(0, 0);
-            Destroy(gameObject);
+            Move();
+            animator.SetBool("isDied", true);
         }
         else
         {
@@ -56,10 +57,7 @@ public class AliveEntity : MonoBehaviour
     public void ChangeHealthAmount(float change)
     {
         if (change + Health <= 0)
-        {
             Health = 0;
-            animator.SetBool("isDied", true);
-        }
         else if (Health + change >= maxHealth)
             Health = maxHealth;
         else

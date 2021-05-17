@@ -5,8 +5,8 @@ public class Dialogue : Interaction
 {
     public DialogueNode[] node;
     public int currentNode;
-    private bool isActivateDialogue;
-    private string dialogueActivateKey = "e";
+    protected bool isActivateDialogue;
+    protected string dialogueActivateKey = "e";
 
     private void Start()
     {
@@ -15,17 +15,9 @@ public class Dialogue : Interaction
 
     private void OnGUI()
     {
-        if (!isActivateDialogue)
-        {
-            isActivateDialogue = Input.GetKey(dialogueActivateKey);
+        if (!isActivateDialogue || !isPlayerReadyToInteract)
             return;
-        }
-
-        if (!isPlayerReadyToInteract) //isPlayerReadyToInteract = isAbleToInteract 
-        {
-            isActivateDialogue = false;
-            return;
-        }
+        
         GUI.Box (new Rect (Screen.width / 2 - 300, Screen.height - 200, 600, 250), "");
         GUI.Label (new Rect (Screen.width / 2 - 250, 
             Screen.height - 180, 500, 90), node [currentNode].NpcText);

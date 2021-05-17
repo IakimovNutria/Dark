@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,6 +18,11 @@ public class GameManager : MonoBehaviour
     public KeyCode KeyObgectsInteraction { get; set; }
     public KeyCode KeyDialogues { get; set; }
 
+    public static readonly Dictionary<string, bool> StoryBools = new Dictionary<string, bool>
+    {
+        {"isFirstRoomCleaned", false},
+        {"a", false}
+    };
     private void Awake()
     {
         if (GM == null)
@@ -31,6 +37,16 @@ public class GameManager : MonoBehaviour
         SetDefaultKeys();
     }
 
+    private void Update()
+    {
+        if (StoryBools["isFirstRoomCleaned"])
+        {
+            
+        }
+        else if (GetEnemiesInScene() is null)
+            ChangeStoryBool("isFirstRoomCleaned");
+    }
+    
     public void FreezeGame()
     {
         Time.timeScale = 0;
@@ -53,5 +69,15 @@ public class GameManager : MonoBehaviour
         KeyHealLight = KeyCode.RightAlt;
         KeyObgectsInteraction = KeyCode.Space;
         KeyDialogues = KeyCode.E;
+    }
+
+    private IEnumerable<GameObject> GetEnemiesInScene()
+    {
+        return GameObject.FindGameObjectsWithTag("Enemy");
+    }
+
+    private void ChangeStoryBool(string storyBoolName)
+    {
+        StoryBools[storyBoolName] = !StoryBools[storyBoolName];
     }
 }

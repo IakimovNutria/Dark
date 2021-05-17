@@ -6,10 +6,9 @@ using UnityEngine;
 public class Enemy : AliveEntity
 {
     private Transform playerTransform;
-    private float damageRadius = 0.5f;
-    private float maxEnemyHealth = 100;
+    private readonly float damageRadius = 0.5f;
+    private readonly float maxEnemyHealth = 100;
     private Player player;
-
     private void Start()
     {
         var playerGameObject = GameObject.FindGameObjectWithTag("Player");
@@ -19,10 +18,12 @@ public class Enemy : AliveEntity
         SetMaxHealth(maxEnemyHealth);
     }
 
-    void Update()
+    private void Update()
     { 
         AliveUpdate();
         DamagePlayer();
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Died"))
+            Destroy(gameObject);
     }
 
     protected override float GetHorizontalVelocity()
@@ -43,6 +44,8 @@ public class Enemy : AliveEntity
 
     private void DamagePlayer()
     {
+        if (Health == 0)
+            return;
         var enemyPosition = body.position;
         var playerPosition = playerTransform.position;
         var length = Geometry.GetLength(enemyPosition.x, enemyPosition.y, 

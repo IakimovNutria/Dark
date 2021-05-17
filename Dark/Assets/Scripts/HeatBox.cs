@@ -5,9 +5,13 @@ using UnityEngine;
 public class HeatBox : MonoBehaviour
 {
     private float damage;
-    public Enemy enemy;
+    public GameObject enemyGameObject;
+    private Enemy enemy;
+    //private SpriteRenderer enemySpriteRenderer;
     private void Start()
     {
+        enemy = enemyGameObject.GetComponent<Enemy>();
+        //enemySpriteRenderer = enemyGameObject.GetComponent<SpriteRenderer>();
         Light2DEmitter.OnBeamStay += OnBeamStay;
         Light2DEmitter.OnBeamEnter += OnBeamEnter;
         Light2DEmitter.OnBeamExit += OnBeamExit; 
