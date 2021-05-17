@@ -17,7 +17,7 @@ public class SceneChange : Interaction
     // Update is called once per frame
     void Update()
     {
-        if (isPlayerReadyToInteract && Input.GetKeyDown("space") && nextScene != "")
+        if (isPlayerReadyToInteract && Input.GetKeyDown(GameManager.GM.KeyObgectsInteraction) && nextScene != "")
             ChangeScene();
     }
 

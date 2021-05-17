@@ -41,13 +41,13 @@ public class Mario : MonoBehaviour
 
         if ((Vector2) transform.position == destination)
         {
-            if (Input.GetKey(Player.Player.KeyUp) && gameObject.IsValid(Vector2.up, mazeCollider))
+            if (Input.GetKey(GameManager.GM.KeyUp) && gameObject.IsValid(Vector2.up, mazeCollider))
                 destination = (Vector2) transform.position + Vector2.up;
-            if (Input.GetKey(Player.Player.KeyRight) && gameObject.IsValid(Vector2.right, mazeCollider))
+            if (Input.GetKey(GameManager.GM.KeyRight) && gameObject.IsValid(Vector2.right, mazeCollider))
                 destination = (Vector2) transform.position + Vector2.right;
-            if (Input.GetKey(Player.Player.KeyDown) && gameObject.IsValid(-Vector2.up, mazeCollider))
+            if (Input.GetKey(GameManager.GM.KeyDown) && gameObject.IsValid(-Vector2.up, mazeCollider))
                 destination = (Vector2) transform.position - Vector2.up;
-            if (Input.GetKey(Player.Player.KeyLeft) && gameObject.IsValid(-Vector2.right, mazeCollider))
+            if (Input.GetKey(GameManager.GM.KeyLeft) && gameObject.IsValid(-Vector2.right, mazeCollider))
                 destination = (Vector2) transform.position - Vector2.right;
         }
         var dir = destination - (Vector2)transform.position;
