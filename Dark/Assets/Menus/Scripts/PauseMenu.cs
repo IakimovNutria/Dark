@@ -5,44 +5,16 @@ using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
-    public static bool isGamePaused;
-    //public Button pauseButton;
-    public GameObject pauseMenuUI;
-    public GameManager sceneController;
-    public bool flag;
-
-    private void Start()
+    public GameObject settingsPanel;
+    public void OpenSettings()
     {
-        pauseMenuUI = GameObject.FindGameObjectWithTag("PauseMenu");
-        pauseMenuUI.SetActive(false);
-        sceneController = this.GetComponent<GameManager>();
-        //pauseButton = GameObject.FindGameObjectWithTag("PauseButton").GetComponent<Button>();
-        //pauseButton.onClick.AddListener(PauseGame);
+        GameManager.GM.FreezeGame();
+        settingsPanel.SetActive(true);
     }
 
-    void Update()
+    public void CloseSettings()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-            PauseGame();
-    }
-
-    public void PauseGame()
-    {
-        flag = true;
-        if (isGamePaused)
-            Resume();
-        else
-        {
-            pauseMenuUI.SetActive(true);
-            sceneController.FreezeGame();
-            isGamePaused = true;
-        }
-    }
-
-    private void Resume()
-    {
-        pauseMenuUI.SetActive(false);
-        Time.timeScale = 1;
-        isGamePaused = false;
+        settingsPanel.SetActive(false);
+        GameManager.GM.ResumeGame();
     }
 }
