@@ -7,6 +7,12 @@ public class Dialogue : Interaction
     public int currentNode;
     private bool isActivateDialogue;
     private string dialogueActivateKey = "e";
+
+    private void Start()
+    {
+        InteractionInitialize(4);
+    }
+
     private void OnGUI()
     {
         if (!isActivateDialogue)
@@ -15,7 +21,7 @@ public class Dialogue : Interaction
             return;
         }
 
-        if (!isAbleToInteract)
+        if (!isPlayerReadyToInteract) //isPlayerReadyToInteract = isAbleToInteract 
         {
             isActivateDialogue = false;
             return;
@@ -29,7 +35,7 @@ public class Dialogue : Interaction
                     Screen.height - 100 + 25 * i, 500, 25),
                 node[currentNode].PlayerAnswer[i].Text)) continue;
             if (node [currentNode].PlayerAnswer [i].SpeakEnd) {
-                isAbleToInteract = false;
+                canObjectBeInteracted = false;
             }
             currentNode = node [currentNode].PlayerAnswer [i].ToNode;
         }

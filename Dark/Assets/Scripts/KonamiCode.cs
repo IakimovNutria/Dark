@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EasterEgg : ActivationCode
+public class KonamiCode : ActivationCode
 {
+    public Flashlight flashlight;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +19,6 @@ public class EasterEgg : ActivationCode
 
     protected override void Activate()
     {
-        
+        flashlight.ChangeBatteriesCount(30);
     }
 }
