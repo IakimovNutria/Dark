@@ -9,7 +9,8 @@ TagManager:
   - Flashlight
   - Canvas
   - PauseMenu
-  - PauseButton
+  - LoadingBar
+  - HealthBar
   layers:
   - Default
   - TransparentFX

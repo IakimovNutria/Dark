@@ -21,11 +21,7 @@ public class SceneChange : ObjectInteraction
         {
             SceneLoad.prevScene = SceneLoad.currentScene;
             SceneLoad.currentScene = nextScene;
-            DontDestroyOnLoad(GameObject.FindGameObjectWithTag("Player"));
-            DontDestroyOnLoad(GameObject.FindGameObjectWithTag("Canvas"));
-            DontDestroyOnLoad(GameObject.FindGameObjectWithTag("MainCamera"));
-            DontDestroyOnLoad(GameObject.FindGameObjectWithTag("Flashlight"));
-            SceneManager.LoadScene(nextScene);
+            SceneManager.LoadSceneAsync(nextScene);
         }
     }
 }

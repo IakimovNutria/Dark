@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/GameStartMenu.unity
+    guid: c968b78ca1142e544900b880002b0de6
   - enabled: 1
     path: Assets/Scenes/StartingRoom.unity
     guid: b6158bdf6d3797745a44e95fd9bc550d
@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FirstLivingRoom.unity
     guid: 83b60360fd3677d4e9c4e6d149292dca
+  - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}

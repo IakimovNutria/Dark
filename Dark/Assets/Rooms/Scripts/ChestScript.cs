@@ -10,7 +10,7 @@ public class ChestScript : ObjectInteraction
     public int battaries;
 
     private GameObject player;
-    private SceneController sceneController;
+    private GameManager sceneController;
     private FieldInfo chestVisitedField;
     void Start()
     {
@@ -34,8 +34,8 @@ public class ChestScript : ObjectInteraction
 
     private void SetBattaries()
     {
-        sceneController = new SceneController();
-        chestVisitedField = typeof(SceneController).GetField(chestName + "ChestVisited");
+        sceneController = new GameManager();
+        chestVisitedField = typeof(GameManager).GetField(chestName + "ChestVisited");
         if ((bool)chestVisitedField.GetValue(chestVisitedField))
             RefuseToInteract();
     }

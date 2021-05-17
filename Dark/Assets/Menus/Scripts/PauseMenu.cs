@@ -8,14 +8,14 @@ public class PauseMenu : MonoBehaviour
     public static bool isGamePaused;
     //public Button pauseButton;
     public GameObject pauseMenuUI;
-    public SceneController sceneController;
+    public GameManager sceneController;
     public bool flag;
 
     private void Start()
     {
         pauseMenuUI = GameObject.FindGameObjectWithTag("PauseMenu");
         pauseMenuUI.SetActive(false);
-        sceneController = this.GetComponent<SceneController>();
+        sceneController = this.GetComponent<GameManager>();
         //pauseButton = GameObject.FindGameObjectWithTag("PauseButton").GetComponent<Button>();
         //pauseButton.onClick.AddListener(PauseGame);
     }
