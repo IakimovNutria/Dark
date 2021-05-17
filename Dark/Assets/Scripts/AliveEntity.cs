@@ -19,10 +19,10 @@ public class AliveEntity : MonoBehaviour
         {
             gameObject.tag = "Died";
             body.velocity = new Vector2(0, 0);
+            Destroy(gameObject);
         }
         else
         {
-            TakeDamage();
             Move();
         }
     }
@@ -68,6 +68,11 @@ public class AliveEntity : MonoBehaviour
         healthBar.SetValue(Health);
     }
 
+    public void TakeDamage(float damage)
+    {
+        ChangeHealthAmount(-damage);
+    }
+    
     protected virtual float GetHorizontalVelocity()
     {
         return 0;
@@ -76,10 +81,5 @@ public class AliveEntity : MonoBehaviour
     protected virtual float GetVerticalVelocity()
     {
         return 0;
-    }
-    
-    protected virtual void TakeDamage()
-    {
-        
     }
 }

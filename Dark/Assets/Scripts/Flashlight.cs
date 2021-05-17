@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class Flashlight : MonoBehaviour
 {
-    public Player.Player player;
+    public Player player;
     public GameObject flashLight;
     public Bar chargeBar;
     public Text batteriesCountText;

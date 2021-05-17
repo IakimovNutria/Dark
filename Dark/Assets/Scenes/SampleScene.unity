@@ -588,7 +588,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49140ed064af94d39a249ded909ecf55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isAbleToInteract: 0
+  canObjectBeInteracted: 0
+  isPlayerReadyToInteract: 0
   node: []
   currentNode: 0
 --- !u!212 &518532822
@@ -1644,8 +1645,6 @@ MonoBehaviour:
   animator: {fileID: 1537141266}
   body: {fileID: 1537141263}
   healthBar: {fileID: 1976291918}
-  keyDamageLight: Fire1
-  keyHealLight: Fire2
 --- !u!95 &1537141266
 Animator:
   serializedVersion: 3
@@ -1756,6 +1755,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac651b7789fd14e9ab25390631df92ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flashlight: {fileID: 0}
 --- !u!114 &1537141272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1920,7 +1920,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49140ed064af94d39a249ded909ecf55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isAbleToInteract: 0
+  canObjectBeInteracted: 0
+  isPlayerReadyToInteract: 0
   node:
   - NpcText: "\u0430\u0443\u0430"
     PlayerAnswer:

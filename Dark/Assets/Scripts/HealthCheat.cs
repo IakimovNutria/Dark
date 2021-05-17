@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HealthCheat : ActivationCode
 {
-    public Player.Player player;
+    public Player player;
 
     private bool isActive;
     // Start is called before the first frame update

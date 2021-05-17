@@ -5,11 +5,12 @@ using UnityEngine;
 public class HeatBox : MonoBehaviour
 {
     private float damage;
+    public Enemy enemy;
     private void Start()
     {
         Light2DEmitter.OnBeamStay += OnBeamStay;
         Light2DEmitter.OnBeamEnter += OnBeamEnter;
-        Light2DEmitter.OnBeamExit += OnBeamExit;
+        Light2DEmitter.OnBeamExit += OnBeamExit; 
     }
     
     private void OnBeamEnter(GameObject obj, Light2DEmitter emitter)
@@ -20,7 +21,7 @@ public class HeatBox : MonoBehaviour
     {
         if (obj.GetInstanceID() == gameObject.GetInstanceID() && emitter.eventPassedFilter == "DamageEnemy")
         {
-            damage += 0.1f;
+            enemy.TakeDamage(0.1f);
         }
     }
     private void OnBeamExit(GameObject obj, Light2DEmitter emitter)

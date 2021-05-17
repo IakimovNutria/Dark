@@ -110,6 +110,114 @@ TextureImporter:
   - first:
       213: -1841360820640092161
     second: NPC0Walk_35
+  - first:
+      213: -6926264672520568045
+    second: EliWalk_0
+  - first:
+      213: 2268845633148380765
+    second: EliWalk_1
+  - first:
+      213: -408444606563178135
+    second: EliWalk_2
+  - first:
+      213: -8018871074695659385
+    second: EliWalk_3
+  - first:
+      213: 8610973277051143266
+    second: EliWalk_4
+  - first:
+      213: 551185549844049272
+    second: EliWalk_5
+  - first:
+      213: 2038562039203546142
+    second: EliWalk_6
+  - first:
+      213: 796225246855478654
+    second: EliWalk_7
+  - first:
+      213: 7604591393429378439
+    second: EliWalk_8
+  - first:
+      213: 6221569587911183592
+    second: EliWalk_9
+  - first:
+      213: -3156525344869818822
+    second: EliWalk_10
+  - first:
+      213: 2678265817827700171
+    second: EliWalk_11
+  - first:
+      213: -6381898623498459871
+    second: EliWalk_12
+  - first:
+      213: -2164374613277320891
+    second: EliWalk_13
+  - first:
+      213: -8139222933137298143
+    second: EliWalk_14
+  - first:
+      213: 5628976663209089682
+    second: EliWalk_15
+  - first:
+      213: -3133829612598337529
+    second: EliWalk_16
+  - first:
+      213: 7984424510365341558
+    second: EliWalk_17
+  - first:
+      213: 1843728058125805896
+    second: EliWalk_18
+  - first:
+      213: -3189606574237878514
+    second: EliWalk_19
+  - first:
+      213: -2111260063962219729
+    second: EliWalk_20
+  - first:
+      213: -2296738689619854990
+    second: EliWalk_21
+  - first:
+      213: -8071427193439263538
+    second: EliWalk_22
+  - first:
+      213: 2356999062521471043
+    second: EliWalk_23
+  - first:
+      213: -8542279543854233966
+    second: EliWalk_24
+  - first:
+      213: -7325398002118840206
+    second: EliWalk_25
+  - first:
+      213: -950910164455529806
+    second: EliWalk_26
+  - first:
+      213: -1039238071452797342
+    second: EliWalk_27
+  - first:
+      213: -6986678567967494227
+    second: EliWalk_28
+  - first:
+      213: -8458346814976961646
+    second: EliWalk_29
+  - first:
+      213: -8546704508582445441
+    second: EliWalk_30
+  - first:
+      213: 7751311754465943162
+    second: EliWalk_31
+  - first:
+      213: 7666622291556483884
+    second: EliWalk_32
+  - first:
+      213: -536720281223085478
+    second: EliWalk_33
+  - first:
+      213: 7774248605714983421
+    second: EliWalk_34
+  - first:
+      213: -2463558452298644151
+    second: EliWalk_35
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -199,7 +307,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: NPC0Walk_0
+      name: EliWalk_0
       rect:
         serializedVersion: 2
         x: 3
@@ -213,14 +321,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 399ae6243fdb0f390800000000000000
-      internalID: -7786514903234336365
+      spriteID: 313031e2af6f0ef90800000000000000
+      internalID: -6926264672520568045
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NPC0Walk_1
+      name: EliWalk_1
       rect:
         serializedVersion: 2
         x: 67
@@ -234,14 +342,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b6c8be10935726d20800000000000000
-      internalID: 3270305167130201195
+      spriteID: d56610e151f8c7f10800000000000000
+      internalID: 2268845633148380765
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NPC0Walk_2
+      name: EliWalk_2
       rect:
         serializedVersion: 2
         x: 131
@@ -255,14 +363,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 231f93499f3422940800000000000000
-      internalID: 5269849253189644594
+      spriteID: 969a06b5bc9e45af0800000000000000
+      internalID: -408444606563178135
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NPC0Walk_3
+      name: EliWalk_3
       rect:
         serializedVersion: 2
         x: 195
@@ -276,14 +384,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c3c7b997f6000000800000000000000
-      internalID: 7660505646022
+      spriteID: 7804c1d4e3f37b090800000000000000
+      internalID: -8018871074695659385
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NPC0Walk_4
+      name: EliWalk_4
       rect:
         serializedVersion: 2
         x: 259
@@ -297,14 +405,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fc21f146ed34c1120800000000000000
-      internalID: 2385856525041078991
+      spriteID: 264c3059292508770800000000000000
+      internalID: 8610973277051143266
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NPC0Walk_5
+      name: EliWalk_5
       rect:
         serializedVersion: 2
         x: 323
@@ -318,14 +426,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b1341318aa0299c10800000000000000
-      internalID: 2060714221182731035
+      spriteID: 87d68c7565436a700800000000000000
+      internalID: 551185549844049272
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NPC0Walk_6
+      name: EliWalk_6
       rect:
         serializedVersion: 2
         x: 387
@@ -339,14 +447,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5397b2b2c29559c30800000000000000
-      internalID: 4365493460043266357
+      spriteID: e14c257bf5d6a4c10800000000000000
+      internalID: 2038562039203546142
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NPC0Walk_7
+      name: EliWalk_7
       rect:
         serializedVersion: 2
         x: 451
@@ -360,14 +468,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f31936f49a9bbe8e0800000000000000
-      internalID: -1663031500550729409
+      spriteID: e7db408b4a2cc0b00800000000000000
+      internalID: 796225246855478654
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NPC0Walk_8
+      name: EliWalk_8
       rect:
         serializedVersion: 2
         x: 515
@@ -381,14 +489,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 39e602900f74311a0800000000000000
-      internalID: -6840044312774807917
+      spriteID: 785d95bd49fe88960800000000000000
+      internalID: 7604591393429378439
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NPC0Walk_9
+      name: EliWalk_9
       rect:
         serializedVersion: 2
         x: 5
@@ -402,14 +510,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ceef0a527045a9a10800000000000000
-      internalID: 1916936981072379628
+      spriteID: 8ecc1d0b394775650800000000000000
+      internalID: 6221569587911183592
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NPC0Walk_10
+      name: EliWalk_10
       rect:
         serializedVersion: 2
         x: 68
@@ -423,14 +531,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 161d8753075bdc500800000000000000
-      internalID: 418189833953399137
+      spriteID: a3e548e3ce4c134d0800000000000000
+      internalID: -3156525344869818822
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NPC0Walk_11
+      name: EliWalk_11
       rect:
         serializedVersion: 2
         x: 132
@@ -444,14 +552,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dde7f39cf52c31a10800000000000000
-      internalID: 1879059186197692125
+      spriteID: bcde0bd329c1b2520800000000000000
+      internalID: 2678265817827700171
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NPC0Walk_12
+      name: EliWalk_12
       rect:
         serializedVersion: 2
         x: 197
@@ -465,14 +573,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1edb3ede5e0d623c0800000000000000
-      internalID: -4384587501241385503
+      spriteID: 125e1d1c301fe67a0800000000000000
+      internalID: -6381898623498459871
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NPC0Walk_13
+      name: EliWalk_13
       rect:
         serializedVersion: 2
         x: 261
@@ -486,14 +594,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 69d3ddceb9704b150800000000000000
-      internalID: 5887338979155328406
+      spriteID: 5495bbea1c896f1e0800000000000000
+      internalID: -2164374613277320891
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NPC0Walk_14
+      name: EliWalk_14
       rect:
         serializedVersion: 2
         x: 325
@@ -507,14 +615,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5aa67c72aa07e3c40800000000000000
-      internalID: 5493952471552715429
+      spriteID: 12d63a2addbab0f80800000000000000
+      internalID: -8139222933137298143
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NPC0Walk_15
+      name: EliWalk_15
       rect:
         serializedVersion: 2
         x: 389
@@ -528,14 +636,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5f5e284546d7440a0800000000000000
-      internalID: -6898250859356690955
+      spriteID: 29a9a8b93742e1e40800000000000000
+      internalID: 5628976663209089682
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NPC0Walk_16
+      name: EliWalk_16
       rect:
         serializedVersion: 2
         x: 453
@@ -549,14 +657,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 12b38b924c3c08eb0800000000000000
-      internalID: -4719557162203333855
+      spriteID: 700e97232966284d0800000000000000
+      internalID: -3133829612598337529
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NPC0Walk_17
+      name: EliWalk_17
       rect:
         serializedVersion: 2
         x: 517
@@ -570,14 +678,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 45dbcce148d099e90800000000000000
-      internalID: -7018563683176628908
+      spriteID: 6779f34f9cf5ece60800000000000000
+      internalID: 7984424510365341558
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NPC0Walk_18
+      name: EliWalk_18
       rect:
         serializedVersion: 2
         x: 3
@@ -591,14 +699,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 03577739795d81e40800000000000000
-      internalID: 5627482581390292272
+      spriteID: 849620f76ec369910800000000000000
+      internalID: 1843728058125805896
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NPC0Walk_19
+      name: EliWalk_19
       rect:
         serializedVersion: 2
         x: 67
@@ -612,14 +720,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d3ca309e1eb461900800000000000000
-      internalID: 654794229478042685
+      spriteID: e07fc4158bd3cb3d0800000000000000
+      internalID: -3189606574237878514
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NPC0Walk_20
+      name: EliWalk_20
       rect:
         serializedVersion: 2
         x: 131
@@ -633,14 +741,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6bdc8afa85a6b0cd0800000000000000
-      internalID: -2590860231484846666
+      spriteID: f2b3013682c43b2e0800000000000000
+      internalID: -2111260063962219729
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NPC0Walk_21
+      name: EliWalk_21
       rect:
         serializedVersion: 2
         x: 195
@@ -654,14 +762,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 78017d65f29c2f520800000000000000
-      internalID: 2734469128924893319
+      spriteID: 279ff4794585020e0800000000000000
+      internalID: -2296738689619854990
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NPC0Walk_22
+      name: EliWalk_22
       rect:
         serializedVersion: 2
         x: 259
@@ -675,14 +783,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52aaa92e852c7b960800000000000000
-      internalID: 7617770981735180837
+      spriteID: ec4ef985bb78cff80800000000000000
+      internalID: -8071427193439263538
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NPC0Walk_23
+      name: EliWalk_23
       rect:
         serializedVersion: 2
         x: 323
@@ -696,14 +804,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 74a0eb4552491bcb0800000000000000
-      internalID: -4849932435644872121
+      spriteID: 3406581d82eb5b020800000000000000
+      internalID: 2356999062521471043
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NPC0Walk_24
+      name: EliWalk_24
       rect:
         serializedVersion: 2
         x: 387
@@ -717,14 +825,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 84a9f37fcbbbefc40800000000000000
-      internalID: 5548078211243416136
+      spriteID: 2968b78830ab37980800000000000000
+      internalID: -8542279543854233966
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NPC0Walk_25
+      name: EliWalk_25
       rect:
         serializedVersion: 2
         x: 451
@@ -738,14 +846,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d51cde7bf4ee8540800000000000000
-      internalID: 5012195204126217686
+      spriteID: 270b9552455f65a90800000000000000
+      internalID: -7325398002118840206
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NPC0Walk_26
+      name: EliWalk_26
       rect:
         serializedVersion: 2
         x: 515
@@ -759,14 +867,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f28e5da9889680350800000000000000
-      internalID: 5983148140395882543
+      spriteID: 2b2e15a5e30bdc2f0800000000000000
+      internalID: -950910164455529806
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NPC0Walk_27
+      name: EliWalk_27
       rect:
         serializedVersion: 2
         x: 5
@@ -780,14 +888,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 01088838a4c85e430800000000000000
-      internalID: 3811606911301222416
+      spriteID: 2667ef9ea72e391f0800000000000000
+      internalID: -1039238071452797342
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NPC0Walk_28
+      name: EliWalk_28
       rect:
         serializedVersion: 2
         x: 68
@@ -801,14 +909,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f24006ec01c8e7da0800000000000000
-      internalID: -5945160454272711633
+      spriteID: daf66740cd45a0f90800000000000000
+      internalID: -6986678567967494227
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NPC0Walk_29
+      name: EliWalk_29
       rect:
         serializedVersion: 2
         x: 132
@@ -822,14 +930,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0eea24057e7531130800000000000000
-      internalID: 3536266783411580640
+      spriteID: 293dd32d26aed9a80800000000000000
+      internalID: -8458346814976961646
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NPC0Walk_30
+      name: EliWalk_30
       rect:
         serializedVersion: 2
         x: 196
@@ -843,14 +951,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5f45bf922d27f0d10800000000000000
-      internalID: 2094018598723605749
+      spriteID: f7eb6b52881046980800000000000000
+      internalID: -8546704508582445441
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NPC0Walk_31
+      name: EliWalk_31
       rect:
         serializedVersion: 2
         x: 260
@@ -864,14 +972,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c3c62b16c5f4d420800000000000000
-      internalID: 2654016311635919815
+      spriteID: a7e9044f8f0329b60800000000000000
+      internalID: 7751311754465943162
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NPC0Walk_32
+      name: EliWalk_32
       rect:
         serializedVersion: 2
         x: 322
@@ -885,14 +993,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5588015e9de354c00800000000000000
-      internalID: 884182007420061781
+      spriteID: c23c05bca50556a60800000000000000
+      internalID: 7666622291556483884
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NPC0Walk_33
+      name: EliWalk_33
       rect:
         serializedVersion: 2
         x: 388
@@ -906,14 +1014,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae71e8449e7a3cb40800000000000000
-      internalID: 5459391793622554602
+      spriteID: a5243f57fbf2d88f0800000000000000
+      internalID: -536720281223085478
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NPC0Walk_34
+      name: EliWalk_34
       rect:
         serializedVersion: 2
         x: 453
@@ -927,14 +1035,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a01c6a7a8fc84fd0800000000000000
-      internalID: -2357406211262115676
+      spriteID: df9a73bcaeda3eb60800000000000000
+      internalID: 7774248605714983421
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NPC0Walk_35
+      name: EliWalk_35
       rect:
         serializedVersion: 2
         x: 517
@@ -948,8 +1056,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fffec6ee61c2276e0800000000000000
-      internalID: -1841360820640092161
+      spriteID: 945045fd3aeafcdd0800000000000000
+      internalID: -2463558452298644151
       vertices: []
       indices: 
       edges: []
