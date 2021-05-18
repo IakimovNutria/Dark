@@ -40,6 +40,9 @@ public class Dialogue : Interaction
             if (!GUI.Button(new Rect(Screen.width / 2 - 250, 
                     Screen.height - 100 + 25 * i, 500, 25),
                 node[currentNode].PlayerAnswer[i].Text)) continue;
+            var storyBoolToChange = node[currentNode].PlayerAnswer[i].StoryBoolToChange;
+            if (storyBoolToChange != "")
+                GameManager.GM.ChangeStoryBool(storyBoolToChange);
             if (node [currentNode].PlayerAnswer [i].SpeakEnd) {
                 canObjectBeInteracted = false;
                 isDialogueEnd = true;
@@ -71,4 +74,5 @@ public class Answer
     public string Text;
     public int ToNode;
     public bool SpeakEnd;
+    public string StoryBoolToChange;
 }

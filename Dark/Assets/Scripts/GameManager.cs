@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
     public readonly Dictionary<string, bool> StoryBools = new Dictionary<string, bool>
     {
         {"isFirstRoomCleaned", false},
-        {"a", false}
+        {"isPlayerHelpEli", false}
     };
     private void Awake()
     {
@@ -82,7 +82,7 @@ public class GameManager : MonoBehaviour
         return GameObject.FindGameObjectsWithTag("Died");
     }
 
-    private void ChangeStoryBool(string storyBoolName)
+    public void ChangeStoryBool(string storyBoolName)
     {
         StoryBools[storyBoolName] = !StoryBools[storyBoolName];
     }
