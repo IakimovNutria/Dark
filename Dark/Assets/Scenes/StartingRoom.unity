@@ -4619,7 +4619,7 @@ GameObject:
   - component: {fileID: 742468611}
   - component: {fileID: 742468610}
   - component: {fileID: 742468609}
-  - component: {fileID: 742468612}
+  - component: {fileID: 742468608}
   m_Layer: 0
   m_Name: ClosedDoor
   m_TagString: Untagged
@@ -4642,6 +4642,29 @@ Transform:
   m_Father: {fileID: 2034841796}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &742468608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742468606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49140ed064af94d39a249ded909ecf55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canObjectBeInteracted: 0
+  isPlayerReadyToInteract: 0
+  node:
+  - NpcText: There's no enter
+    PlayerAnswer:
+    - Text: oh:(
+      ToNode: 0
+      SpeakEnd: 1
+      StoryBoolToChange: 
+  currentNode: 0
+  canRepeat: 1
 --- !u!60 &742468609
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -4816,28 +4839,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!114 &742468612
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 742468606}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49140ed064af94d39a249ded909ecf55, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canObjectBeInteracted: 0
-  isPlayerReadyToInteract: 0
-  node:
-  - NpcText: "\u043D\u0435\u0442"
-    PlayerAnswer:
-    - Text: ...
-      ToNode: 0
-      SpeakEnd: 1
-      StoryBoolToChange: 
-  currentNode: 0
 --- !u!1 &745602673
 GameObject:
   m_ObjectHideFlags: 0
@@ -5821,6 +5822,7 @@ MonoBehaviour:
       SpeakEnd: 1
       StoryBoolToChange: isFirstDialogueEnd
   currentNode: 0
+  canRepeat: 0
 --- !u!212 &902455205
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5880,7 +5882,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 902455201}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.499, y: -2.288, z: 0}
+  m_LocalPosition: {x: -5.354, y: -3.886, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 976920493}
@@ -7669,6 +7671,7 @@ GameObject:
   - component: {fileID: 1600107757}
   - component: {fileID: 1600107759}
   - component: {fileID: 1600107760}
+  - component: {fileID: 1600107761}
   m_Layer: 3
   m_Name: LeftDoor
   m_TagString: Untagged
@@ -7881,6 +7884,29 @@ MonoBehaviour:
   canObjectBeInteracted: 0
   isPlayerReadyToInteract: 0
   nextScene: StartingAisle
+--- !u!114 &1600107761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1600107755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49140ed064af94d39a249ded909ecf55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canObjectBeInteracted: 0
+  isPlayerReadyToInteract: 0
+  node:
+  - NpcText: There's no enter
+    PlayerAnswer:
+    - Text: ok...
+      ToNode: 0
+      SpeakEnd: 1
+      StoryBoolToChange: 
+  currentNode: 0
+  canRepeat: 1
 --- !u!1 &1600302187
 GameObject:
   m_ObjectHideFlags: 0

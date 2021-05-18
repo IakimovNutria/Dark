@@ -8,6 +8,8 @@ public class Dialogue : Interaction
     protected bool isActivateDialogue;
     protected string dialogueActivateKey = "e";
     protected bool isDialogueEnd;
+    public bool canRepeat;
+    private bool isGameResumed;
     
     public void Start()
     {
@@ -18,20 +20,25 @@ public class Dialogue : Interaction
     {
         if (!isActivateDialogue)
         {
-            if (isDialogueEnd)
+            if (isDialogueEnd && !isGameResumed)
+            {
                 GameManager.GM.ResumeGame();
-            isActivateDialogue = ActivateCondition() && !isDialogueEnd;
+                isGameResumed = true;
+            }
+
+            isActivateDialogue = ActivateCondition() && (!isDialogueEnd || canRepeat);
             return;
         }
-
-        GameManager.GM.FreezeGame();
-
+        
         if (!isPlayerReadyToInteract) 
         {
             isActivateDialogue = false;
             return;
         }
-
+        
+        GameManager.GM.FreezeGame();
+        isGameResumed = false;
+        
         GUI.Box (new Rect (Screen.width / 2 - 300, Screen.height - 200, 600, 250), "");
         GUI.Label (new Rect (Screen.width / 2 - 250, 
             Screen.height - 180, 500, 90), node [currentNode].NpcText);
@@ -44,7 +51,8 @@ public class Dialogue : Interaction
             if (storyBoolToChange != "")
                 GameManager.GM.ChangeStoryBool(storyBoolToChange);
             if (node [currentNode].PlayerAnswer [i].SpeakEnd) {
-                canObjectBeInteracted = false;
+                if (!canRepeat)
+                    canObjectBeInteracted = false;
                 isDialogueEnd = true;
                 isActivateDialogue = false;
             }
