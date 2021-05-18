@@ -10,13 +10,13 @@ public static class Algorithms
     {
         public readonly T Value;
         public readonly SinglyLinkedList<T> Previous;
-        public readonly int Length;
+        private readonly int length;
 
         public SinglyLinkedList(T value, SinglyLinkedList<T> previous = null)
         {
             Value = value;
             Previous = previous;
-            Length = previous?.Length + 1 ?? 1;
+            length = previous?.length + 1 ?? 1;
         }
 
         public IEnumerator<T> GetEnumerator()
