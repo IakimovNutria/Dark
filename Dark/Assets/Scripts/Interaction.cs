@@ -38,7 +38,7 @@ public class Interaction : MonoBehaviour
         isPlayerReadyToInteract = canInteract;
     }
 
-    protected virtual bool ActivateDialogueCondition()
+    protected virtual bool ActivateCondition()
     {
         throw new System.NotImplementedException();
     }

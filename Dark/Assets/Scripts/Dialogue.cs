@@ -9,18 +9,18 @@ public class Dialogue : Interaction
     protected string dialogueActivateKey = "e";
     protected bool isDialogueEnd;
     
-    protected void DialogueStart()
+    public void Start()
     {
         InteractionInitialize(4);
     }
 
-    protected void DialogueOnGUI()
+    public void OnGUI()
     {
         if (!isActivateDialogue)
         {
             if (isDialogueEnd)
                 GameManager.GM.ResumeGame();
-            isActivateDialogue = ActivateDialogueCondition() && !isDialogueEnd;
+            isActivateDialogue = ActivateCondition() && !isDialogueEnd;
             return;
         }
 
@@ -53,7 +53,7 @@ public class Dialogue : Interaction
         
     }
 
-    protected override bool ActivateDialogueCondition()
+    protected override bool ActivateCondition()
     {
         return Input.GetKey(dialogueActivateKey);
     }

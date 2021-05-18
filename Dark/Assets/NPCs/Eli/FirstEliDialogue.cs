@@ -5,20 +5,23 @@ using UnityEngine;
 
 public class FirstEliDialogue : Dialogue
 {
-    private void Start()
+    private Dialogue dialogue;
+
+    private new void Start()
     {
-        DialogueStart();
+        dialogue = gameObject.GetComponent<FirstEliDialogue>();
+        dialogue.Start();
         canObjectBeInteracted = false;
         isPlayerReadyToInteract = true;
     }
 
-    protected override bool ActivateDialogueCondition()
+    protected override bool ActivateCondition()
     {
         return GameManager.GM.StoryBools["isFirstRoomCleaned"];
     }
 
-    private void OnGUI()
+    private new void OnGUI()
     {
-        DialogueOnGUI();
+        dialogue.OnGUI();
     }
 }

@@ -22,8 +22,9 @@ public class GameManager : MonoBehaviour
     public readonly Dictionary<string, bool> StoryBools = new Dictionary<string, bool>
     {
         {"isFirstRoomCleaned", false},
+        {"isFirstDialogueEnd", false},
         {"isPlayerHelpEli", false}
-    };
+};
     private void Awake()
     {
         if (GM == null)

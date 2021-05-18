@@ -8,16 +8,16 @@ public class SceneChange : Interaction
     public string nextScene;
 
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
         InteractionInitialize(3);
         SceneLoad.currentScene = SceneManager.GetActiveScene().name;
     }
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
-        if (isPlayerReadyToInteract && Input.GetKeyDown(GameManager.GM.KeyObgectsInteraction) && nextScene != "")
+        if (isPlayerReadyToInteract && ActivateCondition() && nextScene != "")
             ChangeScene();
     }
 
@@ -30,5 +30,10 @@ public class SceneChange : Interaction
         DontDestroyOnLoad(GameObject.FindGameObjectWithTag("MainCamera"));
         DontDestroyOnLoad(GameObject.FindGameObjectWithTag("Flashlight"));
         SceneManager.LoadScene(nextScene);
+    }
+
+    protected override bool ActivateCondition()
+    {
+        return Input.GetKeyDown(GameManager.GM.KeyObgectsInteraction);
     }
 }
