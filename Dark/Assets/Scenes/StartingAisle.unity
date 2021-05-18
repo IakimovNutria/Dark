@@ -2823,7 +2823,6 @@ GameObject:
   - component: {fileID: 1839489233}
   - component: {fileID: 1839489236}
   - component: {fileID: 1839489235}
-  - component: {fileID: 1839489237}
   m_Layer: 0
   m_Name: RightDoor
   m_TagString: Untagged
@@ -3064,21 +3063,6 @@ PolygonCollider2D:
       - {x: -3.6928294, y: -4.496716}
       - {x: -3.7704594, y: -4.387533}
       - {x: -3.9912457, y: -4.2726655}
---- !u!114 &1839489237
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1839489231}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46611e9584b479148a22c1f5bc8915cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canObjectBeInteracted: 0
-  isPlayerReadyToInteract: 0
-  nextScene: StartingRoom
 --- !u!1 &2138236585
 GameObject:
   m_ObjectHideFlags: 0
