@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -33,10 +34,10 @@ public class HeatBox : MonoBehaviour
         
     }
 
-    public float GetDamage()
+    private void OnDestroy()
     {
-        var takenDamage = damage;
-        damage = 0;
-        return takenDamage;
+        Light2DEmitter.OnBeamStay -= OnBeamStay;
+        Light2DEmitter.OnBeamEnter -= OnBeamEnter;
+        Light2DEmitter.OnBeamExit -= OnBeamExit; 
     }
 }
