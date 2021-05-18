@@ -8,7 +8,7 @@ public class FirstRoomSceneChange : SceneChange
 
     private new void Start()
     {
-        sceneChange = gameObject.GetComponent<SceneChange>();
+        sceneChange = this;
         sceneChange.Start();
         canObjectBeInteracted = false;
         isPlayerReadyToInteract = true;

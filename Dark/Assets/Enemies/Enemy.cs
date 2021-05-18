@@ -5,12 +5,14 @@ using UnityEngine;
 
 public class Enemy : AliveEntity
 {
+    private AliveEntity aliveEntity;
     private Transform playerTransform;
     private readonly float damageRadius = 0.5f;
     private readonly float maxEnemyHealth = 100;
     private Player player;
     private void Start()
     {
+        aliveEntity = this;
         var playerGameObject = GameObject.FindGameObjectWithTag("Player");
         playerTransform = playerGameObject.transform;
         player = playerGameObject.GetComponent<Player>();
@@ -18,9 +20,9 @@ public class Enemy : AliveEntity
         SetMaxHealth(maxEnemyHealth);
     }
 
-    private void Update()
+    private new void Update()
     { 
-        AliveUpdate();
+        aliveEntity.Update();
         DamagePlayer();
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("Died"))
             Destroy(gameObject);

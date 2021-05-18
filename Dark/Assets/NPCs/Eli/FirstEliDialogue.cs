@@ -9,7 +9,7 @@ public class FirstEliDialogue : Dialogue
 
     private new void Start()
     {
-        dialogue = gameObject.GetComponent<FirstEliDialogue>();
+        dialogue = this;
         dialogue.Start();
         canObjectBeInteracted = false;
         isPlayerReadyToInteract = true;

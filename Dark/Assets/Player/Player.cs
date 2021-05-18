@@ -8,14 +8,16 @@ public class Player : AliveEntity
 {
     private float speed = 1;
     private float maxPlayerHealth = 1000;
-        
+    private AliveEntity aliveEntity;
+    
     private void Start()
-    { 
+    {
+        aliveEntity = this;
         SetMaxHealth(maxPlayerHealth);
     }
-    private void Update()
+    private new void Update()
     {
-        AliveUpdate();
+        aliveEntity.Update();
     }
     protected override float GetHorizontalVelocity()
     {

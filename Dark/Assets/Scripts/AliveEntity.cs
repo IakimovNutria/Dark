@@ -13,7 +13,7 @@ public class AliveEntity : MonoBehaviour
     public Bar healthBar;
     private bool haveHealthBar;
 
-    protected void AliveUpdate()
+    public void Update()
     {
         if (Health == 0)
         {
