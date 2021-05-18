@@ -24,8 +24,6 @@ public class Enemy : AliveEntity
     { 
         aliveEntity.Update();
         DamagePlayer();
-        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Died"))
-            Destroy(gameObject);
     }
 
     protected override float GetHorizontalVelocity()

@@ -26,6 +26,8 @@ public class AliveEntity : MonoBehaviour
         {
             Move();
         }
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Died"))
+            Destroy(gameObject);
     }
 
     private void Move()
