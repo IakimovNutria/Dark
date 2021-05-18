@@ -37,4 +37,9 @@ public class Interaction : MonoBehaviour
         interactionIndicator.SetActive(canInteract);
         isPlayerReadyToInteract = canInteract;
     }
+
+    protected virtual bool ActivateDialogueCondition()
+    {
+        throw new System.NotImplementedException();
+    }
 }

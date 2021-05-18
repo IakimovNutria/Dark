@@ -7,17 +7,31 @@ public class Dialogue : Interaction
     public int currentNode;
     protected bool isActivateDialogue;
     protected string dialogueActivateKey = "e";
-
-    private void Start()
+    protected bool isDialogueEnd;
+    
+    protected void DialogueStart()
     {
         InteractionInitialize(4);
     }
 
-    private void OnGUI()
+    protected void DialogueOnGUI()
     {
-        if (!isActivateDialogue || !isPlayerReadyToInteract)
+        if (!isActivateDialogue)
+        {
+            if (isDialogueEnd)
+                GameManager.GM.ResumeGame();
+            isActivateDialogue = ActivateDialogueCondition() && !isDialogueEnd;
             return;
-        
+        }
+
+        GameManager.GM.FreezeGame();
+
+        if (!isPlayerReadyToInteract) 
+        {
+            isActivateDialogue = false;
+            return;
+        }
+
         GUI.Box (new Rect (Screen.width / 2 - 300, Screen.height - 200, 600, 250), "");
         GUI.Label (new Rect (Screen.width / 2 - 250, 
             Screen.height - 180, 500, 90), node [currentNode].NpcText);
@@ -28,11 +42,20 @@ public class Dialogue : Interaction
                 node[currentNode].PlayerAnswer[i].Text)) continue;
             if (node [currentNode].PlayerAnswer [i].SpeakEnd) {
                 canObjectBeInteracted = false;
+                isDialogueEnd = true;
+                isActivateDialogue = false;
             }
             currentNode = node [currentNode].PlayerAnswer [i].ToNode;
         }
+        
+    }
+
+    protected override bool ActivateDialogueCondition()
+    {
+        return Input.GetKey(dialogueActivateKey);
     }
 }
+
 
 [System.Serializable]
 public class DialogueNode

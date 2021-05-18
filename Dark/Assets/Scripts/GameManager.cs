@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -18,7 +19,7 @@ public class GameManager : MonoBehaviour
     public KeyCode KeyObgectsInteraction { get; set; }
     public KeyCode KeyDialogues { get; set; }
 
-    public static readonly Dictionary<string, bool> StoryBools = new Dictionary<string, bool>
+    public readonly Dictionary<string, bool> StoryBools = new Dictionary<string, bool>
     {
         {"isFirstRoomCleaned", false},
         {"a", false}
@@ -43,7 +44,7 @@ public class GameManager : MonoBehaviour
         {
             
         }
-        else if (GetEnemiesInScene() is null)
+        else if (!GetEnemiesInScene().Any() && !GetDiedInScene().Any())
             ChangeStoryBool("isFirstRoomCleaned");
     }
     
@@ -74,6 +75,11 @@ public class GameManager : MonoBehaviour
     private IEnumerable<GameObject> GetEnemiesInScene()
     {
         return GameObject.FindGameObjectsWithTag("Enemy");
+    }
+    
+    private IEnumerable<GameObject> GetDiedInScene()
+    {
+        return GameObject.FindGameObjectsWithTag("Died");
     }
 
     private void ChangeStoryBool(string storyBoolName)
