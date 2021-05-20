@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class ChestScript : Interaction
 {
-    // Start is called before the first frame update
     public string chestName;
     public int battaries;
 
@@ -22,7 +21,7 @@ public class ChestScript : Interaction
     // Update is called once per frame
     void Update()
     {
-        if (battaries > 0 && Input.GetKeyDown(GameManager.GM.KeyObgectsInteraction))
+        if (isPlayerReadyToInteract && canObjectBeInteracted && Input.GetKeyDown(GameManager.GM.KeyObgectsInteraction))
         {
             enterText.SetActive(false);
             interactionIndicator.SetActive(false);

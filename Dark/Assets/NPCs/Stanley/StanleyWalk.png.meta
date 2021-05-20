@@ -1,0 +1,984 @@
+fileFormatVersion: 2
+guid: d488bf43302b6ea4c86587cbf236bd22
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2483816395431047873
+    second: StanleyWalk_0
+  - first:
+      213: -8341364863194746313
+    second: StanleyWalk_1
+  - first:
+      213: -7732146095673131041
+    second: StanleyWalk_2
+  - first:
+      213: 2102327128423244072
+    second: StanleyWalk_3
+  - first:
+      213: -5291308926632389286
+    second: StanleyWalk_4
+  - first:
+      213: -5738228985883379409
+    second: StanleyWalk_5
+  - first:
+      213: 5917991603085671025
+    second: StanleyWalk_6
+  - first:
+      213: -506073616338464500
+    second: StanleyWalk_7
+  - first:
+      213: -5507759605494231324
+    second: StanleyWalk_8
+  - first:
+      213: 2532986633126080600
+    second: StanleyWalk_9
+  - first:
+      213: 300010283954873940
+    second: StanleyWalk_10
+  - first:
+      213: 621806809227170965
+    second: StanleyWalk_11
+  - first:
+      213: 3771665183101757573
+    second: StanleyWalk_12
+  - first:
+      213: 4268856479905843158
+    second: StanleyWalk_13
+  - first:
+      213: -4559116263053302673
+    second: StanleyWalk_14
+  - first:
+      213: -8410326412011776012
+    second: StanleyWalk_15
+  - first:
+      213: 597898900667137956
+    second: StanleyWalk_16
+  - first:
+      213: -5333823118515749536
+    second: StanleyWalk_17
+  - first:
+      213: -2131938726905552339
+    second: StanleyWalk_18
+  - first:
+      213: -305011563637071879
+    second: StanleyWalk_19
+  - first:
+      213: -4560563565628894969
+    second: StanleyWalk_20
+  - first:
+      213: 6743431678640720636
+    second: StanleyWalk_21
+  - first:
+      213: 9010983836346815915
+    second: StanleyWalk_22
+  - first:
+      213: -6820384089950892949
+    second: StanleyWalk_23
+  - first:
+      213: -4720249488110334444
+    second: StanleyWalk_24
+  - first:
+      213: 6204953676258444108
+    second: StanleyWalk_25
+  - first:
+      213: -7050597277925475124
+    second: StanleyWalk_26
+  - first:
+      213: -9098013949361307427
+    second: StanleyWalk_27
+  - first:
+      213: -3450990600525587794
+    second: StanleyWalk_28
+  - first:
+      213: 792827903003283571
+    second: StanleyWalk_29
+  - first:
+      213: 7785673701576136594
+    second: StanleyWalk_30
+  - first:
+      213: -4188400145022890819
+    second: StanleyWalk_31
+  - first:
+      213: -9002674827326760596
+    second: StanleyWalk_32
+  - first:
+      213: 4942058327196781253
+    second: StanleyWalk_33
+  - first:
+      213: 733363045633665024
+    second: StanleyWalk_34
+  - first:
+      213: 8770527185305640525
+    second: StanleyWalk_35
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: StanleyWalk_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192.75
+        width: 64.666664
+        height: 64.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c275f01ad9487220800000000000000
+      internalID: 2483816395431047873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StanleyWalk_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 192.75
+        width: 64.666664
+        height: 64.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7323a53f9d48d3c80800000000000000
+      internalID: -8341364863194746313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StanleyWalk_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 192.75
+        width: 64.666664
+        height: 64.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdfbaf7b716e1b490800000000000000
+      internalID: -7732146095673131041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StanleyWalk_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192.75
+        width: 64.666664
+        height: 64.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 821a55b7267fc2d10800000000000000
+      internalID: 2102327128423244072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StanleyWalk_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 192.75
+        width: 64.666664
+        height: 64.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a551937d09e7196b0800000000000000
+      internalID: -5291308926632389286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StanleyWalk_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 192.75
+        width: 64.666664
+        height: 64.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f293298c327bd50b0800000000000000
+      internalID: -5738228985883379409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StanleyWalk_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 192.75
+        width: 64.666664
+        height: 64.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17a7aa5120ee02250800000000000000
+      internalID: 5917991603085671025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StanleyWalk_7
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 192.75
+        width: 64.666664
+        height: 64.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c01d2fb2ab01af8f0800000000000000
+      internalID: -506073616338464500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StanleyWalk_8
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 192.75
+        width: 64.666664
+        height: 64.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ee4546f1d18093b0800000000000000
+      internalID: -5507759605494231324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StanleyWalk_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128.75
+        width: 64.666664
+        height: 64.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 850fa482ce9f62320800000000000000
+      internalID: 2532986633126080600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StanleyWalk_10
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128.75
+        width: 64.666664
+        height: 64.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 456281483c9d92400800000000000000
+      internalID: 300010283954873940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StanleyWalk_11
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128.75
+        width: 64.666664
+        height: 64.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59497ee9ff911a800800000000000000
+      internalID: 621806809227170965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StanleyWalk_12
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128.75
+        width: 64.666664
+        height: 64.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5882d7a3085a75430800000000000000
+      internalID: 3771665183101757573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StanleyWalk_13
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128.75
+        width: 64.666664
+        height: 64.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d789e1e9560e3b30800000000000000
+      internalID: 4268856479905843158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StanleyWalk_14
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 128.75
+        width: 64.666664
+        height: 64.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f64600bf9e3cab0c0800000000000000
+      internalID: -4559116263053302673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StanleyWalk_15
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 128.75
+        width: 64.666664
+        height: 64.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f7d3f620b4884b80800000000000000
+      internalID: -8410326412011776012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StanleyWalk_16
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 128.75
+        width: 64.666664
+        height: 64.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4af7cd1e1e92c4800800000000000000
+      internalID: 597898900667137956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StanleyWalk_17
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 128.75
+        width: 64.666664
+        height: 64.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06d3a1e22247af5b0800000000000000
+      internalID: -5333823118515749536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StanleyWalk_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64.75
+        width: 64.666664
+        height: 64.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2265ebf505d962e0800000000000000
+      internalID: -2131938726905552339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StanleyWalk_19
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64.75
+        width: 64.666664
+        height: 64.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ff9601599164cbf0800000000000000
+      internalID: -305011563637071879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StanleyWalk_20
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64.75
+        width: 64.666664
+        height: 64.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 701d917999f95b0c0800000000000000
+      internalID: -4560563565628894969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StanleyWalk_21
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64.75
+        width: 64.666664
+        height: 64.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfa0f7c226b759d50800000000000000
+      internalID: 6743431678640720636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StanleyWalk_22
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 64.75
+        width: 64.666664
+        height: 64.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba51d329e027d0d70800000000000000
+      internalID: 9010983836346815915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StanleyWalk_23
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 64.75
+        width: 64.666664
+        height: 64.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6c40ce5ec02951a0800000000000000
+      internalID: -6820384089950892949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StanleyWalk_24
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 64.75
+        width: 64.666664
+        height: 64.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41ec6f9791e4e7eb0800000000000000
+      internalID: -4720249488110334444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StanleyWalk_25
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 64.75
+        width: 64.666664
+        height: 64.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4383294e7c6c1650800000000000000
+      internalID: 6204953676258444108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StanleyWalk_26
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 64.75
+        width: 64.666664
+        height: 64.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccc7ae2a12f372e90800000000000000
+      internalID: -7050597277925475124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StanleyWalk_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0.75
+        width: 64.666664
+        height: 64.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd045c2348c5db180800000000000000
+      internalID: -9098013949361307427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StanleyWalk_28
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0.75
+        width: 64.666664
+        height: 64.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaad57c355e9b10d0800000000000000
+      internalID: -3450990600525587794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StanleyWalk_29
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0.75
+        width: 64.666664
+        height: 64.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3705786f6c0b00b00800000000000000
+      internalID: 792827903003283571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StanleyWalk_30
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0.75
+        width: 64.666664
+        height: 64.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 297db873bf44c0c60800000000000000
+      internalID: 7785673701576136594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StanleyWalk_31
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0.75
+        width: 64.666664
+        height: 64.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbc47ba5240dfd5c0800000000000000
+      internalID: -4188400145022890819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StanleyWalk_32
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0.75
+        width: 64.666664
+        height: 64.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6956d851f2101380800000000000000
+      internalID: -9002674827326760596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StanleyWalk_33
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0.75
+        width: 64.666664
+        height: 64.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ca43db4dd7b59440800000000000000
+      internalID: 4942058327196781253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StanleyWalk_34
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0.75
+        width: 64.666664
+        height: 64.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 008a462fdcd6d2a00800000000000000
+      internalID: 733363045633665024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StanleyWalk_35
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0.75
+        width: 64.666664
+        height: 64.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4e9c0db10c27b970800000000000000
+      internalID: 8770527185305640525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
