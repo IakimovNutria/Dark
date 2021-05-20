@@ -8,11 +8,17 @@ public class AliveEntity : MonoBehaviour
     public float Health { get; private set; } = 1;
 
     private float maxHealth = 1;
+    [NonSerialized]
     public Animator animator;
-    public Rigidbody2D body;
+    protected Rigidbody2D body;
     public Bar healthBar;
     private bool haveHealthBar;
 
+    public void Start()
+    {
+        animator = gameObject.GetComponent<Animator>();
+        body = gameObject.GetComponent<Rigidbody2D>();
+    }
     public void Update()
     {
         if (Health == 0)

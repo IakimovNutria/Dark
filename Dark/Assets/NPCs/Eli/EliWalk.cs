@@ -3,14 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EliWalkToRoom : AliveEntity
+public class EliWalk : AliveEntity
 {
     private AliveEntity aliveEntity;
     private float speed = 0.2f;
-    private Vector2 destination = new Vector2(-5.35f, -2.51f);
-    private void Start()
+    public Vector2 destination;  
+    private new void Start()
     {
         aliveEntity = this;
+        aliveEntity.Start();
     }
 
     private new void Update()

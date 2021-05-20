@@ -6,16 +6,20 @@ public class Interaction : MonoBehaviour
 {
     public bool canObjectBeInteracted;
     public bool isPlayerReadyToInteract;
+    public bool noInteractionIndicator;
     protected GameObject interactionIndicator;
     protected GameObject enterText;
     protected void InteractionInitialize(int textIndex)
     {
         var canvas = GameObject.FindGameObjectWithTag("Canvas");
         enterText = canvas.transform.GetChild(textIndex).gameObject;
-        interactionIndicator = gameObject.transform.GetChild(0).gameObject;
+        if (!noInteractionIndicator)
+        {
+            interactionIndicator = gameObject.transform.GetChild(0).gameObject;
+            interactionIndicator.SetActive(false);
+        }
 
         canObjectBeInteracted = true;
-        interactionIndicator.SetActive(false);
         enterText.SetActive(false);
     }
 
@@ -34,7 +38,8 @@ public class Interaction : MonoBehaviour
     private void SetAbilities(bool canInteract)
     {
         enterText.SetActive(canInteract);
-        interactionIndicator.SetActive(canInteract);
+        if (!noInteractionIndicator)
+            interactionIndicator.SetActive(canInteract);
         isPlayerReadyToInteract = canInteract;
     }
 

@@ -26,6 +26,11 @@ public class Player : AliveEntity
         SetMaxHealth(MAXPlayerHealth);
     }
 
+    private new void Start()
+    {
+        aliveEntity.Start();
+    }
+
     private new void Update()
     {
         aliveEntity.Update();

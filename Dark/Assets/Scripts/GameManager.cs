@@ -29,7 +29,8 @@ public class GameManager : MonoBehaviour
         {"isPlayerHelpEli", false},
         {"isEliReachedRoom", false},
         {"isPlayerHelpEmily", false},
-        {"doesPlayerKnowStanley", false}
+        {"isPlayerAskedAboutToy", false},
+        {"doesPlayerKnowStanley", false},
     };
     private void Awake()
     {

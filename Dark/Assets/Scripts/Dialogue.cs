@@ -57,9 +57,9 @@ public class Dialogue : Interaction
         {
             buttonCount++;
             if (answer.IsAnswered &&
-                !answer.canRepeat || 
+                answer.cantRepeat || 
                 !string.IsNullOrEmpty(answer.storyBoolToGetAnswer) &&
-                GameManager.GM.StoryBools[answer.storyBoolToGetAnswer] != answer.storyBoolMustBeFalse)
+                GameManager.GM.StoryBools[answer.storyBoolToGetAnswer] == answer.storyBoolMustBeFalse)
             {
                 buttonCount--;
                 continue;
@@ -67,7 +67,7 @@ public class Dialogue : Interaction
 
             if (!GUI.Button(new Rect(Screen.width / 2 - 250, 
                     Screen.height + indention + 30 * buttonCount, 500, 25),
-                answer.text)) continue;
+                string.IsNullOrEmpty(answer.text) ? "..." : answer.text)) continue;
             answer.IsAnswered = true;
             var storyBoolToChange = answer.storyBoolToChange;
             if (!string.IsNullOrEmpty(storyBoolToChange))
@@ -106,7 +106,7 @@ public class Answer
     [NonSerialized]
     public bool IsAnswered;
     
-    public bool canRepeat;
+    public bool cantRepeat;
     public string text;
     public int toNode;
     public bool speakEnd;
