@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class FirstEliDialogue : Dialogue
 {
-    private Dialogue dialogue;
-
     private new void Start()
     {
         dialogue = this;

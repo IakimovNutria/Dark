@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
 
     public readonly Dictionary<string, bool> StoryBools = new Dictionary<string, bool>
     {
+        {"isGameStarted", false},
         {"isFirstRoomCleaned", false},
         {"isFirstDialogueEnd", false},
         {"isPlayerHelpEli", false}
@@ -53,8 +54,10 @@ public class GameManager : MonoBehaviour
         {
 
         }
-        else if (!GetEnemiesInScene().Any() && !GetDiedInScene().Any())
+        else if (!GetEnemiesInScene().Any() && !GetDiedInScene().Any() && StoryBools["isGameStarted"])
             ChangeStoryBool("isFirstRoomCleaned");
+        else if (GetEnemiesInScene().Any())
+            ChangeStoryBool("isGameStarted");
     }
     
     public void FreezeGame()
