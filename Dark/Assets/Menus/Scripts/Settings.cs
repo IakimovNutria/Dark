@@ -7,18 +7,19 @@ using UnityEngine.UI;
 public class Settings : MonoBehaviour
 {
     public Transform buttonsObject;
+    public GameObject playerCanvas;
+
     private Event keyEvent;
     private TextMeshProUGUI buttonText;
     private bool waitingForKey;
     private KeyCode newKey;
 
-    // Start is called before the first frame update
-    void Start()
+    public void SetSettings()
     {
         for (int i = 0; i < buttonsObject.childCount; i++)
         {
             var button = buttonsObject.GetChild(i);
-            switch(button.name)
+            switch (button.name)
             {
                 case ("ForwardButton"):
                     button.GetComponentInChildren<TextMeshProUGUI>().text = GameManager.GM.KeyUp.ToString();
@@ -63,6 +64,9 @@ public class Settings : MonoBehaviour
     public IEnumerator AssignKey(string keyName)
     {
         waitingForKey = true;
+        var thisButton = UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject;
+        thisButton.GetComponentInChildren<TextMeshProUGUI>().text = "";
+
         yield return WaitForKey();
 
         switch(keyName)
@@ -87,9 +91,11 @@ public class Settings : MonoBehaviour
                 break;
             case ("ObjInteractionButton"):
                 SetKey("KeyObgectsInteraction");
+                UpdateInteractionHint();
                 break;
             case ("DialoguesButton"):
                 SetKey("KeyDialogues");
+                UpdateDialogueHint();
                 break;
         }
         yield return null;
@@ -102,6 +108,18 @@ public class Settings : MonoBehaviour
         buttonText.text = newKey.ToString();
     }
 
+    private void UpdateInteractionHint()
+    {
+        if (playerCanvas != null)
+            playerCanvas.GetComponent<CanvasHints>().SetInteractionHint();
+    }
+
+    private void UpdateDialogueHint()
+    {
+        if (playerCanvas != null)
+            playerCanvas.GetComponent<CanvasHints>().SetDialogueHint();
+    }
+
     public void SendText(TextMeshProUGUI text)
     {
         buttonText = text;
@@ -111,7 +129,8 @@ public class Settings : MonoBehaviour
     {
         keyEvent = Event.current;
 
-        if(keyEvent.isKey && waitingForKey)
+
+        if (keyEvent.isKey && waitingForKey)
         {
             waitingForKey = false;
             newKey = keyEvent.keyCode;

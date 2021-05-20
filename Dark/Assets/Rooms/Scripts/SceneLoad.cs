@@ -17,7 +17,6 @@ public class SceneLoad : MonoBehaviour
 
     private void OnLevelWasLoaded(int level)
     {
-        //var player = Player.Instance.gameObject.transform;
         if (prevSceneIndex == rightScene)
             Player.Instance.gameObject.transform.position = rightStart;
         if (prevSceneIndex == leftScene)
