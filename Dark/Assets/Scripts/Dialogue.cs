@@ -52,7 +52,7 @@ public class Dialogue : Interaction
         for (var i = 0; i < node[currentNode].playerAnswer.Length; i++)
         {
             if (node[currentNode].playerAnswer[i].IsAnswered && 
-                !node[currentNode].playerAnswer[i].canRepeat && node.Length != 1)
+                !node[currentNode].playerAnswer[i].canRepeat)
                 continue;
             
             if (!GUI.Button(new Rect(Screen.width / 2 - 250, 

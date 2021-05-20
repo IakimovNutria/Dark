@@ -29,8 +29,9 @@ public class GameManager : MonoBehaviour
         {"isFirstRoomCleaned", false},
         {"isFirstDialogueEnd", false},
         {"isPlayerHelpEli", false},
-        {"isPlayerHelpEmily", false}
-};
+        {"isEliReachedRoom", false},
+        {"isPlayerHelpEmily", false},
+    };
     private void Awake()
     {
         if (GM == null)
