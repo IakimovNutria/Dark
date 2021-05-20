@@ -106,11 +106,12 @@ public class Training : Interaction
     private static void OnGuiTraining(IReadOnlyList<string> trainingText, ref int index)
     {
         GameManager.GM.FreezeGame();
-        GUI.Box (new Rect (Screen.width / 2 - 300, Screen.height - 200, 600, 250), "");
+        GUI.Box (new Rect (Screen.width / 2 - 300, Screen.height - 250, 600, 240), 
+            "Обучение");
         GUI.Label (new Rect (Screen.width / 2 - 250, 
             Screen.height - 180, 500, 90), trainingText[index]);
-        if (GUI.Button(new Rect(Screen.width / 2 - 250,
-                Screen.height - 100 + 25, 500, 25),
+        if (GUI.Button(new Rect(Screen.width / 2 - 250, 
+            Screen.height - 100 + 25, 500, 25), 
             "Далее"))
             index++;
     }

@@ -6604,7 +6604,7 @@ MonoBehaviour:
   - {fileID: 772047146}
   lightType: 0
   lightDetail: 100
-  lightSize: 5
+  lightSize: 0.001
   coneAngle: 30
   lightMaterial: {fileID: 2100000, guid: 50bab7521dc28c847ab56bfc11bb457e, type: 2}
   lightColor: {r: 0.745283, g: 0.5947196, b: 0.36912602, a: 0.16470589}
