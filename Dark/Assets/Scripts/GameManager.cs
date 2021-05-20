@@ -56,7 +56,7 @@ public class GameManager : MonoBehaviour
         }
         else if (!GetEnemiesInScene().Any() && !GetDiedInScene().Any() && StoryBools["isGameStarted"])
             ChangeStoryBool("isFirstRoomCleaned");
-        else if (GetEnemiesInScene().Any())
+        else if (GetEnemiesInScene().Any() && !StoryBools["isGameStarted"])
             ChangeStoryBool("isGameStarted");
     }
     
