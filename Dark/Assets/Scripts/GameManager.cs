@@ -28,7 +28,8 @@ public class GameManager : MonoBehaviour
         {"isFirstDialogueEnd", false},
         {"isPlayerHelpEli", false},
         {"isEliReachedRoom", false},
-        {"isPlayerHelpEmily", false}
+        {"isPlayerHelpEmily", false},
+        {"doesPlayerKnowStanley", false}
     };
     private void Awake()
     {
