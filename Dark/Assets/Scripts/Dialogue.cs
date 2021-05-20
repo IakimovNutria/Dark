@@ -45,30 +45,38 @@ public class Dialogue : Interaction
             }
         GameManager.GM.FreezeGame();
         isGameResumed = false;
-        GUI.Box (new Rect (Screen.width / 2 - 300, Screen.height - 200, 600, 250), "");
+        GUI.Box (new Rect (Screen.width / 2 - 300, Screen.height - 250, 600, 240), "");
         GUI.Label (new Rect (Screen.width / 2 - 250, 
-            Screen.height - 180, 500, 90), node[currentNode].npcText);
-        
-        for (var i = 0; i < node[currentNode].playerAnswer.Length; i++)
+            Screen.height - 230, 500, 90), node[currentNode].npcText);
+
+
+        var indention = node[currentNode].npcText == "" ? -260 : -160;
+
+        var buttonCount = 0;
+        foreach (var answer in node[currentNode].playerAnswer)
         {
-            if (node[currentNode].playerAnswer[i].IsAnswered && 
-                !node[currentNode].playerAnswer[i].canRepeat)
+            buttonCount++;
+            if (answer.IsAnswered &&
+                !answer.canRepeat)
+            {
+                buttonCount--;
                 continue;
-            
+            }
+
             if (!GUI.Button(new Rect(Screen.width / 2 - 250, 
-                    Screen.height - 100 + 25 * i, 500, 25),
-                node[currentNode].playerAnswer[i].text)) continue;
-            node[currentNode].playerAnswer[i].IsAnswered = true;
-            var storyBoolToChange = node[currentNode].playerAnswer[i].storyBoolToChange;
+                    Screen.height + indention + 30 * buttonCount, 500, 25),
+                answer.text)) continue;
+            answer.IsAnswered = true;
+            var storyBoolToChange = answer.storyBoolToChange;
             if (storyBoolToChange != "")
                 GameManager.GM.ChangeStoryBool(storyBoolToChange);
-            if (node [currentNode].playerAnswer [i].speakEnd) {
+            if (answer.speakEnd) {
                 if (!canRepeat)
                     canObjectBeInteracted = false;
                 isDialogueEnd = true;
                 isActivateDialogue = false;
             }
-            currentNode = node [currentNode].playerAnswer [i].toNode;
+            currentNode = answer.toNode;
         }
         
     }

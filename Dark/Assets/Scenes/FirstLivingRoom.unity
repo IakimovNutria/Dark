@@ -3004,6 +3004,11 @@ MonoBehaviour:
       toNode: 32
       speakEnd: 0
       storyBoolToChange: 
+    - canRepeat: 1
+      text: "\u0423\u0439\u0442\u0438"
+      toNode: 0
+      speakEnd: 1
+      storyBoolToChange: 
   - storyBoolToGetDialogue: 
     toNode: 0
     npcText: "\u041C\u0430\u043B\u0435\u043D\u044C\u043A\u0438\u0439 \u0448\u0430\u043B\u0430\u0448
