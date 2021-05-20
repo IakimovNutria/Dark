@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using System.Collections;
 
@@ -8,8 +9,9 @@ public class Dialogue : Interaction
     protected bool isActivateDialogue;
     protected string dialogueActivateKey = "e";
     protected bool isDialogueEnd;
-    public bool canRepeat;
     private bool isGameResumed;
+    public bool canRepeat;
+    protected Dialogue dialogue;
     
     public void Start()
     {
@@ -42,11 +44,16 @@ public class Dialogue : Interaction
         GUI.Box (new Rect (Screen.width / 2 - 300, Screen.height - 200, 600, 250), "");
         GUI.Label (new Rect (Screen.width / 2 - 250, 
             Screen.height - 180, 500, 90), node [currentNode].NpcText);
+        
         for (var i = 0; i < node [currentNode].PlayerAnswer.Length; i++)
         {
+            if (node[currentNode].PlayerAnswer[i].isAnswered && !node[currentNode].PlayerAnswer[i].canRepeat)
+                continue;
+            
             if (!GUI.Button(new Rect(Screen.width / 2 - 250, 
                     Screen.height - 100 + 25 * i, 500, 25),
                 node[currentNode].PlayerAnswer[i].Text)) continue;
+            node[currentNode].PlayerAnswer[i].isAnswered = true;
             var storyBoolToChange = node[currentNode].PlayerAnswer[i].StoryBoolToChange;
             if (storyBoolToChange != "")
                 GameManager.GM.ChangeStoryBool(storyBoolToChange);
@@ -68,7 +75,7 @@ public class Dialogue : Interaction
 }
 
 
-[System.Serializable]
+[Serializable]
 public class DialogueNode
 {
     public string NpcText;
@@ -76,9 +83,13 @@ public class DialogueNode
 }
 
 
-[System.Serializable]
+[Serializable]
 public class Answer
 {
+    [NonSerialized]
+    public bool isAnswered;
+    
+    public bool canRepeat;
     public string Text;
     public int ToNode;
     public bool SpeakEnd;

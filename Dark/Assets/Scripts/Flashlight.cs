@@ -14,10 +14,11 @@ public class Flashlight : MonoBehaviour
     private Light2DEmitter lightParameters;
     private bool isLightDamageOn;
     private bool isLightHealOn;
-    private float flashlightCharge;
-    private uint batteriesCount = 2;
+    public float Charge { get; private set; } = 1000f;
+    public uint BatteriesCount { get; private set; }
+    public uint StartBatteriesCount { get; } = 2;
     private float damageLightSize = 5;
-    private float maxFlashlightCharge = 1000;
+    public float MAXFlashlightCharge { get; } = 1000f;
     private float damageLightConeAngle = 30;
     private float healPower = 1;
     
@@ -32,11 +33,13 @@ public class Flashlight : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        BatteriesCount = StartBatteriesCount;
+        
         lightParameters = flashLight.GetComponent<Light2DEmitter>();
-            
-        chargeBar.SetMaxValue(maxFlashlightCharge);
-        flashlightCharge = maxFlashlightCharge;
-        chargeBar.SetValue(flashlightCharge);
+        
+        chargeBar.SetMaxValue(MAXFlashlightCharge);
+        Charge = MAXFlashlightCharge;
+        chargeBar.SetValue(Charge);
         
         UpdateBatteriesCountText();
     }
@@ -50,12 +53,12 @@ public class Flashlight : MonoBehaviour
             return;
         }
 
-        if (flashlightCharge != 0)
+        if (Charge != 0)
             FlashLightUpdate();
-        else if (batteriesCount != 0)
+        else if (BatteriesCount != 0)
         {
             ChangeBatteriesCount(-1);
-            flashlightCharge = maxFlashlightCharge;
+            Charge = MAXFlashlightCharge;
         }
         else
             lightParameters.lightSize = 0; 
@@ -88,13 +91,13 @@ public class Flashlight : MonoBehaviour
 
     public void ChangeCharge(float change)
     {
-        if (change + flashlightCharge <= 0)
-            flashlightCharge = 0;
-        else if (flashlightCharge + change >= maxFlashlightCharge)
-            flashlightCharge = maxFlashlightCharge;
+        if (change + Charge <= 0)
+            Charge = 0;
+        else if (Charge + change >= MAXFlashlightCharge)
+            Charge = MAXFlashlightCharge;
         else
-            flashlightCharge += change;
-        chargeBar.SetValue(flashlightCharge);
+            Charge += change;
+        chargeBar.SetValue(Charge);
     }
     private void TurnOffFlashlight()
     {
@@ -117,21 +120,23 @@ public class Flashlight : MonoBehaviour
             animatorStateInfo.IsName("PlayerRightStandAnimation"))
         {
             rotation = damageLightConeAngle / 2 - 90;
-            //position. = ...
+            position.y = -0.06f;
+            position.x = -0.08f;
         }
 
         else if (animatorStateInfo.IsName("PlayerBackWalkAnimation") ||
             animatorStateInfo.IsName("PlayerBackStandAnimation"))
         {
             rotation = damageLightConeAngle / 2 + 180;
-            //position. = ...
+            position.x = -0.068f;
         }
 
         else if (animatorStateInfo.IsName("PlayerForwardWalkAnimation") ||
             animatorStateInfo.IsName("PlayerForwardStandAnimation"))
         {
             rotation = damageLightConeAngle / 2;
-            //position. = ...
+            position.x = 0.12f;
+            position.y = -0.05f;
         }
         else 
             throw new NotImplementedException();
@@ -141,16 +146,16 @@ public class Flashlight : MonoBehaviour
     
     public void ChangeBatteriesCount(int change)
     {
-        if (change + batteriesCount <= 0)
-            batteriesCount = 0;
+        if (change + BatteriesCount <= 0)
+            BatteriesCount = 0;
         else
-            batteriesCount = (uint) (batteriesCount + change);
+            BatteriesCount = (uint) (BatteriesCount + change);
         UpdateBatteriesCountText();
     }
     
     private void UpdateBatteriesCountText()
     {
-        batteriesCountText.text = batteriesCount.ToString();
+        batteriesCountText.text = BatteriesCount.ToString();
     }
 
     private void ChangeLightParameters(float coneAngle, float lightSize, Color lightColor, string eventFilter)
