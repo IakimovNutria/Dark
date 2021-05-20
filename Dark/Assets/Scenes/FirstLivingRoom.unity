@@ -2976,30 +2976,30 @@ MonoBehaviour:
     toNode: 1
     npcText: 
     playerAnswer:
-    - canRepeat: 1
+    - canRepeat: 0
       text: "\u0421\u043A\u043E\u043B\u044C\u043A\u043E \u0442\u0435\u0431\u0435
         \u043B\u0435\u0442?"
       toNode: 2
       speakEnd: 0
       storyBoolToChange: 
-    - canRepeat: 1
+    - canRepeat: 0
       text: "\u0427\u0442\u043E \u0442\u044B \u043F\u043E\u0442\u0435\u0440\u044F\u043B\u0430?"
       toNode: 5
       speakEnd: 0
       storyBoolToChange: 
-    - canRepeat: 1
+    - canRepeat: 0
       text: "\u041F\u043E\u0447\u0435\u043C\u0443 \u0442\u044B \u043D\u0435 \u0432\u044B\u0445\u043E\u0434\u0438\u0448\u044C?"
       toNode: 14
       speakEnd: 0
       storyBoolToChange: 
-    - canRepeat: 1
+    - canRepeat: 0
       text: "\u041F\u043E\u0447\u0435\u043C\u0443 \u0442\u044B \u043D\u0435 \u043F\u043E\u0439\u0434\u0435\u0448\u044C
         \u0437\u0430 \u0441\u0432\u043E\u0435\u0439 \u0432\u0435\u0449\u044C\u044E
         \u0441\u0430\u043C\u0430?"
       toNode: 18
       speakEnd: 0
       storyBoolToChange: 
-    - canRepeat: 1
+    - canRepeat: 0
       text: "\u0413\u0434\u0435 \u0442\u0432\u043E\u0438 \u0440\u043E\u0434\u0438\u0442\u0435\u043B\u0438?"
       toNode: 32
       speakEnd: 0
@@ -3025,7 +3025,7 @@ MonoBehaviour:
     npcText: "\u042D\u043C\u0438\u043B\u0438: \u041A\u0430\u043A\u0430\u044F \u0440\u0430\u0437\u043D\u0438\u0446\u0430
       \u0432\u043E\u043E\u0431\u0449\u0435?"
     playerAnswer:
-    - canRepeat: 0
+    - canRepeat: 1
       text: ...
       toNode: 3
       speakEnd: 0
@@ -3037,7 +3037,7 @@ MonoBehaviour:
       \u0442\u0435\u0431\u044F, \u0442\u043E \u043C\u0435\u043D\u044F \u043D\u0435\u0447\u0435\u0433\u043E
       \u0431\u043E\u044F\u0442\u044C\u0441\u044F?"
     playerAnswer:
-    - canRepeat: 0
+    - canRepeat: 1
       text: ...
       toNode: 4
       speakEnd: 0
@@ -3048,7 +3048,7 @@ MonoBehaviour:
       \u0447\u0442\u043E \u043F\u0430\u043B\u0430\u0442\u043A\u0430 \u0434\u0440\u043E\u0436\u0438\u0442
       \u043E\u0442 \u0443\u0436\u0430\u0441\u0430."
     playerAnswer:
-    - canRepeat: 0
+    - canRepeat: 1
       text: ...
       toNode: 0
       speakEnd: 0
@@ -3058,7 +3058,7 @@ MonoBehaviour:
     npcText: "\u042D\u043C\u0438\u043B\u0438: \u0414\u0430 \u0442\u044B \u0438\u0441\u043F\u0443\u0433\u0430\u0435\u0448\u044C\u0441\u044F
       \u043F\u043E\u0439\u0442\u0438 \u0438\u0441\u043A\u0430\u0442\u044C!"
     playerAnswer:
-    - canRepeat: 0
+    - canRepeat: 1
       text: ...
       toNode: 7
       speakEnd: 0
@@ -3070,7 +3070,7 @@ MonoBehaviour:
       \u0435\u0441\u043B\u0438 \u043F\u043E\u043C\u043E\u0433\u0430\u0442\u044C \u043D\u0435
       \u0441\u043E\u0431\u0438\u0440\u0430\u0435\u0448\u044C\u0441\u044F?!"
     playerAnswer:
-    - canRepeat: 0
+    - canRepeat: 1
       text: ...
       toNode: 0
       speakEnd: 0
@@ -3081,7 +3081,7 @@ MonoBehaviour:
       \u0438\u0437 \u043F\u0430\u043B\u0430\u0442\u043A\u0438 \u043D\u0435 \u0441\u043B\u044B\u0448\u043D\u043E
       \u043D\u0438\u0447\u0435\u0433\u043E, \u043A\u0440\u043E\u043C\u0435 \u0432\u0441\u0445\u043B\u0438\u043F\u043E\u0432."
     playerAnswer:
-    - canRepeat: 0
+    - canRepeat: 1
       text: ...
       toNode: 8
       speakEnd: 0
@@ -3090,7 +3090,7 @@ MonoBehaviour:
     toNode: 0
     npcText: "\u042D\u043C\u0438\u043B\u0438: \u0421\u0432\u043E\u044E \u043A\u0443\u043A\u043B\u0443..."
     playerAnswer:
-    - canRepeat: 0
+    - canRepeat: 1
       text: ...
       toNode: 9
       speakEnd: 0
@@ -3101,7 +3101,7 @@ MonoBehaviour:
       \u0432\u0430\u0436\u043D\u0430\u044F \u043A\u0443\u043A\u043B\u0430, \u0442\u043E\u043B\u044C\u043A\u043E
       \u043E\u043D\u0430 \u0443 \u043C\u0435\u043D\u044F..."
     playerAnswer:
-    - canRepeat: 0
+    - canRepeat: 1
       text: ...
       toNode: 10
       speakEnd: 0
@@ -3111,7 +3111,7 @@ MonoBehaviour:
     npcText: "\u042D\u043C\u0438\u043B\u0438: \u0414\u0430 \u0447\u0442\u043E \u0442\u044B
       \u0432\u043E\u043E\u0431\u0449\u0435 \u043C\u0435\u043D\u044F \u0440\u0430\u0441\u0441\u043F\u0440\u0430\u0448\u0438\u0432\u0430\u0435\u0448\u044C?"
     playerAnswer:
-    - canRepeat: 0
+    - canRepeat: 1
       text: ...
       toNode: 11
       speakEnd: 0
@@ -3121,7 +3121,7 @@ MonoBehaviour:
     npcText: "\u042D\u043C\u0438\u043B\u0438: \u0411\u043E\u0438\u0448\u044C\u0441\u044F
       \u0438\u0434\u0442\u0438?"
     playerAnswer:
-    - canRepeat: 0
+    - canRepeat: 1
       text: ...
       toNode: 12
       speakEnd: 0
@@ -3132,7 +3132,7 @@ MonoBehaviour:
       \u0438 \u043D\u0435 \u043B\u0435\u0437\u044C \u043A\u043E \u043C\u043D\u0435,
       \u0432\u043E\u0442!"
     playerAnswer:
-    - canRepeat: 0
+    - canRepeat: 1
       text: ...
       toNode: 13
       speakEnd: 0
@@ -3143,7 +3143,7 @@ MonoBehaviour:
       \u0438\u0437 \u043F\u0430\u043B\u0430\u0442\u043A\u0438 \u0441\u043B\u044B\u0448\u043D\u043E
       \u0445\u043B\u044E\u043F\u0430\u043D\u044C\u0435 \u043D\u043E\u0441\u043E\u043C."
     playerAnswer:
-    - canRepeat: 0
+    - canRepeat: 1
       text: ...
       toNode: 0
       speakEnd: 0
@@ -3153,7 +3153,7 @@ MonoBehaviour:
     npcText: "\u042D\u043C\u0438\u043B\u0438: \u0410 \u0432\u0434\u0440\u0443\u0433
       \u0442\u044B..."
     playerAnswer:
-    - canRepeat: 0
+    - canRepeat: 1
       text: ...
       toNode: 15
       speakEnd: 0
@@ -3163,7 +3163,7 @@ MonoBehaviour:
     npcText: "\u042D\u043C\u0438\u043B\u0438: \u041D\u0435\u0442! \u0412\u043E\u0432\u0441\u0435
       \u044F \u0442\u0435\u0431\u044F \u043D\u0435 \u0431\u043E\u044E\u0441\u044C!"
     playerAnswer:
-    - canRepeat: 0
+    - canRepeat: 1
       text: ...
       toNode: 16
       speakEnd: 0
@@ -3174,7 +3174,7 @@ MonoBehaviour:
       \u043D\u0435 \u0445\u043E\u0447\u0443 \u0442\u0435\u0431\u044F \u0432\u0438\u0434\u0435\u0442\u044C,
       \u0432\u043E\u0442!"
     playerAnswer:
-    - canRepeat: 0
+    - canRepeat: 1
       text: ...
       toNode: 17
       speakEnd: 0
@@ -3186,7 +3186,7 @@ MonoBehaviour:
       \u0432\u043E\u043E\u0431\u0449\u0435 \u0437\u0430\u043D\u044F\u0442\u0430.
       \u0412\u043E\u0442"
     playerAnswer:
-    - canRepeat: 0
+    - canRepeat: 1
       text: ...
       toNode: 0
       speakEnd: 0
@@ -3197,7 +3197,7 @@ MonoBehaviour:
       \u0447\u0442\u043E \u043F\u0430\u043B\u0430\u0442\u043A\u0430 \u043F\u043E\u0434\u043F\u0440\u044B\u0433\u043D\u0443\u043B\u0430
       \u043E\u0442 \u043D\u0435\u043E\u0436\u0438\u0434\u0430\u043D\u043D\u043E\u0441\u0442\u0438."
     playerAnswer:
-    - canRepeat: 0
+    - canRepeat: 1
       text: ...
       toNode: 25
       speakEnd: 0
@@ -3206,7 +3206,7 @@ MonoBehaviour:
     toNode: 0
     npcText: "\u0414\u043E\u043B\u0433\u043E\u0435 \u043C\u043E\u043B\u0447\u0430\u043D\u0438\u0435."
     playerAnswer:
-    - canRepeat: 0
+    - canRepeat: 1
       text: ...
       toNode: 20
       speakEnd: 0
@@ -3218,7 +3218,7 @@ MonoBehaviour:
       \u0447\u0435\u0433\u043E \u0442\u044B \u0442\u0443\u0442 \u0441\u0442\u043E\u0438\u0448\u044C,
       \u0430?"
     playerAnswer:
-    - canRepeat: 0
+    - canRepeat: 1
       text: ...
       toNode: 21
       speakEnd: 0
@@ -3228,7 +3228,7 @@ MonoBehaviour:
     npcText: "\u0413\u043E\u043B\u043E\u0441 \u0434\u0435\u0432\u043E\u0447\u043A\u0438
       \u0437\u0432\u0443\u0447\u0438\u0442 \u043E\u0447\u0435\u043D\u044C \u0441\u0434\u0430\u0432\u043B\u0435\u043D\u043D\u043E."
     playerAnswer:
-    - canRepeat: 0
+    - canRepeat: 1
       text: ...
       toNode: 22
       speakEnd: 0
@@ -3239,7 +3239,7 @@ MonoBehaviour:
       \u0438 \u0445\u043E\u0447\u0435\u0448\u044C, \u0447\u0442\u043E \u0434\u043E
       \u043C\u0435\u043D\u044F \u0434\u043E\u043A\u043E\u043F\u0430\u0442\u044C\u0441\u044F..."
     playerAnswer:
-    - canRepeat: 0
+    - canRepeat: 1
       text: ...
       toNode: 23
       speakEnd: 0
@@ -3251,7 +3251,7 @@ MonoBehaviour:
       \u0411\u0435\u0437 \u0442\u0435\u0431\u044F \u0441 \u0418\u043B\u0430\u0435\u043C
       \u0441\u043F\u0440\u0430\u0432\u0438\u043C\u0441\u044F..."
     playerAnswer:
-    - canRepeat: 0
+    - canRepeat: 1
       text: ...
       toNode: 24
       speakEnd: 0
@@ -3261,7 +3261,7 @@ MonoBehaviour:
     npcText: "\u0422\u044B \u0441\u043B\u044B\u0448\u0438\u0448\u044C \u043E\u0431\u0438\u0434\u0443
       \u0432 \u0435\u0451 \u0433\u043E\u043B\u043E\u0441\u0435."
     playerAnswer:
-    - canRepeat: 0
+    - canRepeat: 1
       text: ...
       toNode: 0
       speakEnd: 0
@@ -3271,7 +3271,7 @@ MonoBehaviour:
     npcText: "\u042D\u043C\u0438\u043B\u0438: \u0414\u0430 \u044F... \u0434\u0430
       \u0442\u0430\u043C..."
     playerAnswer:
-    - canRepeat: 0
+    - canRepeat: 1
       text: ...
       toNode: 26
       speakEnd: 0
@@ -3281,7 +3281,7 @@ MonoBehaviour:
     npcText: "\u042D\u043C\u0438\u043B\u0438: \u041C\u0435\u043D\u044F \u0418\u043B\u0430\u0439
       \u043D\u0435 \u043F\u0443\u0441\u0442\u0438\u0442, \u0432\u043E\u0442!"
     playerAnswer:
-    - canRepeat: 0
+    - canRepeat: 1
       text: ...
       toNode: 27
       speakEnd: 0
@@ -3293,7 +3293,7 @@ MonoBehaviour:
       \u0441\u0442\u0440\u0430\u0448\u043D\u044B\u0435... \u043D\u0443 \u0438 \u0434\u0443\u0440\u0430\u043A,
       \u0434\u0430?"
     playerAnswer:
-    - canRepeat: 0
+    - canRepeat: 1
       text: ...
       toNode: 28
       speakEnd: 0
@@ -3303,7 +3303,7 @@ MonoBehaviour:
     npcText: "\u0414\u0435\u0432\u043E\u0447\u043A\u0430 \u0441\u0442\u0430\u0440\u0430\u0435\u0442\u0441\u044F
       \u0437\u0432\u0443\u0447\u0430\u0442\u044C \u0437\u0430\u0434\u043E\u0440\u043D\u043E."
     playerAnswer:
-    - canRepeat: 0
+    - canRepeat: 1
       text: ...
       toNode: 29
       speakEnd: 0
@@ -3316,7 +3316,7 @@ MonoBehaviour:
       \u0441\u0430\u043C \u043F\u0440\u0438\u0434\u0443\u043C\u0430\u043B \u0441\u043E
       \u043C\u043D\u043E\u0439 \u0432\u043E\u0437\u0438\u0442\u044C\u0441\u044F."
     playerAnswer:
-    - canRepeat: 0
+    - canRepeat: 1
       text: ...
       toNode: 30
       speakEnd: 0
@@ -3326,7 +3326,7 @@ MonoBehaviour:
     npcText: "\u042D\u043C\u0438\u043B\u0438: \u0412\u043E\u0442 \u043F\u0443\u0441\u0442\u044C
       \u0441\u0430\u043C \u0438 \u0438\u0434\u0451\u0442."
     playerAnswer:
-    - canRepeat: 0
+    - canRepeat: 1
       text: ...
       toNode: 31
       speakEnd: 0
@@ -3338,7 +3338,7 @@ MonoBehaviour:
       \u0447\u0442\u043E \u043C\u043D\u0435 \u0442\u0430\u043C, \u043D\u0438\u0447\u0435\u0433\u043E
       \u0432\u043E\u043E\u0431\u0449\u0435..."
     playerAnswer:
-    - canRepeat: 0
+    - canRepeat: 1
       text: ...
       toNode: 0
       speakEnd: 0
@@ -3349,7 +3349,7 @@ MonoBehaviour:
       \u043C\u043E\u043B\u0447\u0438\u0442. \u041D\u0430 \u0443\u0434\u0438\u0432\u043B\u0435\u043D\u0438\u0435,
       \u043D\u0435 \u043F\u043B\u0430\u0447\u0435\u0442."
     playerAnswer:
-    - canRepeat: 0
+    - canRepeat: 1
       text: ...
       toNode: 33
       speakEnd: 0
@@ -3360,7 +3360,7 @@ MonoBehaviour:
       \u0441 \u0442\u0435\u0445 \u043F\u043E\u0440, \u043A\u0430\u043A \u043C\u044B
       \u0432\u0441\u0435... \u0442\u0443\u0442... \u043D\u0435 \u0432\u0438\u0434\u0435\u043B\u0430."
     playerAnswer:
-    - canRepeat: 0
+    - canRepeat: 1
       text: ...
       toNode: 34
       speakEnd: 0
@@ -3371,7 +3371,7 @@ MonoBehaviour:
       \u0440\u0430\u0441\u0441\u043F\u0440\u0430\u0448\u0438\u0432\u0430\u0442\u044C
       \u0434\u0430\u043B\u044C\u0448\u0435."
     playerAnswer:
-    - canRepeat: 0
+    - canRepeat: 1
       text: ...
       toNode: 0
       speakEnd: 0
