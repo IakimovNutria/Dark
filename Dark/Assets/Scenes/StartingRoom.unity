@@ -415,6 +415,8 @@ GameObject:
   - component: {fileID: 194882279}
   - component: {fileID: 194882285}
   - component: {fileID: 194882278}
+  - component: {fileID: 194882287}
+  - component: {fileID: 194882286}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -594,6 +596,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flashLight: {fileID: 1165224367}
+--- !u!114 &194882286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194882277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61d90a261b1db497782967820bef0fa4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canObjectBeInteracted: 0
+  isPlayerReadyToInteract: 0
+  flashlight: {fileID: 1165224367}
+--- !u!114 &194882287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194882277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac651b7789fd14e9ab25390631df92ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashlight: {fileID: 1165224367}
 --- !u!1 &217770730
 GameObject:
   m_ObjectHideFlags: 0
@@ -4659,7 +4689,8 @@ MonoBehaviour:
   node:
   - NpcText: There's no enter
     PlayerAnswer:
-    - Text: oh:(
+    - canRepeat: 0
+      Text: oh:(
       ToNode: 0
       SpeakEnd: 1
       StoryBoolToChange: 
@@ -5788,11 +5819,13 @@ MonoBehaviour:
       \u043D\u0435\u0435\u0441\u0442\u0435\u0441\u0442\u0432\u0435\u043D\u043D\u043E
       \u0432\u044B\u0432\u0435\u0440\u043D\u0443\u0442\u0430."
     PlayerAnswer:
-    - Text: "\u041F\u0440\u0435\u0434\u043B\u043E\u0436\u0438\u0442\u044C \u043F\u043E\u043C\u043E\u0449\u044C"
+    - canRepeat: 0
+      Text: "\u041F\u0440\u0435\u0434\u043B\u043E\u0436\u0438\u0442\u044C \u043F\u043E\u043C\u043E\u0449\u044C"
       ToNode: 1
       SpeakEnd: 0
       StoryBoolToChange: isPlayerHelpEli
-    - Text: "\u041F\u0440\u043E\u0439\u0442\u0438 \u043C\u0438\u043C\u043E"
+    - canRepeat: 0
+      Text: "\u041F\u0440\u043E\u0439\u0442\u0438 \u043C\u0438\u043C\u043E"
       ToNode: 2
       SpeakEnd: 0
       StoryBoolToChange: 
@@ -5807,7 +5840,8 @@ MonoBehaviour:
       \u0434\u043E\u0440\u043E\u0433\u0443. \u0415\u0449\u0435 \u0440\u0430\u0437
       \u0441\u043F\u0430\u0441\u0438\u0431\u043E."
     PlayerAnswer:
-    - Text: ...
+    - canRepeat: 0
+      Text: ...
       ToNode: 1
       SpeakEnd: 1
       StoryBoolToChange: isFirstDialogueEnd
@@ -5818,7 +5852,8 @@ MonoBehaviour:
       \u0438 \u0436\u0434\u0435\u0448\u044C \u043A\u0440\u0438\u043A\u0430 \u0432
       \u0441\u043F\u0438\u043D\u0443, \u043D\u043E \u0435\u0433\u043E \u043D\u0435\u0442."
     PlayerAnswer:
-    - Text: ...
+    - canRepeat: 0
+      Text: ...
       ToNode: 1
       SpeakEnd: 1
       StoryBoolToChange: isFirstDialogueEnd
@@ -7902,7 +7937,8 @@ MonoBehaviour:
   node:
   - NpcText: There's no enter
     PlayerAnswer:
-    - Text: ok...
+    - canRepeat: 0
+      Text: ok...
       ToNode: 0
       SpeakEnd: 1
       StoryBoolToChange: 

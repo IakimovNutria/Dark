@@ -6,14 +6,15 @@ using UnityEngine.UI;
 
 public class Player : AliveEntity
 {
+    public float MAXPlayerHealth { get; } = 1000f;
+
     private float speed = 1;
-    private float maxPlayerHealth = 1000;
     private AliveEntity aliveEntity;
     
     private void Start()
     {
         aliveEntity = this;
-        SetMaxHealth(maxPlayerHealth);
+        SetMaxHealth(MAXPlayerHealth);
     }
     private new void Update()
     {
