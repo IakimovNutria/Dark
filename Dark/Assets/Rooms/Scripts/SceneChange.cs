@@ -11,7 +11,6 @@ public class SceneChange : Interaction
     public void Start()
     {
         InteractionInitialize(3);
-        SceneLoad.currentScene = SceneManager.GetActiveScene().name;
     }
 
     // Update is called once per frame
@@ -23,9 +22,7 @@ public class SceneChange : Interaction
 
     private void ChangeScene()
     {
-        SceneLoad.prevScene = SceneLoad.currentScene;
-        SceneLoad.currentScene = nextScene;
-        DontDestroyOnLoad(GameObject.FindGameObjectWithTag("Player"));
+        SceneLoad.prevSceneIndex = SceneManager.GetActiveScene().buildIndex;
         DontDestroyOnLoad(GameObject.FindGameObjectWithTag("Canvas"));
         DontDestroyOnLoad(GameObject.FindGameObjectWithTag("MainCamera"));
         DontDestroyOnLoad(GameObject.FindGameObjectWithTag("Flashlight"));

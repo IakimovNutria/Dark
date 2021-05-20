@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public static string prevScene;
+    public static string currentScene;
     public static bool firstRoomChestVisited;
     public static GameObject flashlight;
 
