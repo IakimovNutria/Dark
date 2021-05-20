@@ -6,8 +6,6 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public static string prevScene;
-    public static string currentScene;
     public static bool firstRoomChestVisited;
     public static GameObject flashlight;
 
@@ -30,6 +28,7 @@ public class GameManager : MonoBehaviour
         {"isFirstDialogueEnd", false},
         {"isPlayerHelpEli", false}
 };
+
     private void Awake()
     {
         if (GM == null)
@@ -81,8 +80,8 @@ public class GameManager : MonoBehaviour
         KeyDown = KeyCode.S;
         KeyLeft = KeyCode.A;
         KeyRight = KeyCode.D;
-        KeyDamageLight = KeyCode.RightControl;
-        KeyHealLight = KeyCode.RightAlt;
+        KeyDamageLight = KeyCode.C;
+        KeyHealLight = KeyCode.V;
         KeyObgectsInteraction = KeyCode.Space;
         KeyDialogues = KeyCode.E;
     }

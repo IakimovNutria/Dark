@@ -6,16 +6,26 @@ using UnityEngine.SceneManagement;
 
 public class StartMenu : MonoBehaviour
 {
-    public GameObject settingsPanel;
+    public GameObject MenuButtons;
+    public GameObject SettingsPanel;
     public GameObject LoadingBar;
-
-    private void Awake()
-    {
-    }
     public void StartGame()
     {
         LoadingBar.SetActive(true);
         StartCoroutine(LoadStartScene());
+    }
+
+    public void OpenSettings()
+    {
+        SettingsPanel.GetComponent<Settings>().SetSettings();
+        MenuButtons.SetActive(false);
+        SettingsPanel.SetActive(true);
+    }
+
+    public void CloseSettings()
+    {
+        SettingsPanel.SetActive(false);
+        MenuButtons.SetActive(true);
     }
 
     public void QuitGame()
