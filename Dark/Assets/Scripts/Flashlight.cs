@@ -120,21 +120,23 @@ public class Flashlight : MonoBehaviour
             animatorStateInfo.IsName("PlayerRightStandAnimation"))
         {
             rotation = damageLightConeAngle / 2 - 90;
-            //position. = ...
+            position.y = -0.06f;
+            position.x = -0.08f;
         }
 
         else if (animatorStateInfo.IsName("PlayerBackWalkAnimation") ||
             animatorStateInfo.IsName("PlayerBackStandAnimation"))
         {
             rotation = damageLightConeAngle / 2 + 180;
-            //position. = ...
+            position.x = -0.068f;
         }
 
         else if (animatorStateInfo.IsName("PlayerForwardWalkAnimation") ||
             animatorStateInfo.IsName("PlayerForwardStandAnimation"))
         {
             rotation = damageLightConeAngle / 2;
-            //position. = ...
+            position.x = 0.12f;
+            position.y = -0.05f;
         }
         else 
             throw new NotImplementedException();
