@@ -82,6 +82,8 @@ public class Flashlight : MonoBehaviour
             isLightDamageOn = !isLightDamageOn;
         else if (Input.GetKeyDown(GameManager.GM.KeyHealLight) && !isLightDamageOn)
             isLightHealOn = !isLightHealOn;
+        else if (Input.GetKeyDown(GameManager.GM.KeyDamageLight) && isLightHealOn)
+            isLightHealOn = false;
         
         if (!isLightDamageOn && !isLightHealOn)
             TurnOffFlashlight();
