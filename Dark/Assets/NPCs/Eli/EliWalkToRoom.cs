@@ -16,6 +16,10 @@ public class EliWalkToRoom : AliveEntity
     private new void Update()
     {
         aliveEntity.Update();
+        if (Math.Abs(body.position.x - destination.x) < 10e-2 && Math.Abs(body.position.y - destination.y) < 10e-2)
+        {
+            GameManager.GM.ChangeStoryBool("isEliReachedRoom");
+        }
     }
 
     protected override float GetHorizontalVelocity()
