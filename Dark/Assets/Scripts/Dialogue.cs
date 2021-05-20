@@ -57,7 +57,9 @@ public class Dialogue : Interaction
         {
             buttonCount++;
             if (answer.IsAnswered &&
-                !answer.canRepeat)
+                !answer.canRepeat || 
+                answer.storyBoolToGetAnswer != "" && 
+                !GameManager.GM.StoryBools[answer.storyBoolToGetAnswer])
             {
                 buttonCount--;
                 continue;
@@ -109,4 +111,5 @@ public class Answer
     public int toNode;
     public bool speakEnd;
     public string storyBoolToChange;
+    public string storyBoolToGetAnswer;
 }
