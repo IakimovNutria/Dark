@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public static string prevScene;
+    public static string currentScene;
     public static bool firstRoomChestVisited;
     public static GameObject flashlight;
 
@@ -18,6 +20,8 @@ public class GameManager : MonoBehaviour
     public KeyCode KeyHealLight { get; set; }
     public KeyCode KeyObgectsInteraction { get; set; }
     public KeyCode KeyDialogues { get; set; }
+
+    public bool isGameFreezed;
 
     public readonly Dictionary<string, bool> StoryBools = new Dictionary<string, bool>
     {
@@ -36,6 +40,11 @@ public class GameManager : MonoBehaviour
         else if (GM != this)
             Destroy(gameObject);
 
+        InitGameManager();
+    }
+
+    private void InitGameManager()
+    {
         flashlight = GameObject.FindGameObjectWithTag("Flashlight");
         SetDefaultKeys();
     }
@@ -44,7 +53,7 @@ public class GameManager : MonoBehaviour
     {
         if (StoryBools["isFirstRoomCleaned"])
         {
-            
+
         }
         else if (!GetEnemiesInScene().Any() && !GetDiedInScene().Any() && StoryBools["isGameStarted"])
             ChangeStoryBool("isFirstRoomCleaned");
@@ -54,14 +63,16 @@ public class GameManager : MonoBehaviour
     
     public void FreezeGame()
     {
-        Time.timeScale = 0;
+        isGameFreezed = true;
         flashlight.SetActive(false);
+        Time.timeScale = 0;
     }
 
     public void ResumeGame()
     {
         Time.timeScale = 1;
         flashlight.SetActive(true);
+        isGameFreezed = false;
     }
 
     private void SetDefaultKeys()

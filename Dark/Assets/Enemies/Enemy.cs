@@ -50,7 +50,7 @@ public class Enemy : AliveEntity
         var playerPosition = playerTransform.position;
         var length = Geometry.GetLength(enemyPosition.x, enemyPosition.y, 
             playerPosition.x, playerPosition.y);
-        if (length < damageRadius)
+        if (length < damageRadius && !GameManager.GM.isGameFreezed)
             player.TakeDamage(0.75f + length);
     }
 }

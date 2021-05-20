@@ -1240,11 +1240,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35dd9645c579ca54e98200816f410537, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  leftScene: 
-  rightScene: 
-  topScene: StartingAisle
-  bottomScene: 
+  leftScene: 0
+  rightScene: 0
+  topScene: 2
+  bottomScene: 0
   leftStart: {x: 0, y: 0}
   rightStart: {x: 0, y: 0}
   topStart: {x: 0.7, y: -0.5}
@@ -1353,8 +1352,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46611e9584b479148a22c1f5bc8915cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  light: {fileID: 0}
-  enterText: {fileID: 0}
   canObjectBeInteracted: 0
   isPlayerReadyToInteract: 0
   nextScene: StartingAisle
