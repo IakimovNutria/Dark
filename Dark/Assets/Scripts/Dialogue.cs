@@ -37,7 +37,7 @@ public class Dialogue : Interaction
             isActivateDialogue = false;
             return;
         }
-        if (node[currentNode].storyBoolToGetDialogue != "")
+        if (!string.IsNullOrEmpty(node[currentNode].storyBoolToGetDialogue))
             if (!GameManager.GM.StoryBools[node[currentNode].storyBoolToGetDialogue])
             {
                 currentNode = node[currentNode].toNode;
@@ -58,8 +58,8 @@ public class Dialogue : Interaction
             buttonCount++;
             if (answer.IsAnswered &&
                 !answer.canRepeat || 
-                answer.storyBoolToGetAnswer != "" && 
-                !GameManager.GM.StoryBools[answer.storyBoolToGetAnswer])
+                !string.IsNullOrEmpty(answer.storyBoolToGetAnswer) &&
+                GameManager.GM.StoryBools[answer.storyBoolToGetAnswer] != answer.storyBoolMustBeFalse)
             {
                 buttonCount--;
                 continue;
@@ -70,7 +70,7 @@ public class Dialogue : Interaction
                 answer.text)) continue;
             answer.IsAnswered = true;
             var storyBoolToChange = answer.storyBoolToChange;
-            if (storyBoolToChange != "")
+            if (!string.IsNullOrEmpty(storyBoolToChange))
                 GameManager.GM.ChangeStoryBool(storyBoolToChange);
             if (answer.speakEnd) {
                 if (!canRepeat)
@@ -112,4 +112,5 @@ public class Answer
     public bool speakEnd;
     public string storyBoolToChange;
     public string storyBoolToGetAnswer;
+    public bool storyBoolMustBeFalse;
 }
