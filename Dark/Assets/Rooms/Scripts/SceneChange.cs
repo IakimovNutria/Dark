@@ -1,28 +1,34 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SceneChange : Interaction
 {
     public string nextScene;
-
-    // Start is called before the first frame update
-    public void Start()
+    private SceneLoadManager sceneLoadManager;
+    
+    private void Start()
     {
+        sceneLoadManager = FindObjectOfType<SceneLoadManager>();
         InteractionInitialize(3);
     }
-
-    // Update is called once per frame
-    public void Update()
+    
+    private void Update()
     {
-        if (isPlayerReadyToInteract && ActivateCondition() && nextScene != "")
-            ChangeScene();
+        if (isPlayerReadyToInteract && (ActivateCondition() || mustNotBeInteraction) 
+                                    && nextScene != "" && StoryBoolActivateCondition())
+        {
+            sceneLoadManager.Save();
+            Invoke(nameof(ChangeScene), invokeTime);
+        }
     }
 
     private void ChangeScene()
     {
-        SceneLoad.prevSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneLoadManager.prevSceneIndex = SceneManager.GetActiveScene().buildIndex;
         DontDestroyOnLoad(GameObject.FindGameObjectWithTag("Canvas"));
         DontDestroyOnLoad(GameObject.FindGameObjectWithTag("MainCamera"));
         DontDestroyOnLoad(GameObject.FindGameObjectWithTag("Flashlight"));
@@ -34,3 +40,4 @@ public class SceneChange : Interaction
         return Input.GetKeyDown(GameManager.GM.KeyObgectsInteraction);
     }
 }
+

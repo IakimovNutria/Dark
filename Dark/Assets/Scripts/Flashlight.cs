@@ -82,6 +82,8 @@ public class Flashlight : MonoBehaviour
             isLightDamageOn = !isLightDamageOn;
         else if (Input.GetKeyDown(GameManager.GM.KeyHealLight) && !isLightDamageOn)
             isLightHealOn = !isLightHealOn;
+        else if (Input.GetKeyDown(GameManager.GM.KeyDamageLight) && isLightHealOn)
+            isLightHealOn = false;
         
         if (!isLightDamageOn && !isLightHealOn)
             TurnOffFlashlight();
@@ -99,8 +101,11 @@ public class Flashlight : MonoBehaviour
             Charge += change;
         chargeBar.SetValue(Charge);
     }
+
     private void TurnOffFlashlight()
     {
+        isLightDamageOn = false;
+        isLightHealOn = false;
         lightParameters.lightSize = 0;
     }
     
@@ -165,4 +170,6 @@ public class Flashlight : MonoBehaviour
         lightParameters.lightColor = lightColor;
         lightParameters.eventPassedFilter = eventFilter;
     }
+    
+    
 }

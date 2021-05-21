@@ -1,21 +1,37 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class Interaction : MonoBehaviour
 {
-    public bool canObjectBeInteracted;
-    public bool isPlayerReadyToInteract;
+    protected bool canObjectBeInteracted;
+    protected bool isPlayerReadyToInteract;
+    public bool mustNotBeInteraction;
+    public List<ActivateConditions> activateConditionsList;
+    
     protected GameObject interactionIndicator;
     protected GameObject enterText;
+    protected float invokeTime;
+    
     protected void InteractionInitialize(int textIndex)
     {
         var canvas = GameObject.FindGameObjectWithTag("Canvas");
         enterText = canvas.transform.GetChild(textIndex).gameObject;
-        interactionIndicator = gameObject.transform.GetChild(0).gameObject;
+        if (mustNotBeInteraction)
+        {
+            canObjectBeInteracted = false;
+            isPlayerReadyToInteract = true;
+            invokeTime = 1;
+        }
+        else
+        {
+            interactionIndicator = gameObject.transform.GetChild(0).gameObject;
+            interactionIndicator.SetActive(false);
+        }
 
         canObjectBeInteracted = true;
-        interactionIndicator.SetActive(false);
         enterText.SetActive(false);
     }
 
@@ -34,12 +50,40 @@ public class Interaction : MonoBehaviour
     private void SetAbilities(bool canInteract)
     {
         enterText.SetActive(canInteract);
-        interactionIndicator.SetActive(canInteract);
-        isPlayerReadyToInteract = canInteract;
+        if (!mustNotBeInteraction)
+        {
+            interactionIndicator.SetActive(canInteract);
+            isPlayerReadyToInteract = canInteract;
+        }
     }
 
     protected virtual bool ActivateCondition()
     {
-        throw new System.NotImplementedException();
+        throw new NotImplementedException();
     }
+
+    protected bool StoryBoolActivateCondition()
+    {
+        var doesOneConditionActivated = activateConditionsList
+            .Select(activateConditions => activateConditions.activateConditions
+                .Where(activateCondition => !string.IsNullOrEmpty(activateCondition.storyBoolToActivate))
+                .All(activateCondition => 
+                    GameManager.GM.StoryBools[activateCondition.storyBoolToActivate] != activateCondition.mustBeFalse))
+            .Any(doesConditionActivated => doesConditionActivated);
+
+        return doesOneConditionActivated || activateConditionsList.Count == 0;
+    }
+}
+
+[Serializable]
+public class ActivateConditions
+{
+    public List<ActivateCondition> activateConditions;
+}
+
+[Serializable]
+public class ActivateCondition
+{
+    public string storyBoolToActivate;
+    public bool mustBeFalse;
 }

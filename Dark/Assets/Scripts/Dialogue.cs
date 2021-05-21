@@ -28,7 +28,7 @@ public class Dialogue : Interaction
                 isGameResumed = true;
             }
 
-            isActivateDialogue = ActivateCondition() && (!isDialogueEnd || canRepeat);
+            isActivateDialogue = ActivateCondition() && (!isDialogueEnd || canRepeat) && StoryBoolActivateCondition();
             return;
         }
         
@@ -43,8 +43,11 @@ public class Dialogue : Interaction
                 currentNode = node[currentNode].toNode;
                 return;
             }
+        
         GameManager.GM.FreezeGame();
         isGameResumed = false;
+        
+        
         GUI.Box (new Rect (Screen.width / 2 - 300, Screen.height - 250, 600, 240), "");
         GUI.Label (new Rect (Screen.width / 2 - 250, 
             Screen.height - 230, 500, 90), node[currentNode].npcText);
@@ -57,9 +60,9 @@ public class Dialogue : Interaction
         {
             buttonCount++;
             if (answer.IsAnswered &&
-                !answer.canRepeat || 
+                answer.cantRepeat || 
                 !string.IsNullOrEmpty(answer.storyBoolToGetAnswer) &&
-                GameManager.GM.StoryBools[answer.storyBoolToGetAnswer] != answer.storyBoolMustBeFalse)
+                GameManager.GM.StoryBools[answer.storyBoolToGetAnswer] == answer.storyBoolMustBeFalse)
             {
                 buttonCount--;
                 continue;
@@ -67,11 +70,11 @@ public class Dialogue : Interaction
 
             if (!GUI.Button(new Rect(Screen.width / 2 - 250, 
                     Screen.height + indention + 30 * buttonCount, 500, 25),
-                answer.text)) continue;
+                string.IsNullOrEmpty(answer.text) ? "..." : answer.text)) continue;
             answer.IsAnswered = true;
             var storyBoolToChange = answer.storyBoolToChange;
             if (!string.IsNullOrEmpty(storyBoolToChange))
-                GameManager.GM.ChangeStoryBool(storyBoolToChange);
+                GameManager.GM.ChangeStoryBool(storyBoolToChange, !answer.changeStoryBoolToFalse);
             if (answer.speakEnd) {
                 if (!canRepeat)
                     canObjectBeInteracted = false;
@@ -80,9 +83,7 @@ public class Dialogue : Interaction
             }
             currentNode = answer.toNode;
         }
-        
     }
-
     protected override bool ActivateCondition()
     {
         return Input.GetKey(dialogueActivateKey);
@@ -106,11 +107,12 @@ public class Answer
     [NonSerialized]
     public bool IsAnswered;
     
-    public bool canRepeat;
+    public bool cantRepeat;
     public string text;
     public int toNode;
     public bool speakEnd;
     public string storyBoolToChange;
     public string storyBoolToGetAnswer;
     public bool storyBoolMustBeFalse;
+    public bool changeStoryBoolToFalse;
 }

@@ -2,17 +2,25 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Xml.Linq;
 
 public class AliveEntity : MonoBehaviour
 {
     public float Health { get; private set; } = 1;
 
     private float maxHealth = 1;
+    [NonSerialized]
     public Animator animator;
-    public Rigidbody2D body;
+    protected Rigidbody2D body;
     public Bar healthBar;
     private bool haveHealthBar;
-
+    protected AliveEntity aliveEntity;
+    public void Start()
+    {
+        aliveEntity = this;
+        animator = gameObject.GetComponent<Animator>();
+        body = gameObject.GetComponent<Rigidbody2D>();
+    }
     public void Update()
     {
         if (Health == 0)
@@ -27,7 +35,7 @@ public class AliveEntity : MonoBehaviour
             Move();
         }
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("Died"))
-            Destroy(gameObject);
+            gameObject.SetActive(false);
     }
 
     private void Move()
@@ -71,6 +79,22 @@ public class AliveEntity : MonoBehaviour
     public void TakeDamage(float damage)
     {
         ChangeHealthAmount(-damage);
+    }
+
+    public XElement GetElement()
+    {
+        var objName = new XAttribute("name", name);
+        var x = new XAttribute("x", transform.position.x);
+        var y = new XAttribute("y", transform.position.y);
+        var health = new XAttribute("health", aliveEntity.Health);
+        return new XElement("instance", objName, health, x, y);
+    }
+
+    public void SetHealth(float health)
+    {
+        Health = health;
+        if (healthBar != null)
+            healthBar.SetValue(Health);
     }
     
     protected virtual float GetHorizontalVelocity()

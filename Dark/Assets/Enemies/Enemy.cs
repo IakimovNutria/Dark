@@ -10,9 +10,10 @@ public class Enemy : AliveEntity
     private readonly float damageRadius = 0.5f;
     private readonly float maxEnemyHealth = 100;
     private Player player;
-    private void Start()
+    private void Awake()
     {
         aliveEntity = this;
+        aliveEntity.Start();
         var playerGameObject = GameObject.FindGameObjectWithTag("Player");
         playerTransform = playerGameObject.transform;
         player = playerGameObject.GetComponent<Player>();

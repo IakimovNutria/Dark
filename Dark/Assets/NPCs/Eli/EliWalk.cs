@@ -3,14 +3,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EliWalkToRoom : AliveEntity
+public class EliWalk : AliveEntity
 {
     private AliveEntity aliveEntity;
     private float speed = 0.2f;
-    private Vector2 destination = new Vector2(-5.35f, -2.51f);
-    private void Start()
+    public Vector2 destination;
+    public string storyBoolToChange;
+    public bool isEliGoToBed;
+    
+    private new void Start()
     {
         aliveEntity = this;
+        aliveEntity.Start();
     }
 
     private new void Update()
@@ -18,7 +22,13 @@ public class EliWalkToRoom : AliveEntity
         aliveEntity.Update();
         if (Math.Abs(body.position.x - destination.x) < 10e-2 && Math.Abs(body.position.y - destination.y) < 10e-2)
         {
-            GameManager.GM.ChangeStoryBool("isEliReachedRoom");
+            body.constraints = RigidbodyConstraints2D.FreezeAll;
+            if (isEliGoToBed)
+                animator.Play("EliBackStandAnimation");
+            else 
+                aliveEntity.SetHealth(0);
+            if (!string.IsNullOrEmpty(storyBoolToChange)) 
+                GameManager.GM.ChangeStoryBool(storyBoolToChange, true);
         }
     }
 

@@ -10,7 +10,6 @@ public class Player : AliveEntity
     public float MAXPlayerHealth { get; } = 1000f;
 
     private float speed = 1;
-    private AliveEntity aliveEntity;
 
     private void Awake()
     {
@@ -21,9 +20,14 @@ public class Player : AliveEntity
         }
         else if (Instance != this)
             Destroy(gameObject);
-
-        aliveEntity = this;
+        
         SetMaxHealth(MAXPlayerHealth);
+    }
+
+    private new void Start()
+    {
+        aliveEntity = this;
+        aliveEntity.Start();
     }
 
     private new void Update()
