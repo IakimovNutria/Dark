@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
         {"isFirstRoomCleaned", false},
         {"isFirstDialogueEnd", false},
         {"isPlayerHelpEli", false},
+        {"playerCanInteractFirstTime", false},
         {"isEliReachedRoom", false},
         {"isFirstEmilyAndEliDialogueEnd", false},
         {"isPlayerHelpEmily", false},

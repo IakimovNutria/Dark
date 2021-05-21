@@ -34,10 +34,5 @@ public class SceneChange : Interaction
         DontDestroyOnLoad(GameObject.FindGameObjectWithTag("Flashlight"));
         SceneManager.LoadScene(nextScene);
     }
-
-    protected override bool ActivateCondition()
-    {
-        return Input.GetKeyDown(GameManager.GM.KeyObgectsInteraction);
-    }
 }
 

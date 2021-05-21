@@ -15,8 +15,11 @@ public class AliveEntity : MonoBehaviour
     public Bar healthBar;
     private bool haveHealthBar;
     protected AliveEntity aliveEntity;
+    private bool ishealthBarNotNull;
+
     public void Start()
     {
+        ishealthBarNotNull = healthBar != null;
         aliveEntity = this;
         animator = gameObject.GetComponent<Animator>();
         body = gameObject.GetComponent<Rigidbody2D>();
@@ -25,8 +28,8 @@ public class AliveEntity : MonoBehaviour
     {
         if (Health == 0)
         {
+            body.constraints = RigidbodyConstraints2D.FreezeAll;
             gameObject.tag = "Died";
-            body.velocity = new Vector2(0, 0);
             Move();
             animator.SetBool("isDied", true);
         }
@@ -93,7 +96,7 @@ public class AliveEntity : MonoBehaviour
     public void SetHealth(float health)
     {
         Health = health;
-        if (healthBar != null)
+        if (ishealthBarNotNull)
             healthBar.SetValue(Health);
     }
     

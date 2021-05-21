@@ -38,7 +38,10 @@ public class Interaction : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player") && canObjectBeInteracted)
+        {
+            GameManager.GM.ChangeStoryBool("playerCanInteractFirstTime", true);
             SetAbilities(true);
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -59,7 +62,7 @@ public class Interaction : MonoBehaviour
 
     protected virtual bool ActivateCondition()
     {
-        throw new NotImplementedException();
+        return Input.GetKey(GameManager.GM.KeyObgectsInteraction);
     }
 
     protected bool StoryBoolActivateCondition()

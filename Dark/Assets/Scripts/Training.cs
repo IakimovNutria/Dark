@@ -11,11 +11,12 @@ public class Training : Interaction
 
     private static readonly List<string> MainTrainingText = new List<string>
     {
-        "Приветствуем вас в нашей игре", "Для передвижения используйте кнопки " + GameManager.GM.KeyUp + 
+        "Для передвижения используйте кнопки " + GameManager.GM.KeyUp + 
                                          GameManager.GM.KeyLeft + 
                                          GameManager.GM.KeyDown + 
                                          GameManager.GM.KeyRight,
-        "Для атаки светом нажмите кнопку " + GameManager.GM.KeyDamageLight
+        "Для атаки светом нажмите кнопку " + GameManager.GM.KeyDamageLight, 
+        "Чтобы поставить игру на паузу нажмите esc"
     };
 
     private static readonly List<string> HealTrainingText = new List<string>
@@ -35,17 +36,24 @@ public class Training : Interaction
         "Когда заряд фонарика падает до критической отметки, вы используете батарейку",
         "Чтобы выжить вам нужны батарейки, ищите их"
     };
+
+    private static readonly List<string> InteractionTrainingText = new List<string>
+    {
+        "Чтобы взаимодействовать нажмите кнопку " + GameManager.GM.KeyObgectsInteraction
+    };
     
     private int currentMainTrainingTextIndex; 
     private int currentHealTrainingTextIndex; 
     private int currentChargeTrainingTextIndex; 
     private int currentBatteriesTrainingTextIndex;
+    private int currentInteractionTrainingTextIndex;
 
     private bool isMainTrainingGameContinued;
     private bool isHealTrainingGameContinued;
     private bool isChargeTrainingGameContinued;
     private bool isBatteriesTrainingGameContinued;
-
+    private bool isInteractionTrainingGameContinued;
+    
     private void Start()
     {
         player = gameObject.GetComponent<Player>();
@@ -99,6 +107,17 @@ public class Training : Interaction
         else if (!isBatteriesTrainingGameContinued)
         {
             isBatteriesTrainingGameContinued = true;
+            GameManager.GM.ResumeGame();
+        }
+
+        if (currentInteractionTrainingTextIndex != InteractionTrainingText.Count)
+        {
+            if (GameManager.GM.StoryBools["playerCanInteractFirstTime"])
+                OnGuiTraining(InteractionTrainingText, ref currentInteractionTrainingTextIndex);
+        }
+        else if (!isInteractionTrainingGameContinued)
+        {
+            isInteractionTrainingGameContinued = true;
             GameManager.GM.ResumeGame();
         }
     }

@@ -42,9 +42,6 @@ public class Settings : MonoBehaviour
                 case ("ObjInteractionButton"):
                     button.GetComponentInChildren<TextMeshProUGUI>().text = GameManager.GM.KeyObgectsInteraction.ToString();
                     break;
-                case ("DialoguesButton"):
-                    button.GetComponentInChildren<TextMeshProUGUI>().text = GameManager.GM.KeyDialogues.ToString();
-                    break;
             }
         }
     }
@@ -93,10 +90,6 @@ public class Settings : MonoBehaviour
                 SetKey("KeyObgectsInteraction");
                 UpdateInteractionHint();
                 break;
-            case ("DialoguesButton"):
-                SetKey("KeyDialogues");
-                UpdateDialogueHint();
-                break;
         }
         yield return null;
     }
@@ -112,12 +105,6 @@ public class Settings : MonoBehaviour
     {
         if (playerCanvas != null)
             playerCanvas.GetComponent<CanvasHints>().SetInteractionHint();
-    }
-
-    private void UpdateDialogueHint()
-    {
-        if (playerCanvas != null)
-            playerCanvas.GetComponent<CanvasHints>().SetDialogueHint();
     }
 
     public void SendText(TextMeshProUGUI text)
