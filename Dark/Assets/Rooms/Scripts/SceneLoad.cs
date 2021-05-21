@@ -1,10 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
+using System.Globalization;
+using System.Xml.Linq;
+using System.IO;
 
 public class SceneLoad : MonoBehaviour
 {
     public static int prevSceneIndex;
+    public List<SavableObject> toSave = new List<SavableObject>();
 
     public int leftScene;
     public int rightScene;
@@ -15,7 +20,9 @@ public class SceneLoad : MonoBehaviour
     public Vector2 topStart;
     public Vector2 bottomStart;
 
-    private void OnLevelWasLoaded(int level)
+    private string docPath;
+
+    private void Awake()
     {
         if (prevSceneIndex == rightScene)
             Player.Instance.gameObject.transform.position = rightStart;
@@ -25,5 +32,58 @@ public class SceneLoad : MonoBehaviour
             Player.Instance.gameObject.transform.position = topStart;
         if (prevSceneIndex == bottomScene)
             Player.Instance.gameObject.transform.position = bottomStart;
+        docPath = $"{Application.temporaryCachePath}/{SceneManager.GetActiveScene().name}.xml";
+    }
+
+    private void Start()
+    {
+        var root = Load();
+        if (root != null)
+            SetThings(root);
+    }
+
+    public void Save()
+    {
+        var root = new XElement("root");
+        foreach(var obj in toSave)
+            root.Add(obj.GetElement());
+        var saveDoc = new XDocument(root);
+        File.WriteAllText(docPath, saveDoc.ToString());
+        Debug.Log("saved");
+    }
+
+    public XElement Load()
+    {
+        XElement root = null;
+        if (File.Exists(docPath))
+            root = XDocument.Parse(File.ReadAllText(docPath)).Element("root");
+        return root;
+    }
+
+    private void SetThings(XElement root)
+    {
+        foreach (var item in root.Elements("instance"))
+        {
+            var name = item.Attribute("name").Value;
+            var thing = GameObject.Find(name);
+            if (thing.tag == "Enemy")
+            {
+                var health = float.Parse(item.Attribute("health").Value, CultureInfo.InvariantCulture);
+                if (health == 0)
+                {
+                    thing.SetActive(false);
+                    return;
+                }
+                thing.GetComponent<Enemy>().SetHealth(health);
+            }
+            var x = float.Parse(item.Attribute("x").Value, CultureInfo.InvariantCulture);
+            var y = float.Parse(item.Attribute("y").Value, CultureInfo.InvariantCulture);
+            thing.transform.position = new Vector2(x, y);
+        }
+    }
+
+    private void OnDestroy()
+    {
+        Save();
     }
 }

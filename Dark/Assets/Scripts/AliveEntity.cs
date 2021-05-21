@@ -78,6 +78,12 @@ public class AliveEntity : MonoBehaviour
     {
         ChangeHealthAmount(-damage);
     }
+
+    public void SetHealth(float health)
+    {
+        Health = health;
+        healthBar.SetValue(Health);
+    }
     
     protected virtual float GetHorizontalVelocity()
     {

@@ -466,6 +466,7 @@ GameObject:
   - component: {fileID: 1103670792}
   - component: {fileID: 1103670798}
   - component: {fileID: 1103670794}
+  - component: {fileID: 1103670799}
   m_Layer: 0
   m_Name: Eli
   m_TagString: Untagged
@@ -1130,6 +1131,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 0}
   destination: {x: 0.54, y: 0.9}
+--- !u!114 &1103670799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1103670791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1fcc056c8eb17041a8b23d389a5fe28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1186544336
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3421,6 +3434,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35dd9645c579ca54e98200816f410537, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  toSave: []
   leftScene: 0
   rightScene: 0
   topScene: 0
