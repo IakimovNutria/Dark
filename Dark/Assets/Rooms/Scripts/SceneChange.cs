@@ -1,26 +1,28 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SceneChange : Interaction
 {
     public string nextScene;
-
     private SceneLoadManager sceneLoadManager;
     
-    public void Start()
+    private void Start()
     {
         sceneLoadManager = FindObjectOfType<SceneLoadManager>();
         InteractionInitialize(3);
     }
     
-    public void Update()
+    private void Update()
     {
-        if (isPlayerReadyToInteract && ActivateCondition() && nextScene != "")
+        if (isPlayerReadyToInteract && (ActivateCondition() || mustNotBeInteraction) 
+                                    && nextScene != "" && StoryBoolActivateCondition())
         {
             sceneLoadManager.Save();
-            ChangeScene();
+            Invoke(nameof(ChangeScene), invokeTime);
         }
     }
 
@@ -38,3 +40,4 @@ public class SceneChange : Interaction
         return Input.GetKeyDown(GameManager.GM.KeyObgectsInteraction);
     }
 }
+

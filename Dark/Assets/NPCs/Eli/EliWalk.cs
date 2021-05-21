@@ -7,7 +7,8 @@ public class EliWalk : AliveEntity
 {
     private AliveEntity aliveEntity;
     private float speed = 0.2f;
-    public Vector2 destination;  
+    public Vector2 destination;
+    public string storyBoolToChange;
     private new void Start()
     {
         aliveEntity = this;
@@ -19,7 +20,8 @@ public class EliWalk : AliveEntity
         aliveEntity.Update();
         if (Math.Abs(body.position.x - destination.x) < 10e-2 && Math.Abs(body.position.y - destination.y) < 10e-2)
         {
-            GameManager.GM.ChangeStoryBool("isEliReachedRoom");
+            if (!string.IsNullOrEmpty(storyBoolToChange)) 
+                GameManager.GM.ChangeStoryBool(storyBoolToChange, true);
         }
     }
 

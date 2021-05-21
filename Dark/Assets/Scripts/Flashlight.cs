@@ -101,8 +101,11 @@ public class Flashlight : MonoBehaviour
             Charge += change;
         chargeBar.SetValue(Charge);
     }
+
     private void TurnOffFlashlight()
     {
+        isLightDamageOn = false;
+        isLightHealOn = false;
         lightParameters.lightSize = 0;
     }
     
@@ -167,4 +170,6 @@ public class Flashlight : MonoBehaviour
         lightParameters.lightColor = lightColor;
         lightParameters.eventPassedFilter = eventFilter;
     }
+    
+    
 }

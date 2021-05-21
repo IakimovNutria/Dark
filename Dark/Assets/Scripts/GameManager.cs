@@ -7,7 +7,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static bool firstRoomChestVisited;
-    public static GameObject flashlight;
+    public static GameObject Flashlight;
 
     public static GameManager GM;
     public KeyCode KeyUp { get; set; }
@@ -28,8 +28,16 @@ public class GameManager : MonoBehaviour
         {"isFirstDialogueEnd", false},
         {"isPlayerHelpEli", false},
         {"isEliReachedRoom", false},
+        {"isFirstEmilyAndEliDialogueEnd", false},
         {"isPlayerHelpEmily", false},
         {"isPlayerAskedAboutToy", false},
+        {"isPlayerAskedAboutLeg", false},
+        {"isPlayerGetToy", false},
+        {"isPlayerGiveToy", false},
+        {"drawHorse", false},
+        {"drawFlower", false},
+        {"drawMarioPacman", false},
+        {"draw", false},
         {"doesPlayerKnowStanley", false},
     };
     private void Awake()
@@ -47,7 +55,7 @@ public class GameManager : MonoBehaviour
 
     private void InitGameManager()
     {
-        flashlight = GameObject.FindGameObjectWithTag("Flashlight");
+        Flashlight = GameObject.FindGameObjectWithTag("Flashlight");
         SetDefaultKeys();
     }
 
@@ -55,25 +63,27 @@ public class GameManager : MonoBehaviour
     {
         if (StoryBools["isFirstRoomCleaned"])
         {
-
+            if (StoryBools["isPlayerGiveToy"])
+                StoryBools["draw"] = StoryBools["drawFlower"] || StoryBools["drawHorse"] 
+                                                              || StoryBools["drawMarioPacman"];
         }
         else if (!GetEnemiesInScene().Any() && !GetDiedInScene().Any() && StoryBools["isGameStarted"])
-            ChangeStoryBool("isFirstRoomCleaned");
+            ChangeStoryBool("isFirstRoomCleaned", true);
         else if (GetEnemiesInScene().Any() && !StoryBools["isGameStarted"])
-            ChangeStoryBool("isGameStarted");
+            ChangeStoryBool("isGameStarted", true);
     }
     
     public void FreezeGame()
     {
         isGameFreezed = true;
-        flashlight.SetActive(false);
+        Flashlight.SetActive(false);
         Time.timeScale = 0;
     }
 
     public void ResumeGame()
     {
         Time.timeScale = 1;
-        flashlight.SetActive(true);
+        Flashlight.SetActive(true);
         isGameFreezed = false;
     }
 
@@ -99,8 +109,8 @@ public class GameManager : MonoBehaviour
         return GameObject.FindGameObjectsWithTag("Died");
     }
 
-    public void ChangeStoryBool(string storyBoolName)
+    public void ChangeStoryBool(string storyBoolName, bool storyBoolValue)
     {
-        StoryBools[storyBoolName] = !StoryBools[storyBoolName];
+        StoryBools[storyBoolName] = storyBoolValue;
     }
 }
