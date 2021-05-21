@@ -1320,7 +1320,7 @@ MonoBehaviour:
     - cantRepeat: 0
       text: "\u042F \u043F\u0440\u0438\u043D\u0435\u0441\u043B\u0430 \u043A\u0443\u043A\u043B\u0443."
       toNode: 11
-      speakEnd: 1
+      speakEnd: 0
       storyBoolToChange: isPlayerGiveToy
       storyBoolToGetAnswer: isPlayerGetToy
       storyBoolMustBeFalse: 0
