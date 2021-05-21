@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
@@ -5,11 +6,12 @@ using UnityEngine;
 using System.Globalization;
 using System.Xml.Linq;
 using System.IO;
+using System.Linq;
 
 public class SceneLoadManager : MonoBehaviour
 {
     public static int prevSceneIndex;
-    public List<AliveEntity> toSave = new List<AliveEntity>();
+    private List<AliveEntity> toSave = new List<AliveEntity>();
 
     public int leftScene;
     public int rightScene;
@@ -32,11 +34,14 @@ public class SceneLoadManager : MonoBehaviour
             Player.Instance.gameObject.transform.position = topStart;
         if (prevSceneIndex == bottomScene)
             Player.Instance.gameObject.transform.position = bottomStart;
-        docPath = $"{Application.temporaryCachePath}/{UnityEngine.SceneManagement.SceneManager.GetActiveScene().name}.xml";
+        docPath = $"{Application.temporaryCachePath}/{SceneManager.GetActiveScene().name}.xml";
     }
 
     private void Start()
     {
+        toSave = FindObjectsOfType<AliveEntity>()
+            .Where(aliveEntity => aliveEntity.GetComponent<Player>() == null)
+            .ToList();
         var root = Load();
         if (root != null)
             SetThings(root);
@@ -45,7 +50,7 @@ public class SceneLoadManager : MonoBehaviour
     public void Save()
     {
         var root = new XElement("root");
-        foreach(var obj in toSave)
+        foreach (var obj in toSave)
             root.Add(obj.GetElement());
         var saveDoc = new XDocument(root);
         File.WriteAllText(docPath, saveDoc.ToString());
@@ -63,26 +68,18 @@ public class SceneLoadManager : MonoBehaviour
     {
         foreach (var item in root.Elements("instance"))
         {
-            var name = item.Attribute("name").Value;
-            var thing = GameObject.Find(name);
-            if (thing.tag == "Enemy")
+            var entityName = item.Attribute("name")?.Value;
+            var entity = GameObject.Find(entityName);
+            var health = float.Parse(item.Attribute("health")?.Value!, CultureInfo.InvariantCulture); 
+            if (health == 0)
             {
-                var health = float.Parse(item.Attribute("health").Value, CultureInfo.InvariantCulture);
-                if (health == 0)
-                {
-                    thing.SetActive(false);
-                    return;
-                }
-                thing.GetComponent<Enemy>().SetHealth(health);
+                entity.SetActive(false);
+                return;
             }
-            var x = float.Parse(item.Attribute("x").Value, CultureInfo.InvariantCulture);
-            var y = float.Parse(item.Attribute("y").Value, CultureInfo.InvariantCulture);
-            thing.transform.position = new Vector2(x, y);
+            entity.GetComponent<AliveEntity>().SetHealth(health);
+            var x = float.Parse(item.Attribute("x")?.Value!, CultureInfo.InvariantCulture);
+            var y = float.Parse(item.Attribute("y")?.Value!, CultureInfo.InvariantCulture);
+            entity.transform.position = new Vector2(x, y);
         }
-    }
-
-    private void OnDestroy()
-    {
-        Save();
     }
 }

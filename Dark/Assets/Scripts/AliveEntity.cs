@@ -14,9 +14,10 @@ public class AliveEntity : MonoBehaviour
     protected Rigidbody2D body;
     public Bar healthBar;
     private bool haveHealthBar;
-
+    protected AliveEntity aliveEntity;
     public void Start()
     {
+        aliveEntity = this;
         animator = gameObject.GetComponent<Animator>();
         body = gameObject.GetComponent<Rigidbody2D>();
     }
@@ -34,7 +35,7 @@ public class AliveEntity : MonoBehaviour
             Move();
         }
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("Died"))
-            Destroy(gameObject);
+            gameObject.SetActive(false);
     }
 
     private void Move()
@@ -85,20 +86,15 @@ public class AliveEntity : MonoBehaviour
         var objName = new XAttribute("name", name);
         var x = new XAttribute("x", transform.position.x);
         var y = new XAttribute("y", transform.position.y);
-        var enemy = gameObject.GetComponent<Enemy>();
-        if (enemy != null)
-        {
-            var health = new XAttribute("health", enemy.Health);
-            return new XElement("instance", objName, health, x, y);
-        }
-        else
-            return new XElement("instance", objName, x, y);
+        var health = new XAttribute("health", aliveEntity.Health);
+        return new XElement("instance", objName, health, x, y);
     }
 
     public void SetHealth(float health)
     {
         Health = health;
-        healthBar.SetValue(Health);
+        if (healthBar != null)
+            healthBar.SetValue(Health);
     }
     
     protected virtual float GetHorizontalVelocity()
