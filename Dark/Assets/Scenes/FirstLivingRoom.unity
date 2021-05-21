@@ -4280,8 +4280,8 @@ MonoBehaviour:
       toNode: 40
       speakEnd: 0
       storyBoolToChange: 
-      storyBoolToGetAnswer: draw
-      storyBoolMustBeFalse: 1
+      storyBoolToGetAnswer: isPlayerGiveToy
+      storyBoolMustBeFalse: 0
       changeStoryBoolToFalse: 0
     - cantRepeat: 0
       text: "\u041A\u0430\u043A \u043F\u043B\u0430\u043D\u0438\u0440\u0443\u0435\u0448\u044C
@@ -4290,7 +4290,7 @@ MonoBehaviour:
       toNode: 57
       speakEnd: 0
       storyBoolToChange: 
-      storyBoolToGetAnswer: 
+      storyBoolToGetAnswer: isPlayerGiveToy
       storyBoolMustBeFalse: 0
       changeStoryBoolToFalse: 0
     - cantRepeat: 0
@@ -4300,7 +4300,7 @@ MonoBehaviour:
       toNode: 61
       speakEnd: 0
       storyBoolToChange: 
-      storyBoolToGetAnswer: 
+      storyBoolToGetAnswer: isPlayerGiveToy
       storyBoolMustBeFalse: 0
       changeStoryBoolToFalse: 0
     - cantRepeat: 0
@@ -4863,7 +4863,15 @@ MonoBehaviour:
       toNode: 41
       speakEnd: 0
       storyBoolToChange: 
-      storyBoolToGetAnswer: 
+      storyBoolToGetAnswer: draw
+      storyBoolMustBeFalse: 1
+      changeStoryBoolToFalse: 0
+    - cantRepeat: 0
+      text: ...
+      toNode: 0
+      speakEnd: 0
+      storyBoolToChange: 
+      storyBoolToGetAnswer: draw
       storyBoolMustBeFalse: 0
       changeStoryBoolToFalse: 0
   - storyBoolToGetDialogue: 
