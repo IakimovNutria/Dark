@@ -537,7 +537,7 @@ MonoBehaviour:
       text: ...
       toNode: 1
       speakEnd: 0
-      storyBoolToChange: 
+      storyBoolToChange: isFirstEmilyAndEliDialogueEnd
       storyBoolToGetAnswer: 
       storyBoolMustBeFalse: 0
   - storyBoolToGetDialogue: 
@@ -1130,6 +1130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 0}
   destination: {x: 0.54, y: 0.9}
+  storyBoolToChange: 
 --- !u!1001 &1186544336
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1373,6 +1374,11 @@ MonoBehaviour:
   isPlayerReadyToInteract: 0
   noInteractionIndicator: 0
   nextScene: StartingAisle
+  activateConditionsList:
+  - activateConditions:
+    - storyBoolToActivate: isFirstEmilyAndEliDialogueEnd
+      mustBeFalse: 0
+  mustNotBeInteraction: 0
 --- !u!60 &1347536459
 PolygonCollider2D:
   m_ObjectHideFlags: 0

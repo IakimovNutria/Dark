@@ -28,6 +28,8 @@ public class GameManager : MonoBehaviour
         {"isFirstDialogueEnd", false},
         {"isPlayerHelpEli", false},
         {"isEliReachedRoom", false},
+        {"doesPlayerVisitEliRoom", false},
+        {"isFirstEmilyAndEliDialogueEnd", false},
         {"isPlayerHelpEmily", false},
         {"isPlayerAskedAboutToy", false},
         {"doesPlayerKnowStanley", false},
@@ -58,9 +60,9 @@ public class GameManager : MonoBehaviour
 
         }
         else if (!GetEnemiesInScene().Any() && !GetDiedInScene().Any() && StoryBools["isGameStarted"])
-            ChangeStoryBool("isFirstRoomCleaned");
+            ChangeStoryBool("isFirstRoomCleaned", true);
         else if (GetEnemiesInScene().Any() && !StoryBools["isGameStarted"])
-            ChangeStoryBool("isGameStarted");
+            ChangeStoryBool("isGameStarted", true);
     }
     
     public void FreezeGame()
@@ -99,8 +101,8 @@ public class GameManager : MonoBehaviour
         return GameObject.FindGameObjectsWithTag("Died");
     }
 
-    public void ChangeStoryBool(string storyBoolName)
+    public void ChangeStoryBool(string storyBoolName, bool storyBoolValue)
     {
-        StoryBools[storyBoolName] = !StoryBools[storyBoolName];
+        StoryBools[storyBoolName] = storyBoolValue;
     }
 }

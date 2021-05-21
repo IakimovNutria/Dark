@@ -71,7 +71,7 @@ public class Dialogue : Interaction
             answer.IsAnswered = true;
             var storyBoolToChange = answer.storyBoolToChange;
             if (!string.IsNullOrEmpty(storyBoolToChange))
-                GameManager.GM.ChangeStoryBool(storyBoolToChange);
+                GameManager.GM.ChangeStoryBool(storyBoolToChange, true);
             if (answer.speakEnd) {
                 if (!canRepeat)
                     canObjectBeInteracted = false;

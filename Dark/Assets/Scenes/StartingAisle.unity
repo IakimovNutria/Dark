@@ -260,6 +260,14 @@ MonoBehaviour:
   isPlayerReadyToInteract: 0
   noInteractionIndicator: 0
   nextScene: 
+  activateConditionsList:
+  - activateConditions:
+    - storyBoolToActivate: isPlayerHelpEli
+      mustBeFalse: 1
+  - activateConditions:
+    - storyBoolToActivate: doesPlayerVisitEliRoom
+      mustBeFalse: 0
+  mustNotBeInteraction: 0
 --- !u!60 &94215059
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -511,6 +519,14 @@ MonoBehaviour:
   isPlayerReadyToInteract: 0
   noInteractionIndicator: 0
   nextScene: StartingBath
+  activateConditionsList:
+  - activateConditions:
+    - storyBoolToActivate: isPlayerHelpEli
+      mustBeFalse: 1
+  - activateConditions:
+    - storyBoolToActivate: doesPlayerVisitEliRoom
+      mustBeFalse: 0
+  mustNotBeInteraction: 0
 --- !u!60 &332896303
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -686,6 +702,14 @@ MonoBehaviour:
   isPlayerReadyToInteract: 0
   noInteractionIndicator: 0
   nextScene: FirstLivingRoom
+  activateConditionsList:
+  - activateConditions:
+    - storyBoolToActivate: isPlayerHelpEli
+      mustBeFalse: 1
+  - activateConditions:
+    - storyBoolToActivate: isEliReachedRoom
+      mustBeFalse: 0
+  mustNotBeInteraction: 0
 --- !u!483693784 &426592492
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -971,6 +995,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 0}
   destination: {x: -5.35, y: -2.51}
+  storyBoolToChange: isEliReachedRoom
 --- !u!95 &630363008
 Animator:
   serializedVersion: 3

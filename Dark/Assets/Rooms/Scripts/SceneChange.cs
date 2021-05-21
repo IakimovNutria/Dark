@@ -1,22 +1,40 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SceneChange : Interaction
 {
     public string nextScene;
-
-    // Start is called before the first frame update
+    public List<ActivateConditions> activateConditionsList;
+    public bool mustNotBeInteraction;
+    
     public void Start()
     {
+        if (mustNotBeInteraction)
+        {
+            canObjectBeInteracted = false;
+            isPlayerReadyToInteract = true;
+        }
         InteractionInitialize(3);
     }
 
-    // Update is called once per frame
     public void Update()
     {
-        if (isPlayerReadyToInteract && ActivateCondition() && nextScene != "")
+        var doesOneConditionActivated = activateConditionsList
+            .Select(activateConditions => activateConditions.activateConditions
+                .Where(activateCondition => !string.IsNullOrEmpty(activateCondition.storyBoolToActivate))
+                .All(activateCondition => 
+                    GameManager.GM.StoryBools[activateCondition.storyBoolToActivate] != activateCondition.mustBeFalse))
+            .Any(doesConditionActivated => doesConditionActivated);
+
+        if (!doesOneConditionActivated && activateConditionsList.Count != 0)
+            return;
+
+
+        if (isPlayerReadyToInteract && (ActivateCondition() || mustNotBeInteraction) && nextScene != "")
             ChangeScene();
     }
 
@@ -33,4 +51,17 @@ public class SceneChange : Interaction
     {
         return Input.GetKeyDown(GameManager.GM.KeyObgectsInteraction);
     }
+}
+
+[Serializable]
+public class ActivateConditions
+{
+    public List<ActivateCondition> activateConditions;
+}
+
+[Serializable]
+public class ActivateCondition
+{
+    public string storyBoolToActivate;
+    public bool mustBeFalse;
 }

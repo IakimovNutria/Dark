@@ -8068,8 +8068,8 @@ GameObject:
   - component: {fileID: 1600107758}
   - component: {fileID: 1600107757}
   - component: {fileID: 1600107759}
-  - component: {fileID: 1600107760}
   - component: {fileID: 1600107761}
+  - component: {fileID: 1600107760}
   m_Layer: 3
   m_Name: LeftDoor
   m_TagString: Untagged
@@ -8276,13 +8276,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1600107755}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 128873d6002c74a36ba06f4159998e81, type: 3}
+  m_Script: {fileID: 11500000, guid: 46611e9584b479148a22c1f5bc8915cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   canObjectBeInteracted: 0
   isPlayerReadyToInteract: 0
   noInteractionIndicator: 0
   nextScene: StartingAisle
+  activateConditionsList:
+  - activateConditions:
+    - storyBoolToActivate: isFirstDialogueEnd
+      mustBeFalse: 0
+  mustNotBeInteraction: 1
 --- !u!114 &1600107761
 MonoBehaviour:
   m_ObjectHideFlags: 0
