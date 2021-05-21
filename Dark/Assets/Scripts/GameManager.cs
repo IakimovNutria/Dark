@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
     public readonly Dictionary<string, bool> StoryBools = new Dictionary<string, bool>
     {
         {"isGameStarted", false},
+        {"exitGame", false}, 
         {"isFirstRoomCleaned", false},
         {"isFirstDialogueEnd", false},
         {"isPlayerHelpEli", false},

@@ -13,6 +13,8 @@ public class EliWalk : AliveEntity
     
     private new void Start()
     {
+        if (!GameManager.GM.StoryBools["isPlayerHelpEli"])
+            gameObject.SetActive(false);
         aliveEntity = this;
         aliveEntity.Start();
     }

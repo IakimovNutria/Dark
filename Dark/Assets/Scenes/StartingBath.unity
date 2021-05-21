@@ -505,8 +505,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35dd9645c579ca54e98200816f410537, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toSave:
-  - {fileID: 364353015}
   leftScene: 0
   rightScene: 0
   topScene: 2
@@ -1639,9 +1637,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46611e9584b479148a22c1f5bc8915cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canObjectBeInteracted: 0
-  isPlayerReadyToInteract: 0
-  noInteractionIndicator: 0
+  mustNotBeInteraction: 0
+  activateConditionsList: []
   nextScene: StartingAisle
 --- !u!483693784 &1270547827
 TilemapRenderer:

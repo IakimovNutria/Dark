@@ -967,7 +967,7 @@ MonoBehaviour:
   - activateConditions:
     - storyBoolToActivate: isPlayerHelpEli
       mustBeFalse: 0
-    - storyBoolToActivate: isFirstEmilyAndEliDialogueEnd
+    - storyBoolToActivate: isEliReachedRoom
       mustBeFalse: 1
   node:
   - storyBoolToGetDialogue: 

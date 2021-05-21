@@ -661,7 +661,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mustNotBeInteraction: 1
-  activateConditionsList: []
+  activateConditionsList:
+  - activateConditions:
+    - storyBoolToActivate: isFirstEmilyAndEliDialogueEnd
+      mustBeFalse: 1
   node:
   - storyBoolToGetDialogue: 
     toNode: 0
@@ -1986,10 +1989,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mustNotBeInteraction: 0
-  activateConditionsList:
-  - activateConditions:
-    - storyBoolToActivate: isFirstEmilyAndEliDialogueEnd
-      mustBeFalse: 0
+  activateConditionsList: []
   nextScene: StartingAisle
 --- !u!60 &1347536459
 PolygonCollider2D:

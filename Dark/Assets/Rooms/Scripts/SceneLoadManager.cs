@@ -11,8 +11,7 @@ using System.Linq;
 public class SceneLoadManager : MonoBehaviour
 {
     public static int prevSceneIndex;
-    private List<AliveEntity> toSave = new List<AliveEntity>();
-
+    
     public int leftScene;
     public int rightScene;
     public int topScene;
@@ -21,9 +20,7 @@ public class SceneLoadManager : MonoBehaviour
     public Vector2 rightStart;
     public Vector2 topStart;
     public Vector2 bottomStart;
-
-    private string docPath;
-
+    private SceneSaveManager sceneSaveManager;
     private void Awake()
     {
         if (prevSceneIndex == rightScene)
@@ -34,38 +31,31 @@ public class SceneLoadManager : MonoBehaviour
             Player.Instance.gameObject.transform.position = topStart;
         if (prevSceneIndex == bottomScene)
             Player.Instance.gameObject.transform.position = bottomStart;
-        docPath = $"{Application.temporaryCachePath}/{SceneManager.GetActiveScene().name}.xml";
     }
 
     private void Start()
     {
-        toSave = FindObjectsOfType<AliveEntity>()
-            .Where(aliveEntity => aliveEntity.GetComponent<Player>() == null)
-            .ToList();
+        sceneSaveManager = FindObjectOfType<SceneSaveManager>();
         var root = Load();
         if (root != null)
             SetThings(root);
     }
-
-    public void Save()
-    {
-        var root = new XElement("root");
-        foreach (var obj in toSave)
-            root.Add(obj.GetElement());
-        var saveDoc = new XDocument(root);
-        File.WriteAllText(docPath, saveDoc.ToString());
-    }
-
     public XElement Load()
     {
-        XElement root = null;
-        if (File.Exists(docPath))
-            root = XDocument.Parse(File.ReadAllText(docPath)).Element("root");
-        return root;
+        var filePath = sceneSaveManager.currentGameFolderPath + $"/{SceneManager.GetActiveScene().name}.xml";
+        return File.Exists(filePath) ? XDocument
+                .Parse(File.ReadAllText(filePath))
+                .Element("root") 
+            : null;
     }
 
     private void SetThings(XElement root)
     {
+        var allEntities = FindObjectsOfType<AliveEntity>()
+            .Where(aliveEntity => aliveEntity.GetComponent<Player>() == null)
+            .ToList();
+        var loadedEntities = new List<AliveEntity>();
+        
         foreach (var item in root.Elements("instance"))
         {
             var entityName = item.Attribute("name")?.Value;
@@ -76,10 +66,17 @@ public class SceneLoadManager : MonoBehaviour
                 entity.SetActive(false);
                 return;
             }
-            entity.GetComponent<AliveEntity>().SetHealth(health);
+
+            var aliveEntity = entity.GetComponent<AliveEntity>();
+            aliveEntity.SetHealth(health);
             var x = float.Parse(item.Attribute("x")?.Value!, CultureInfo.InvariantCulture);
             var y = float.Parse(item.Attribute("y")?.Value!, CultureInfo.InvariantCulture);
             entity.transform.position = new Vector2(x, y);
+            loadedEntities.Add(aliveEntity);
         }
+
+        var notLoadedEntities = allEntities.Except(loadedEntities);
+        foreach (var entity in notLoadedEntities)
+            entity.gameObject.SetActive(false);
     }
 }

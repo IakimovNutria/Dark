@@ -8,11 +8,11 @@ using UnityEngine.SceneManagement;
 public class SceneChange : Interaction
 {
     public string nextScene;
-    private SceneLoadManager sceneLoadManager;
+    private SceneSaveManager sceneSaveManager;
     
     private void Start()
     {
-        sceneLoadManager = FindObjectOfType<SceneLoadManager>();
+        sceneSaveManager = FindObjectOfType<SceneSaveManager>();
         InteractionInitialize(3);
     }
     
@@ -21,7 +21,7 @@ public class SceneChange : Interaction
         if (isPlayerReadyToInteract && (ActivateCondition() || mustNotBeInteraction) 
                                     && nextScene != "" && StoryBoolActivateCondition())
         {
-            sceneLoadManager.Save();
+            sceneSaveManager.Save();
             Invoke(nameof(ChangeScene), invokeTime);
         }
     }
