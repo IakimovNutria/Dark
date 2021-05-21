@@ -662,7 +662,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canObjectBeInteracted: 0
   isPlayerReadyToInteract: 0
-  noInteractionIndicator: 0
+  mustNotBeInteraction: 0
   flashlight: {fileID: 1165224367}
 --- !u!114 &194882287
 MonoBehaviour:
@@ -4884,7 +4884,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canObjectBeInteracted: 0
   isPlayerReadyToInteract: 0
-  noInteractionIndicator: 0
+  mustNotBeInteraction: 0
   node:
   - storyBoolToGetDialogue: 
     toNode: 0
@@ -6005,7 +6005,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canObjectBeInteracted: 0
   isPlayerReadyToInteract: 0
-  noInteractionIndicator: 1
+  mustNotBeInteraction: 1
   node:
   - storyBoolToGetDialogue: 
     toNode: 0
@@ -8281,13 +8281,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canObjectBeInteracted: 0
   isPlayerReadyToInteract: 0
-  noInteractionIndicator: 0
+  mustNotBeInteraction: 1
   nextScene: StartingAisle
   activateConditionsList:
   - activateConditions:
     - storyBoolToActivate: isFirstDialogueEnd
       mustBeFalse: 0
-  mustNotBeInteraction: 1
 --- !u!114 &1600107761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8302,7 +8301,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canObjectBeInteracted: 0
   isPlayerReadyToInteract: 0
-  noInteractionIndicator: 0
+  mustNotBeInteraction: 0
   node:
   - storyBoolToGetDialogue: 
     toNode: 0

@@ -18,7 +18,7 @@ public class EliWalk : AliveEntity
     private new void Update()
     {
         aliveEntity.Update();
-        if (Math.Abs(body.position.x - destination.x) < 10e-1 && Math.Abs(body.position.y - destination.y) < 10e-1)
+        if (Math.Abs(body.position.x - destination.x) < 10e-2 && Math.Abs(body.position.y - destination.y) < 10e-2)
         {
             if (!string.IsNullOrEmpty(storyBoolToChange)) 
                 GameManager.GM.ChangeStoryBool(storyBoolToChange, true);

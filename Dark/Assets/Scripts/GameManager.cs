@@ -7,7 +7,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static bool firstRoomChestVisited;
-    public static GameObject flashlight;
+    public static GameObject Flashlight;
 
     public static GameManager GM;
     public KeyCode KeyUp { get; set; }
@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour
 
     private void InitGameManager()
     {
-        flashlight = GameObject.FindGameObjectWithTag("Flashlight");
+        Flashlight = GameObject.FindGameObjectWithTag("Flashlight");
         SetDefaultKeys();
     }
 
@@ -68,14 +68,14 @@ public class GameManager : MonoBehaviour
     public void FreezeGame()
     {
         isGameFreezed = true;
-        flashlight.SetActive(false);
+        Flashlight.SetActive(false);
         Time.timeScale = 0;
     }
 
     public void ResumeGame()
     {
         Time.timeScale = 1;
-        flashlight.SetActive(true);
+        Flashlight.SetActive(true);
         isGameFreezed = false;
     }
 

@@ -28,7 +28,7 @@ public class Dialogue : Interaction
                 isGameResumed = true;
             }
 
-            isActivateDialogue = ActivateCondition() && (!isDialogueEnd || canRepeat);
+            isActivateDialogue = ActivateCondition() && (!isDialogueEnd || canRepeat) && StoryBoolActivateCondition();
             return;
         }
         
@@ -43,8 +43,11 @@ public class Dialogue : Interaction
                 currentNode = node[currentNode].toNode;
                 return;
             }
+        
         GameManager.GM.FreezeGame();
         isGameResumed = false;
+        
+        
         GUI.Box (new Rect (Screen.width / 2 - 300, Screen.height - 250, 600, 240), "");
         GUI.Label (new Rect (Screen.width / 2 - 250, 
             Screen.height - 230, 500, 90), node[currentNode].npcText);
@@ -80,9 +83,7 @@ public class Dialogue : Interaction
             }
             currentNode = answer.toNode;
         }
-        
     }
-
     protected override bool ActivateCondition()
     {
         return Input.GetKey(dialogueActivateKey);

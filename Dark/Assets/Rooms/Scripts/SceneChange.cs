@@ -8,34 +8,17 @@ using UnityEngine.SceneManagement;
 public class SceneChange : Interaction
 {
     public string nextScene;
-    public List<ActivateConditions> activateConditionsList;
-    public bool mustNotBeInteraction;
-    
-    public void Start()
+
+    private void Start()
     {
-        if (mustNotBeInteraction)
-        {
-            canObjectBeInteracted = false;
-            isPlayerReadyToInteract = true;
-        }
         InteractionInitialize(3);
     }
 
-    public void Update()
+    private void Update()
     {
-        var doesOneConditionActivated = activateConditionsList
-            .Select(activateConditions => activateConditions.activateConditions
-                .Where(activateCondition => !string.IsNullOrEmpty(activateCondition.storyBoolToActivate))
-                .All(activateCondition => 
-                    GameManager.GM.StoryBools[activateCondition.storyBoolToActivate] != activateCondition.mustBeFalse))
-            .Any(doesConditionActivated => doesConditionActivated);
-
-        if (!doesOneConditionActivated && activateConditionsList.Count != 0)
-            return;
-
-
-        if (isPlayerReadyToInteract && (ActivateCondition() || mustNotBeInteraction) && nextScene != "")
-            ChangeScene();
+        if (isPlayerReadyToInteract && (ActivateCondition() || mustNotBeInteraction) 
+                                    && nextScene != "" && StoryBoolActivateCondition())
+            Invoke(nameof(ChangeScene), invokeTime);;
     }
 
     private void ChangeScene()
@@ -53,15 +36,3 @@ public class SceneChange : Interaction
     }
 }
 
-[Serializable]
-public class ActivateConditions
-{
-    public List<ActivateCondition> activateConditions;
-}
-
-[Serializable]
-public class ActivateCondition
-{
-    public string storyBoolToActivate;
-    public bool mustBeFalse;
-}
