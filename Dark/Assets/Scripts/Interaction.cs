@@ -6,8 +6,8 @@ using System.Linq;
 
 public class Interaction : MonoBehaviour
 {
-    public bool canObjectBeInteracted;
-    public bool isPlayerReadyToInteract;
+    protected bool canObjectBeInteracted;
+    protected bool isPlayerReadyToInteract;
     public bool mustNotBeInteraction;
     public List<ActivateConditions> activateConditionsList;
     

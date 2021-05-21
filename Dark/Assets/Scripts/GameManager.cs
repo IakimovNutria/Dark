@@ -32,6 +32,13 @@ public class GameManager : MonoBehaviour
         {"isFirstEmilyAndEliDialogueEnd", false},
         {"isPlayerHelpEmily", false},
         {"isPlayerAskedAboutToy", false},
+        {"isPlayerAskedAboutLeg", false},
+        {"isPlayerGetToy", true},
+        {"isPlayerGiveToy", false},
+        {"drawHorse", false},
+        {"drawFlower", false},
+        {"drawMarioPacman", false},
+        {"draw", false},
         {"doesPlayerKnowStanley", false},
     };
     private void Awake()
@@ -57,7 +64,9 @@ public class GameManager : MonoBehaviour
     {
         if (StoryBools["isFirstRoomCleaned"])
         {
-
+            if (StoryBools["isPlayerGiveToy"])
+                StoryBools["draw"] = StoryBools["drawFlower"] || StoryBools["drawHorse"] 
+                                                              || StoryBools["drawMarioPacman"];
         }
         else if (!GetEnemiesInScene().Any() && !GetDiedInScene().Any() && StoryBools["isGameStarted"])
             ChangeStoryBool("isFirstRoomCleaned", true);
