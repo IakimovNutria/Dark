@@ -8,22 +8,27 @@ using UnityEngine.SceneManagement;
 public class SceneChange : Interaction
 {
     public string nextScene;
-
+    private SceneLoadManager sceneLoadManager;
+    
     private void Start()
     {
+        sceneLoadManager = FindObjectOfType<SceneLoadManager>();
         InteractionInitialize(3);
     }
-
+    
     private void Update()
     {
         if (isPlayerReadyToInteract && (ActivateCondition() || mustNotBeInteraction) 
                                     && nextScene != "" && StoryBoolActivateCondition())
-            Invoke(nameof(ChangeScene), invokeTime);;
+        {
+            sceneLoadManager.Save();
+            Invoke(nameof(ChangeScene), invokeTime);
+        }
     }
 
     private void ChangeScene()
     {
-        SceneLoad.prevSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneLoadManager.prevSceneIndex = SceneManager.GetActiveScene().buildIndex;
         DontDestroyOnLoad(GameObject.FindGameObjectWithTag("Canvas"));
         DontDestroyOnLoad(GameObject.FindGameObjectWithTag("MainCamera"));
         DontDestroyOnLoad(GameObject.FindGameObjectWithTag("Flashlight"));

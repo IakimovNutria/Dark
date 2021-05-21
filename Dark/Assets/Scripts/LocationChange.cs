@@ -16,11 +16,11 @@ public class LocationChange : ActivationCode
     
     private void ChangeScene()
     {
-        SceneLoad.prevSceneIndex = 2;
+        SceneLoadManager.prevSceneIndex = 2;
         DontDestroyOnLoad(GameObject.FindGameObjectWithTag("Canvas"));
         DontDestroyOnLoad(GameObject.FindGameObjectWithTag("MainCamera"));
         DontDestroyOnLoad(GameObject.FindGameObjectWithTag("Flashlight"));
-        SceneManager.LoadScene("FirstLivingRoom");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("FirstLivingRoom");
     }
     
     protected override void Activate()

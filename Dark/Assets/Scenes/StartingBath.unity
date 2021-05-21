@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 364353015}
   - component: {fileID: 364353014}
   - component: {fileID: 364353013}
+  - component: {fileID: 364353019}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -290,6 +291,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &364353019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 364353012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1fcc056c8eb17041a8b23d389a5fe28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &462500989
 GameObject:
   m_ObjectHideFlags: 0
@@ -463,6 +476,59 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4994588287122091960, guid: f49cc2804f0e2914c8fd01919a14cbe3, type: 3}
   m_PrefabInstance: {fileID: 773325805}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &785423393
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 785423395}
+  - component: {fileID: 785423394}
+  m_Layer: 0
+  m_Name: SceneLoadManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &785423394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 785423393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35dd9645c579ca54e98200816f410537, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toSave:
+  - {fileID: 364353015}
+  leftScene: 0
+  rightScene: 0
+  topScene: 2
+  bottomScene: 0
+  leftStart: {x: 0, y: 0}
+  rightStart: {x: 0, y: 0}
+  topStart: {x: 0.7, y: -0.5}
+  bottomStart: {x: 0, y: 0}
+--- !u!4 &785423395
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 785423393}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.9365131, y: -2.622548, z: -1.3360431}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &980156320
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -637,7 +703,6 @@ GameObject:
   - component: {fileID: 1132263429}
   - component: {fileID: 1132263431}
   - component: {fileID: 1132263430}
-  - component: {fileID: 1132263432}
   - component: {fileID: 1132263433}
   m_Layer: 0
   m_Name: Floor
@@ -1470,26 +1535,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!114 &1132263432
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1132263428}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35dd9645c579ca54e98200816f410537, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  leftScene: 0
-  rightScene: 0
-  topScene: 2
-  bottomScene: 0
-  leftStart: {x: 0, y: 0}
-  rightStart: {x: 0, y: 0}
-  topStart: {x: 0.7, y: -0.5}
-  bottomStart: {x: 0, y: 0}
 --- !u!68 &1132263433
 EdgeCollider2D:
   m_ObjectHideFlags: 0

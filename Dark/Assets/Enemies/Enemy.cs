@@ -10,7 +10,7 @@ public class Enemy : AliveEntity
     private readonly float damageRadius = 0.5f;
     private readonly float maxEnemyHealth = 100;
     private Player player;
-    private new void Start()
+    private new void Awake()
     {
         aliveEntity = this;
         aliveEntity.Start();
