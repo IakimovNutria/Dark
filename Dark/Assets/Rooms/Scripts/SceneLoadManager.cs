@@ -6,10 +6,10 @@ using System.Globalization;
 using System.Xml.Linq;
 using System.IO;
 
-public class SceneLoad : MonoBehaviour
+public class SceneLoadManager : MonoBehaviour
 {
     public static int prevSceneIndex;
-    public List<SavableObject> toSave = new List<SavableObject>();
+    public List<AliveEntity> toSave = new List<AliveEntity>();
 
     public int leftScene;
     public int rightScene;
@@ -32,7 +32,7 @@ public class SceneLoad : MonoBehaviour
             Player.Instance.gameObject.transform.position = topStart;
         if (prevSceneIndex == bottomScene)
             Player.Instance.gameObject.transform.position = bottomStart;
-        docPath = $"{Application.temporaryCachePath}/{SceneManager.GetActiveScene().name}.xml";
+        docPath = $"{Application.temporaryCachePath}/{UnityEngine.SceneManagement.SceneManager.GetActiveScene().name}.xml";
     }
 
     private void Start()
@@ -49,7 +49,6 @@ public class SceneLoad : MonoBehaviour
             root.Add(obj.GetElement());
         var saveDoc = new XDocument(root);
         File.WriteAllText(docPath, saveDoc.ToString());
-        Debug.Log("saved");
     }
 
     public XElement Load()

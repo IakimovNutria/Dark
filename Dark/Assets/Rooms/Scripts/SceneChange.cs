@@ -22,11 +22,11 @@ public class SceneChange : Interaction
 
     private void ChangeScene()
     {
-        SceneLoad.prevSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneLoadManager.prevSceneIndex = UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex;
         DontDestroyOnLoad(GameObject.FindGameObjectWithTag("Canvas"));
         DontDestroyOnLoad(GameObject.FindGameObjectWithTag("MainCamera"));
         DontDestroyOnLoad(GameObject.FindGameObjectWithTag("Flashlight"));
-        SceneManager.LoadScene(nextScene);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(nextScene);
     }
 
     protected override bool ActivateCondition()
