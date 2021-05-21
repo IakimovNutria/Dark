@@ -21,7 +21,7 @@ public class SceneChange : Interaction
         if (isPlayerReadyToInteract && (ActivateCondition() || mustNotBeInteraction) 
                                     && nextScene != "" && StoryBoolActivateCondition())
         {
-            sceneSaveManager.Save();
+            sceneSaveManager.SaveScene();
             Invoke(nameof(ChangeScene), invokeTime);
         }
     }

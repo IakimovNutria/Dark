@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -114,5 +115,16 @@ public class GameManager : MonoBehaviour
     public void ChangeStoryBool(string storyBoolName, bool storyBoolValue)
     {
         StoryBools[storyBoolName] = storyBoolValue;
+    }
+
+    public void ResetGame()
+    {
+        Destroy(GameObject.FindGameObjectWithTag("Player"));
+        Destroy(GameObject.FindGameObjectWithTag("MainCamera"));
+        Destroy(GameObject.FindGameObjectWithTag("Flashlight"));
+        Destroy(GameObject.FindGameObjectWithTag("Canvas"));
+        SceneSaveManager.DeleteSave("CurrentGame");
+        SceneManager.LoadScene("GameStartMenu");
+        Destroy(gameObject);
     }
 }

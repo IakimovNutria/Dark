@@ -20,7 +20,6 @@ public class SceneLoadManager : MonoBehaviour
     public Vector2 rightStart;
     public Vector2 topStart;
     public Vector2 bottomStart;
-    private SceneSaveManager sceneSaveManager;
     private void Awake()
     {
         if (prevSceneIndex == rightScene)
@@ -35,14 +34,13 @@ public class SceneLoadManager : MonoBehaviour
 
     private void Start()
     {
-        sceneSaveManager = FindObjectOfType<SceneSaveManager>();
         var root = Load();
         if (root != null)
             SetThings(root);
     }
     public XElement Load()
     {
-        var filePath = sceneSaveManager.currentGameFolderPath + $"/{SceneManager.GetActiveScene().name}.xml";
+        var filePath = SceneSaveManager.currentGameFolderPath + $"/{SceneManager.GetActiveScene().name}.xml";
         return File.Exists(filePath) ? XDocument
                 .Parse(File.ReadAllText(filePath))
                 .Element("root") 
