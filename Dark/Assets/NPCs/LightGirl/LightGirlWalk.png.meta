@@ -1,0 +1,972 @@
+fileFormatVersion: 2
+guid: a06c74dbdbf4841aa8745f386a48e249
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8003534080355992971
+    second: LightGirlWalk_0
+  - first:
+      213: -7865577204730691320
+    second: LightGirlWalk_1
+  - first:
+      213: 2164356444999279517
+    second: LightGirlWalk_2
+  - first:
+      213: -5101572311530641481
+    second: LightGirlWalk_3
+  - first:
+      213: 1214652481777682211
+    second: LightGirlWalk_4
+  - first:
+      213: 995204144486024541
+    second: LightGirlWalk_5
+  - first:
+      213: 2110679315209793382
+    second: LightGirlWalk_6
+  - first:
+      213: -3875371631369554892
+    second: LightGirlWalk_7
+  - first:
+      213: 48098269955668030
+    second: LightGirlWalk_8
+  - first:
+      213: -5823871071287843913
+    second: LightGirlWalk_9
+  - first:
+      213: 3082568382135068733
+    second: LightGirlWalk_10
+  - first:
+      213: -9041137327594946886
+    second: LightGirlWalk_11
+  - first:
+      213: -25706268494432103
+    second: LightGirlWalk_12
+  - first:
+      213: -4926402557971957244
+    second: LightGirlWalk_13
+  - first:
+      213: 1213282600846852828
+    second: LightGirlWalk_14
+  - first:
+      213: -6155711911637735635
+    second: LightGirlWalk_15
+  - first:
+      213: -5276245224293954337
+    second: LightGirlWalk_16
+  - first:
+      213: -4285901300041772329
+    second: LightGirlWalk_17
+  - first:
+      213: 3808427961530736429
+    second: LightGirlWalk_18
+  - first:
+      213: -7538040821616853118
+    second: LightGirlWalk_19
+  - first:
+      213: -9215814915059849938
+    second: LightGirlWalk_20
+  - first:
+      213: 2641021055469656578
+    second: LightGirlWalk_21
+  - first:
+      213: -7975437414753705257
+    second: LightGirlWalk_22
+  - first:
+      213: 9092618251219224532
+    second: LightGirlWalk_23
+  - first:
+      213: -5207754042326302064
+    second: LightGirlWalk_24
+  - first:
+      213: -3804757043491495399
+    second: LightGirlWalk_25
+  - first:
+      213: -996646494936494950
+    second: LightGirlWalk_26
+  - first:
+      213: -1642105731934950437
+    second: LightGirlWalk_27
+  - first:
+      213: 7520390881626995301
+    second: LightGirlWalk_28
+  - first:
+      213: -7719104880763685876
+    second: LightGirlWalk_29
+  - first:
+      213: 6094634173566743327
+    second: LightGirlWalk_30
+  - first:
+      213: 6674353943075852390
+    second: LightGirlWalk_31
+  - first:
+      213: -4612791001046844127
+    second: LightGirlWalk_32
+  - first:
+      213: 3169510976860212097
+    second: LightGirlWalk_33
+  - first:
+      213: -6954280311622210620
+    second: LightGirlWalk_34
+  - first:
+      213: 3175418649339635424
+    second: LightGirlWalk_35
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: LightGirlWalk_0
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 216
+        width: 30
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57af5a0982cbde090800000000000000
+      internalID: -8003534080355992971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightGirlWalk_1
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 216
+        width: 30
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8010e96b43bd7d290800000000000000
+      internalID: -7865577204730691320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightGirlWalk_2
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 216
+        width: 30
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d93628f28b6590e10800000000000000
+      internalID: 2164356444999279517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightGirlWalk_3
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 216
+        width: 30
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b76f3f03039339b0800000000000000
+      internalID: -5101572311530641481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightGirlWalk_4
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 216
+        width: 30
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 327c7e52fff4bd010800000000000000
+      internalID: 1214652481777682211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightGirlWalk_5
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 216
+        width: 30
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d55061785ecafcd00800000000000000
+      internalID: 995204144486024541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightGirlWalk_6
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 216
+        width: 30
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66f28d187a3aa4d10800000000000000
+      internalID: 2110679315209793382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightGirlWalk_7
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 216
+        width: 30
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 434779ba80ae73ac0800000000000000
+      internalID: -3875371631369554892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightGirlWalk_8
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 216
+        width: 30
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e38b4072f11eaa000800000000000000
+      internalID: 48098269955668030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightGirlWalk_9
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 152
+        width: 26
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b3e63aed147d2fa0800000000000000
+      internalID: -5823871071287843913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightGirlWalk_10
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 152
+        width: 28
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d38e2058c9b77ca20800000000000000
+      internalID: 3082568382135068733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightGirlWalk_11
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 152
+        width: 28
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abebd27a08d678280800000000000000
+      internalID: -9041137327594946886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightGirlWalk_12
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 152
+        width: 27
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99873e5f84ca4aff0800000000000000
+      internalID: -25706268494432103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightGirlWalk_13
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 152
+        width: 27
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40a718789f6e1abb0800000000000000
+      internalID: -4926402557971957244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightGirlWalk_14
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 152
+        width: 28
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd283a3e81276d010800000000000000
+      internalID: 1213282600846852828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightGirlWalk_15
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 152
+        width: 27
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d27213771a4829aa0800000000000000
+      internalID: -6155711911637735635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightGirlWalk_16
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 152
+        width: 26
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdc8b1a5ce207c6b0800000000000000
+      internalID: -5276245224293954337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightGirlWalk_17
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 152
+        width: 26
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d210aca97b6584c0800000000000000
+      internalID: -4285901300041772329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightGirlWalk_18
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 88
+        width: 30
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2f54b79d014ad430800000000000000
+      internalID: 3808427961530736429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightGirlWalk_19
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 88
+        width: 30
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28f322d9fcf736790800000000000000
+      internalID: -7538040821616853118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightGirlWalk_20
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 88
+        width: 30
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e256c188929da1080800000000000000
+      internalID: -9215814915059849938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightGirlWalk_21
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 88
+        width: 30
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20a989f38aac6a420800000000000000
+      internalID: 2641021055469656578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightGirlWalk_22
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 88
+        width: 30
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d2ee3d4ded815190800000000000000
+      internalID: -7975437414753705257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightGirlWalk_23
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 88
+        width: 30
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d7c72eef187f2e70800000000000000
+      internalID: 9092618251219224532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightGirlWalk_24
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 88
+        width: 30
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09249855a475ab7b0800000000000000
+      internalID: -5207754042326302064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightGirlWalk_25
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 88
+        width: 30
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 912260e90a9c23bc0800000000000000
+      internalID: -3804757043491495399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightGirlWalk_26
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 88
+        width: 30
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9c0ca61b433b22f0800000000000000
+      internalID: -996646494936494950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightGirlWalk_27
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 24
+        width: 26
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdb626c79811639e0800000000000000
+      internalID: -1642105731934950437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightGirlWalk_28
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 24
+        width: 28
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56ab67f79abcd5860800000000000000
+      internalID: 7520390881626995301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightGirlWalk_29
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 24
+        width: 28
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c04b81e220b30e490800000000000000
+      internalID: -7719104880763685876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightGirlWalk_30
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 24
+        width: 27
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f13f6677d7d749450800000000000000
+      internalID: 6094634173566743327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightGirlWalk_31
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 24
+        width: 27
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 660934a8c8110ac50800000000000000
+      internalID: 6674353943075852390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightGirlWalk_32
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 24
+        width: 28
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12dfb7f26031cffb0800000000000000
+      internalID: -4612791001046844127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightGirlWalk_33
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 24
+        width: 27
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18b447fc07d5cfb20800000000000000
+      internalID: 3169510976860212097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightGirlWalk_34
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 24
+        width: 26
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cbe345e6ee6d7f90800000000000000
+      internalID: -6954280311622210620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LightGirlWalk_35
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 24
+        width: 26
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e62a0fff6a511c20800000000000000
+      internalID: 3175418649339635424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

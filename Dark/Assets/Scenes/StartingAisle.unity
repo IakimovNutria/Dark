@@ -332,6 +332,7 @@ MonoBehaviour:
       storyBoolMustBeFalse: 0
       changeStoryBoolToFalse: 0
   currentNode: 0
+  canRepeat: 1
 --- !u!1 &251099512
 GameObject:
   m_ObjectHideFlags: 0
@@ -622,6 +623,7 @@ MonoBehaviour:
       storyBoolMustBeFalse: 0
       changeStoryBoolToFalse: 0
   currentNode: 0
+  canRepeat: 1
 --- !u!1 &395527977
 GameObject:
   m_ObjectHideFlags: 0
