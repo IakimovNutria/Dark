@@ -21,13 +21,13 @@ public class Player : AliveEntity
         else if (Instance != this)
             Destroy(gameObject);
         
-        SetMaxHealth(MAXPlayerHealth);
     }
 
     private new void Start()
     {
         aliveEntity = this;
         aliveEntity.Start();
+        SetMaxHealth(MAXPlayerHealth);
     }
 
     private new void Update()
