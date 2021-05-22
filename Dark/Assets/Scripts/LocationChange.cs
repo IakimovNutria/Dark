@@ -20,7 +20,7 @@ public class LocationChange : ActivationCode
         DontDestroyOnLoad(GameObject.FindGameObjectWithTag("Canvas"));
         DontDestroyOnLoad(GameObject.FindGameObjectWithTag("MainCamera"));
         DontDestroyOnLoad(GameObject.FindGameObjectWithTag("Flashlight"));
-        UnityEngine.SceneManagement.SceneManager.LoadScene("FirstLivingRoom");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("MalcolmRoom");
     }
     
     protected override void Activate()
