@@ -45,7 +45,9 @@ public class GameManager : MonoBehaviour
         {"isPlayerKnowMalcolm", false},
         {"isPlayerHelpMalcolm", false},
         {"isPlayerMeetUlf", false},
+        {"isPlayerKnowUlf", false},
         {"isPlayerTakeBattery", false},
+        {"UlfKnowWhereMalcolm", false},
         {"isPlayerAskMalcolm", false},
         {"isPlayerGiveBattery", false}
     };
