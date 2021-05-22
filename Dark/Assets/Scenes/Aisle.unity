@@ -546,9 +546,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mustNotBeInteraction: 0
-  activateConditionsList:
-  - activateConditions: []
-  nextScene: 6
+  activateConditionsList: []
+  nextScene: StanleyRoomScene
 --- !u!60 &332896303
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -722,7 +721,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mustNotBeInteraction: 0
   activateConditionsList: []
-  nextScene: 7
+  nextScene: Laundry
 --- !u!483693784 &426592492
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -3913,7 +3912,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mustNotBeInteraction: 0
   activateConditionsList: []
-  nextScene: 2
+  nextScene: StartingAisle
 --- !u!60 &1839489236
 PolygonCollider2D:
   m_ObjectHideFlags: 0

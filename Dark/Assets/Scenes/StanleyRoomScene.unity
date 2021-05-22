@@ -2523,7 +2523,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mustNotBeInteraction: 0
   activateConditionsList: []
-  nextScene: 5
+  nextScene: Aisle
 --- !u!60 &1712987196
 PolygonCollider2D:
   m_ObjectHideFlags: 0
