@@ -977,9 +977,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   leftScene: 0
-  rightScene: 0
-  topScene: 0
-  bottomScene: 0
+  rightScene: 2
+  topScene: 7
+  bottomScene: 6
   leftStart: {x: -7.4, y: -2.9}
   rightStart: {x: -4.1, y: -4.2}
   topStart: {x: -5.4, y: -2.5}
@@ -3712,6 +3712,7 @@ GameObject:
   - component: {fileID: 1839489234}
   - component: {fileID: 1839489233}
   - component: {fileID: 1839489236}
+  - component: {fileID: 1839489235}
   m_Layer: 0
   m_Name: RightDoor
   m_TagString: Untagged
@@ -3898,6 +3899,21 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &1839489235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1839489231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46611e9584b479148a22c1f5bc8915cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mustNotBeInteraction: 0
+  activateConditionsList: []
+  nextScene: 2
 --- !u!60 &1839489236
 PolygonCollider2D:
   m_ObjectHideFlags: 0
