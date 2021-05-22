@@ -29,4 +29,22 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Laundry.unity
     guid: 58f76467eae06f846acfdccab8b08372
+  - enabled: 1
+    path: Assets/Scenes/ToyRoom.unity
+    guid: c2f3b2e941f21254b846e93c10383927
+  - enabled: 1
+    path: Assets/Scenes/ToyAisle.unity
+    guid: 5f64933f5ecb5c44dbc582ffcc050cf8
+  - enabled: 1
+    path: Assets/Scenes/StanleyAisle.unity
+    guid: 22ad44ca1afae5e40b85847c6fc7ae94
+  - enabled: 1
+    path: Assets/Scenes/MalcolmAisle.unity
+    guid: eff0006a9b16df94dac471d087ad7006
+  - enabled: 1
+    path: Assets/Scenes/Bath2.unity
+    guid: 3811f9b223e2a4249846a0e9cec03d20
+  - enabled: 1
+    path: Assets/Scenes/Kitchen.unity
+    guid: f5e6732911bc8364d803d0b9350702a4
   m_configObjects: {}
