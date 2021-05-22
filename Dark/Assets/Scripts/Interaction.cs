@@ -33,7 +33,7 @@ public class Interaction : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player") && canObjectBeInteracted)
+        if (collision.CompareTag("Player") && canObjectBeInteracted && StoryBoolActivateCondition())
         {
             GameManager.GM.ChangeStoryBool("playerCanInteractFirstTime", true);
             SetAbilities(true);

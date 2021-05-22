@@ -4645,7 +4645,7 @@ MonoBehaviour:
       storyBoolMustBeFalse: 0
       changeStoryBoolToFalse: 0
   currentNode: 0
-  canRepeat: 0
+  canRepeat: 1
 --- !u!1001 &5667734222474561063
 PrefabInstance:
   m_ObjectHideFlags: 0
