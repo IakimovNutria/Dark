@@ -30,7 +30,6 @@ public class Flashlight : MonoBehaviour
     private const string DamageLightEventFilter = "DamageEnemy";
     private const string HealLightEventFilter = "";
     
-    // Start is called before the first frame update
     void Start()
     {
         BatteriesCount = StartBatteriesCount;
@@ -44,7 +43,6 @@ public class Flashlight : MonoBehaviour
         UpdateBatteriesCountText();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (player.Health == 0)
