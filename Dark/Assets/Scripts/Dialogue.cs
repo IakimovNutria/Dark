@@ -26,8 +26,7 @@ public class Dialogue : Interaction
                 isGameResumed = true;
             }
 
-            isActivateDialogue = (ActivateCondition() || mustNotBeInteraction)
-                                 && !isDialogueEnd && StoryBoolActivateCondition();
+            isActivateDialogue = ActivateCondition() && isDialogueEnd && StoryBoolActivateCondition();
             return;
         }
         
