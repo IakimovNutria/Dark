@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 94215057}
   - component: {fileID: 94215056}
   - component: {fileID: 94215059}
+  - component: {fileID: 94215058}
   m_Layer: 0
   m_Name: LeftDoor
   m_TagString: Untagged
@@ -243,6 +244,21 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &94215058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 94215054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46611e9584b479148a22c1f5bc8915cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mustNotBeInteraction: 0
+  activateConditionsList: []
+  nextScene: ToyRoom
 --- !u!60 &94215059
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -547,7 +563,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mustNotBeInteraction: 0
   activateConditionsList: []
-  nextScene: StanleyRoomScene
+  nextScene: StanleyAisle
 --- !u!60 &332896303
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -975,10 +991,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35dd9645c579ca54e98200816f410537, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftScene: 0
+  leftScene: 8
   rightScene: 2
   topScene: 7
-  bottomScene: 6
+  bottomScene: 10
   leftStart: {x: -7.4, y: -2.9}
   rightStart: {x: -4.1, y: -4.2}
   topStart: {x: -5.4, y: -2.5}
@@ -3632,7 +3648,6 @@ MonoBehaviour:
       storyBoolMustBeFalse: 0
       changeStoryBoolToFalse: 0
   currentNode: 0
-  canRepeat: 1
 --- !u!212 &1769220188
 SpriteRenderer:
   m_ObjectHideFlags: 0
