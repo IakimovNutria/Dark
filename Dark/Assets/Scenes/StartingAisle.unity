@@ -984,6 +984,7 @@ MonoBehaviour:
       storyBoolMustBeFalse: 0
       changeStoryBoolToFalse: 0
   currentNode: 0
+  canRepeat: 1
 --- !u!4 &551177874 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8174505182656584940, guid: 0214a174923e8d649965a43fd9cd4a5e, type: 3}
@@ -3330,6 +3331,7 @@ MonoBehaviour:
       storyBoolMustBeFalse: 0
       changeStoryBoolToFalse: 0
   currentNode: 0
+  canRepeat: 1
 --- !u!60 &1839489236
 PolygonCollider2D:
   m_ObjectHideFlags: 0
