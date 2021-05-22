@@ -110,6 +110,114 @@ TextureImporter:
   - first:
       213: -412283334955788794
     second: Download83335_35
+  - first:
+      213: -5894102027222355642
+    second: MalcolmWalk_0
+  - first:
+      213: -2193947154524806598
+    second: MalcolmWalk_1
+  - first:
+      213: -7647936358592308458
+    second: MalcolmWalk_2
+  - first:
+      213: -6095495214486917240
+    second: MalcolmWalk_3
+  - first:
+      213: 5546370590014281109
+    second: MalcolmWalk_4
+  - first:
+      213: 8817408127892962901
+    second: MalcolmWalk_5
+  - first:
+      213: -8448726093508838144
+    second: MalcolmWalk_6
+  - first:
+      213: -5745424809111493195
+    second: MalcolmWalk_7
+  - first:
+      213: 2951576705081384389
+    second: MalcolmWalk_8
+  - first:
+      213: 2164903799151040295
+    second: MalcolmWalk_9
+  - first:
+      213: 5728227701225668189
+    second: MalcolmWalk_10
+  - first:
+      213: -1065256744944962589
+    second: MalcolmWalk_11
+  - first:
+      213: 930055184594185579
+    second: MalcolmWalk_12
+  - first:
+      213: -5498440324667445789
+    second: MalcolmWalk_13
+  - first:
+      213: -3048271308259544406
+    second: MalcolmWalk_14
+  - first:
+      213: 8911558227261661567
+    second: MalcolmWalk_15
+  - first:
+      213: -188863532111795444
+    second: MalcolmWalk_16
+  - first:
+      213: 825496004768434759
+    second: MalcolmWalk_17
+  - first:
+      213: -3049172467565631854
+    second: MalcolmWalk_18
+  - first:
+      213: 747212877432459943
+    second: MalcolmWalk_19
+  - first:
+      213: -3301581075849166555
+    second: MalcolmWalk_20
+  - first:
+      213: 5896937334370801312
+    second: MalcolmWalk_21
+  - first:
+      213: 1493976766693112200
+    second: MalcolmWalk_22
+  - first:
+      213: 4446424369699558911
+    second: MalcolmWalk_23
+  - first:
+      213: -2062136872205778468
+    second: MalcolmWalk_24
+  - first:
+      213: 8357028844797061541
+    second: MalcolmWalk_25
+  - first:
+      213: -2869173362878796083
+    second: MalcolmWalk_26
+  - first:
+      213: 8671141892486765093
+    second: MalcolmWalk_27
+  - first:
+      213: -6432777095940672495
+    second: MalcolmWalk_28
+  - first:
+      213: 7925787871719743209
+    second: MalcolmWalk_29
+  - first:
+      213: -4294804985646779106
+    second: MalcolmWalk_30
+  - first:
+      213: -1073296452055336393
+    second: MalcolmWalk_31
+  - first:
+      213: -8879751839768172325
+    second: MalcolmWalk_32
+  - first:
+      213: 4137574068508511875
+    second: MalcolmWalk_33
+  - first:
+      213: -3232221804980390222
+    second: MalcolmWalk_34
+  - first:
+      213: 1610454988375824744
+    second: MalcolmWalk_35
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -199,13 +307,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Download83335_0
+      name: MalcolmWalk_0
       rect:
         serializedVersion: 2
         x: 17
-        y: 198
+        y: 195
         width: 30
-        height: 49
+        height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,20 +321,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c059c1603ea1fd1a0800000000000000
-      internalID: -6782672951434242804
+      spriteID: 641708d3f61f33ea0800000000000000
+      internalID: -5894102027222355642
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Download83335_1
+      name: MalcolmWalk_1
       rect:
         serializedVersion: 2
         x: 81
-        y: 198
+        y: 195
         width: 30
-        height: 49
+        height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,20 +342,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 34d67bb87de911390800000000000000
-      internalID: -7849318026930852541
+      spriteID: a32e19edfa88d81e0800000000000000
+      internalID: -2193947154524806598
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Download83335_2
+      name: MalcolmWalk_2
       rect:
         serializedVersion: 2
         x: 145
-        y: 198
+        y: 195
         width: 30
-        height: 49
+        height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -255,20 +363,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e4ba5457bb7d1b380800000000000000
-      internalID: -8957140983736849586
+      spriteID: 61b9f4107621dd590800000000000000
+      internalID: -7647936358592308458
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Download83335_3
+      name: MalcolmWalk_3
       rect:
         serializedVersion: 2
         x: 209
-        y: 198
+        y: 195
         width: 30
-        height: 48
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -276,20 +384,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 13cad73d263509fa0800000000000000
-      internalID: -5796041036505699279
+      spriteID: 88fe962d563786ba0800000000000000
+      internalID: -6095495214486917240
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Download83335_4
+      name: MalcolmWalk_4
       rect:
         serializedVersion: 2
         x: 273
-        y: 198
+        y: 195
         width: 30
-        height: 49
+        height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -297,20 +405,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 63a818f22adffe8e0800000000000000
-      internalID: -1661830864452875722
+      spriteID: 595997a6aaaa8fc40800000000000000
+      internalID: 5546370590014281109
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Download83335_5
+      name: MalcolmWalk_5
       rect:
         serializedVersion: 2
         x: 337
-        y: 198
+        y: 195
         width: 30
-        height: 49
+        height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -318,20 +426,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 284468f7f8d0c0700800000000000000
-      internalID: 507795767957013634
+      spriteID: 55eb3b6c9f9bd5a70800000000000000
+      internalID: 8817408127892962901
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Download83335_6
+      name: MalcolmWalk_6
       rect:
         serializedVersion: 2
         x: 401
-        y: 198
+        y: 195
         width: 30
-        height: 49
+        height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -339,20 +447,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0dc024d1fa4734660800000000000000
-      internalID: 7368861710767230160
+      spriteID: 00df4d7916810ca80800000000000000
+      internalID: -8448726093508838144
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Download83335_7
+      name: MalcolmWalk_7
       rect:
         serializedVersion: 2
         x: 465
-        y: 198
+        y: 195
         width: 30
-        height: 48
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -360,20 +468,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c489cac9700a97020800000000000000
-      internalID: 2340077435949455436
+      spriteID: 5b56131a3962440b0800000000000000
+      internalID: -5745424809111493195
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Download83335_8
+      name: MalcolmWalk_8
       rect:
         serializedVersion: 2
         x: 529
-        y: 198
+        y: 195
         width: 30
-        height: 49
+        height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -381,20 +489,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e9a5322219a6037f0800000000000000
-      internalID: -634890375883695458
+      spriteID: 5cd91b9006b16f820800000000000000
+      internalID: 2951576705081384389
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Download83335_9
+      name: MalcolmWalk_9
       rect:
         serializedVersion: 2
         x: 19
-        y: 134
+        y: 131
         width: 26
-        height: 49
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -402,39 +510,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c9730326e61a54b0800000000000000
-      internalID: -5451019221292844607
+      spriteID: 7279a4109884b0e10800000000000000
+      internalID: 2164903799151040295
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Download83335_10
+      name: MalcolmWalk_10
       rect:
         serializedVersion: 2
         x: 82
-        y: 134
-        width: 28
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3cc5c4237ac7e5f40800000000000000
-      internalID: 5719145634352356547
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Download83335_11
-      rect:
-        serializedVersion: 2
-        x: 146
-        y: 134
+        y: 131
         width: 28
         height: 49
       alignment: 0
@@ -444,20 +531,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dde9000978ac96470800000000000000
-      internalID: 8388458464539614941
+      spriteID: d5ebb1caeb0ce7f40800000000000000
+      internalID: 5728227701225668189
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Download83335_12
+      name: MalcolmWalk_11
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 131
+        width: 28
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e377fa62a27731f0800000000000000
+      internalID: -1065256744944962589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MalcolmWalk_12
       rect:
         serializedVersion: 2
         x: 211
-        y: 134
+        y: 131
         width: 27
-        height: 49
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -465,20 +573,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b9794cdd8c7d31090800000000000000
-      internalID: -8064865249976346725
+      spriteID: b6d2f33434838ec00800000000000000
+      internalID: 930055184594185579
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Download83335_13
+      name: MalcolmWalk_13
       rect:
         serializedVersion: 2
         x: 275
-        y: 134
+        y: 131
         width: 27
-        height: 49
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -486,20 +594,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2517dee1a3ce65bb0800000000000000
-      internalID: -4947507406248775342
+      spriteID: 3ed638d18ad91b3b0800000000000000
+      internalID: -5498440324667445789
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Download83335_14
+      name: MalcolmWalk_14
       rect:
         serializedVersion: 2
         x: 339
-        y: 134
+        y: 131
         width: 29
-        height: 48
+        height: 49
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -507,20 +615,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3bf9a0ae23ede4fa0800000000000000
-      internalID: -5814465758632435789
+      spriteID: aa2bc24456d52b5d0800000000000000
+      internalID: -3048271308259544406
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Download83335_15
+      name: MalcolmWalk_15
       rect:
         serializedVersion: 2
         x: 403
-        y: 134
+        y: 131
         width: 27
-        height: 49
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -528,20 +636,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1ca02a0391caf880800000000000000
-      internalID: -8576329703099421668
+      spriteID: f7124230ef63cab70800000000000000
+      internalID: 8911558227261661567
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Download83335_16
+      name: MalcolmWalk_16
       rect:
         serializedVersion: 2
         x: 467
-        y: 134
+        y: 131
         width: 26
-        height: 49
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -549,20 +657,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0948e88c04eeba5f0800000000000000
-      internalID: -744239351389584240
+      spriteID: c0b63714e95016df0800000000000000
+      internalID: -188863532111795444
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Download83335_17
+      name: MalcolmWalk_17
       rect:
         serializedVersion: 2
         x: 531
-        y: 134
+        y: 131
         width: 26
-        height: 49
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -570,20 +678,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 646391628cf20c590800000000000000
-      internalID: -7656066829850692026
+      spriteID: 74a0abf1e30c47b00800000000000000
+      internalID: 825496004768434759
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Download83335_18
+      name: MalcolmWalk_18
       rect:
         serializedVersion: 2
         x: 17
-        y: 70
+        y: 67
         width: 30
-        height: 49
+        height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -591,20 +699,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26fd27e03244300f0800000000000000
-      internalID: -1152002162319761566
+      spriteID: 29669d3cbc92fa5d0800000000000000
+      internalID: -3049172467565631854
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Download83335_19
+      name: MalcolmWalk_19
       rect:
         serializedVersion: 2
         x: 81
-        y: 70
+        y: 67
         width: 30
-        height: 49
+        height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -612,20 +720,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e5eb0a8a1509b9c10800000000000000
-      internalID: 2061399934847991390
+      spriteID: 7a295f23722ae5a00800000000000000
+      internalID: 747212877432459943
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Download83335_20
+      name: MalcolmWalk_20
       rect:
         serializedVersion: 2
         x: 145
-        y: 70
+        y: 67
         width: 30
-        height: 49
+        height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -633,20 +741,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bbc91d4fe6152c330800000000000000
-      internalID: 3729632978411822267
+      spriteID: 521cbd8018d6e22d0800000000000000
+      internalID: -3301581075849166555
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Download83335_21
+      name: MalcolmWalk_21
       rect:
         serializedVersion: 2
         x: 209
-        y: 70
+        y: 67
         width: 30
-        height: 48
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -654,20 +762,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: af749d95446fd67e0800000000000000
-      internalID: -1770488305061115910
+      spriteID: 0a619e5234126d150800000000000000
+      internalID: 5896937334370801312
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Download83335_22
+      name: MalcolmWalk_22
       rect:
         serializedVersion: 2
         x: 273
-        y: 70
+        y: 67
         width: 30
-        height: 49
+        height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -675,20 +783,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b707993df63cada0800000000000000
-      internalID: -5932306147932960841
+      spriteID: 889fd6134fbabb410800000000000000
+      internalID: 1493976766693112200
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Download83335_23
+      name: MalcolmWalk_23
       rect:
         serializedVersion: 2
         x: 337
-        y: 70
+        y: 67
         width: 30
-        height: 49
+        height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -696,20 +804,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 729519a0462c2db40800000000000000
-      internalID: 5463643032883648807
+      spriteID: ff51594f76fd4bd30800000000000000
+      internalID: 4446424369699558911
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Download83335_24
+      name: MalcolmWalk_24
       rect:
         serializedVersion: 2
         x: 401
-        y: 70
+        y: 67
         width: 30
-        height: 49
+        height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -717,20 +825,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 750e6f62fe4813760800000000000000
-      internalID: 7435870622451163223
+      spriteID: cd180fdb071d163e0800000000000000
+      internalID: -2062136872205778468
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Download83335_25
+      name: MalcolmWalk_25
       rect:
         serializedVersion: 2
         x: 465
-        y: 70
+        y: 67
         width: 30
-        height: 48
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -738,20 +846,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9694b367dbd0b7ec0800000000000000
-      internalID: -3568243172377409175
+      spriteID: 5a962d7f4712af370800000000000000
+      internalID: 8357028844797061541
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Download83335_26
+      name: MalcolmWalk_26
       rect:
         serializedVersion: 2
         x: 529
-        y: 70
+        y: 67
         width: 30
-        height: 49
+        height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -759,20 +867,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a626b3fd1fe58930800000000000000
-      internalID: 4144981943986300580
+      spriteID: dcea89a2706ae28d0800000000000000
+      internalID: -2869173362878796083
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Download83335_27
+      name: MalcolmWalk_27
       rect:
         serializedVersion: 2
         x: 19
-        y: 6
+        y: 3
         width: 26
-        height: 49
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -780,20 +888,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f5a65beccf1e3ab0800000000000000
-      internalID: -5026545169116781072
+      spriteID: 52a9eaa0c95165870800000000000000
+      internalID: 8671141892486765093
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Download83335_28
+      name: MalcolmWalk_28
       rect:
         serializedVersion: 2
         x: 82
-        y: 6
+        y: 3
         width: 28
-        height: 48
+        height: 49
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -801,20 +909,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 75da943a32039d6a0800000000000000
-      internalID: -6424050463845798569
+      spriteID: 114ff25405f2ab6a0800000000000000
+      internalID: -6432777095940672495
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Download83335_29
+      name: MalcolmWalk_29
       rect:
         serializedVersion: 2
         x: 146
-        y: 6
+        y: 3
         width: 28
-        height: 49
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -822,20 +930,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 06df470c56935ec40800000000000000
-      internalID: 5540898025732636000
+      spriteID: 9ee54f2a31e0efd60800000000000000
+      internalID: 7925787871719743209
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Download83335_30
+      name: MalcolmWalk_30
       rect:
         serializedVersion: 2
         x: 210
-        y: 6
+        y: 3
         width: 27
-        height: 49
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -843,20 +951,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e6aa065e89474390800000000000000
-      internalID: -7834212151109966110
+      spriteID: e1572f2de99c564c0800000000000000
+      internalID: -4294804985646779106
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Download83335_31
+      name: MalcolmWalk_31
       rect:
         serializedVersion: 2
         x: 274
-        y: 6
+        y: 3
         width: 27
-        height: 49
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -864,20 +972,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 54768e5acedff0d90800000000000000
-      internalID: -7129200492266625211
+      spriteID: 73afd8c3092ea11f0800000000000000
+      internalID: -1073296452055336393
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Download83335_32
+      name: MalcolmWalk_32
       rect:
         serializedVersion: 2
         x: 336
-        y: 6
+        y: 3
         width: 29
-        height: 48
+        height: 49
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -885,20 +993,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9b4fd12058698e240800000000000000
-      internalID: 4821268899110450361
+      spriteID: bd82ff8afb8c4c480800000000000000
+      internalID: -8879751839768172325
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Download83335_33
+      name: MalcolmWalk_33
       rect:
         serializedVersion: 2
         x: 402
-        y: 6
+        y: 3
         width: 27
-        height: 49
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -906,20 +1014,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 323eb64c670403210800000000000000
-      internalID: 1310618370410537763
+      spriteID: 38e415981bd9b6930800000000000000
+      internalID: 4137574068508511875
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Download83335_34
+      name: MalcolmWalk_34
       rect:
         serializedVersion: 2
         x: 467
-        y: 6
+        y: 3
         width: 26
-        height: 49
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -927,20 +1035,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 01566c027b88e62e0800000000000000
-      internalID: -2130615253589400304
+      spriteID: 2b63fd6b467d423d0800000000000000
+      internalID: -3232221804980390222
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Download83335_35
+      name: MalcolmWalk_35
       rect:
         serializedVersion: 2
         x: 531
-        y: 6
+        y: 3
         width: 26
-        height: 49
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -948,8 +1056,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6069521cd76474af0800000000000000
-      internalID: -412283334955788794
+      spriteID: 86995e4874c795610800000000000000
+      internalID: 1610454988375824744
       vertices: []
       indices: 
       edges: []
