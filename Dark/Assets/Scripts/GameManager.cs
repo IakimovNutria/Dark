@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static bool firstRoomChestVisited;
+    
     public static GameObject Flashlight;
 
     public static GameManager GM;
@@ -51,6 +52,10 @@ public class GameManager : MonoBehaviour
         {"isPlayerAskMalcolm", false},
         {"isPlayerGiveBattery", false}
     };
+    
+    private GameObject ulfWalk;
+    private GameObject ulfStand;
+    private bool a;
     private void Awake()
     {
         if (GM == null)
@@ -77,6 +82,21 @@ public class GameManager : MonoBehaviour
             if (StoryBools["isPlayerGiveToy"])
                 StoryBools["draw"] = StoryBools["drawFlower"] || StoryBools["drawHorse"] 
                                                               || StoryBools["drawMarioPacman"];
+            
+            if (SceneManager.GetActiveScene().name == "UlfRoom")
+            {
+                if (!a)
+                {
+                    ulfStand = GameObject.FindGameObjectWithTag("StandUlf");
+                    ulfWalk = GameObject.FindGameObjectWithTag("WalkUlf");
+                    a = true;
+                }
+                ulfStand.SetActive(!StoryBools["isPlayerHelpMalcolm"]);
+                ulfWalk.SetActive((StoryBools["isPlayerMeetUlf"] || StoryBools["isPlayerTakeBattery"]) 
+                                  && !StoryBools["UlfKnowWhereMalcolm"]);
+            }
+            else
+                a = false;
         }
         else if (!GetEnemiesInScene().Any() && !GetDiedInScene().Any() && StoryBools["isGameStarted"])
             ChangeStoryBool("isFirstRoomCleaned", true);
