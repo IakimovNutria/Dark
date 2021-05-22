@@ -44,6 +44,10 @@ public class GameManager : MonoBehaviour
         {"doesPlayerKnowStanley", false},
         {"isPlayerKnowMalcolm", false},
         {"isPlayerHelpMalcolm", false},
+        {"isPlayerMeetUlf", false},
+        {"isPlayerTakeBattery", false},
+        {"isPlayerAskMalcolm", false},
+        {"isPlayerGiveBattery", false}
     };
     private void Awake()
     {
