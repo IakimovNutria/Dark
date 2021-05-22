@@ -14,7 +14,7 @@ public class Dialogue : Interaction
     
     public void Start()
     {
-        InteractionInitialize(4);
+        InteractionInitialize();
     }
 
     public void OnGUI()

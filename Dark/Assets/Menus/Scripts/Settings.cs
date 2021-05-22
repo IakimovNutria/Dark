@@ -7,7 +7,6 @@ using UnityEngine.UI;
 public class Settings : MonoBehaviour
 {
     public Transform buttonsObject;
-    public GameObject playerCanvas;
 
     private Event keyEvent;
     private TextMeshProUGUI buttonText;
@@ -88,7 +87,6 @@ public class Settings : MonoBehaviour
                 break;
             case ("ObjInteractionButton"):
                 SetKey("KeyObgectsInteraction");
-                UpdateInteractionHint();
                 break;
         }
         yield return null;
@@ -99,12 +97,6 @@ public class Settings : MonoBehaviour
         var property = typeof(GameManager).GetProperty(field);
         property.SetValue(GameManager.GM, newKey);
         buttonText.text = newKey.ToString();
-    }
-
-    private void UpdateInteractionHint()
-    {
-        if (playerCanvas != null)
-            playerCanvas.GetComponent<CanvasHints>().SetInteractionHint();
     }
 
     public void SendText(TextMeshProUGUI text)

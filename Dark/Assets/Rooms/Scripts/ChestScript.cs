@@ -8,13 +8,13 @@ public class ChestScript : Interaction
     public string chestName;
     public int battaries;
 
-    private GameObject flashlight;
     private FieldInfo chestVisitedField;
+    private Flashlight flashlight;
+
     void Start()
     {
-        InteractionInitialize(3);
-        flashlight = GameObject.FindGameObjectWithTag("Flashlight");
-        var canvas = GameObject.FindGameObjectWithTag("Canvas");
+        flashlight = FindObjectOfType<Flashlight>();
+        InteractionInitialize();
         SetBattaries();
     }
 
@@ -23,9 +23,8 @@ public class ChestScript : Interaction
     {
         if (isPlayerReadyToInteract && canObjectBeInteracted && Input.GetKeyDown(GameManager.GM.KeyObgectsInteraction))
         {
-            enterText.SetActive(false);
             interactionIndicator.SetActive(false);
-            flashlight.GetComponent<Flashlight>().ChangeBatteriesCount(battaries);
+            flashlight.ChangeBatteriesCount(battaries);
             RefuseToInteract();
             chestVisitedField.SetValue(GameManager.GM, true);
         }

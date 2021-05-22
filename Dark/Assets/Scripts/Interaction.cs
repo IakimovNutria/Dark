@@ -12,13 +12,10 @@ public class Interaction : MonoBehaviour
     public List<ActivateConditions> activateConditionsList;
     
     protected GameObject interactionIndicator;
-    protected GameObject enterText;
     protected float invokeTime;
     
-    protected void InteractionInitialize(int textIndex)
+    protected void InteractionInitialize()
     {
-        var canvas = GameObject.FindGameObjectWithTag("Canvas");
-        enterText = canvas.transform.GetChild(textIndex).gameObject;
         if (mustNotBeInteraction)
         {
             canObjectBeInteracted = false;
@@ -32,7 +29,6 @@ public class Interaction : MonoBehaviour
         }
 
         canObjectBeInteracted = true;
-        enterText.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -52,7 +48,6 @@ public class Interaction : MonoBehaviour
 
     private void SetAbilities(bool canInteract)
     {
-        enterText.SetActive(canInteract);
         if (!mustNotBeInteraction)
         {
             interactionIndicator.SetActive(canInteract);

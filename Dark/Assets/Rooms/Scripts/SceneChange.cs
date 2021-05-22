@@ -13,7 +13,7 @@ public class SceneChange : Interaction
     private void Start()
     {
         sceneSaveManager = FindObjectOfType<SceneSaveManager>();
-        InteractionInitialize(3);
+        InteractionInitialize();
     }
     
     private void Update()
