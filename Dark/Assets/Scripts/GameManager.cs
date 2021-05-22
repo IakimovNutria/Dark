@@ -42,6 +42,8 @@ public class GameManager : MonoBehaviour
         {"drawMarioPacman", false},
         {"draw", false},
         {"doesPlayerKnowStanley", false},
+        {"isPlayerKnowMalcolm", false},
+        {"isPlayerHelpMalcolm", false},
     };
     private void Awake()
     {
