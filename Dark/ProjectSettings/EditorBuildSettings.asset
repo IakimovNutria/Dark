@@ -47,4 +47,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Kitchen.unity
     guid: f5e6732911bc8364d803d0b9350702a4
+  - enabled: 1
+    path: Assets/Scenes/MalcolmRoom.unity
+    guid: aa837d5b31f011e4383734e11b5a7742
   m_configObjects: {}

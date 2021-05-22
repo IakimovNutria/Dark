@@ -995,7 +995,7 @@ MonoBehaviour:
   rightScene: 2
   topScene: 7
   bottomScene: 10
-  leftStart: {x: -7.4, y: -2.9}
+  leftStart: {x: -7.85, y: -2.4}
   rightStart: {x: -4.1, y: -4.2}
   topStart: {x: -5.4, y: -2.5}
   bottomStart: {x: -6.9, y: -4}
@@ -3648,6 +3648,7 @@ MonoBehaviour:
       storyBoolMustBeFalse: 0
       changeStoryBoolToFalse: 0
   currentNode: 0
+  canRepeat: 0
 --- !u!212 &1769220188
 SpriteRenderer:
   m_ObjectHideFlags: 0
