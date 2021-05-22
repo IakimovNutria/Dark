@@ -33,8 +33,7 @@ public class Mario : MonoBehaviour
             IsEnergized = false;
             currentEnergizedTime = EnergizedTime;
         }
-        if (Geometry.GetLength(transform.position.x, transform.position.y,
-            destination.x, destination.y) > 5)
+        if (Geometry.GetLength(transform.position, destination) > 5)
             destination = transform.position;
         var p = Vector2.MoveTowards(transform.position, destination, speed);
         _rigidbody2D.MovePosition(p);

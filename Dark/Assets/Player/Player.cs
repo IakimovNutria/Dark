@@ -34,17 +34,15 @@ public class Player : AliveEntity
     {
         aliveEntity.Update();
     }
-    protected override float GetHorizontalVelocity()
-    {
-        return (Input.GetKey(GameManager.GM.KeyRight) ? speed : 0) + 
-               (Input.GetKey(GameManager.GM.KeyLeft) ? -speed : 0) +
-                   body.velocity.x / 10 /*для плавного перехода между анимациями ходьбы*/;
-    }
 
-    protected override float GetVerticalVelocity()
+    protected override Vector2 GetVelocity()
     {
-        return (Input.GetKey(GameManager.GM.KeyUp) ? speed : 0) + 
-               (Input.GetKey(GameManager.GM.KeyDown) ? -speed : 0) +
-                   body.velocity.y / 10 /*для плавного перехода между анимациями ходьбы*/;
+        var horizontalVelocity = (Input.GetKey(GameManager.GM.KeyRight) ? speed : 0) + 
+                                 (Input.GetKey(GameManager.GM.KeyLeft) ? -speed : 0) +
+                                 body.velocity.x / 10 /*для плавного перехода между анимациями ходьбы*/;
+        var verticalVelocity = (Input.GetKey(GameManager.GM.KeyUp) ? speed : 0) + 
+                               (Input.GetKey(GameManager.GM.KeyDown) ? -speed : 0) +
+                               body.velocity.y / 10 /*для плавного перехода между анимациями ходьбы*/;
+        return new Vector2(horizontalVelocity, verticalVelocity);
     }
 }

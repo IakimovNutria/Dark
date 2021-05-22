@@ -27,20 +27,28 @@ public class Enemy : AliveEntity
         DamagePlayer();
     }
 
-    protected override float GetHorizontalVelocity()
+    protected override Vector2 GetVelocity()
     {
-        /*var enemyPlayerVector = playerTransform.transform.position.x - body.position.x;
-        var direction = enemyPlayerVector / Math.Abs(enemyPlayerVector);
-        return direction * 2 + 
-               body.velocity.x / 10 */
-        return (playerTransform.position.x - body.position.x) / 2 + 
-               body.velocity.x / 10 /*для плавного перехода между анимациями ходьбы*/;
-    }
+        var playerPosition = playerTransform.position;
+        var enemyPosition = body.position;
 
-    protected override float GetVerticalVelocity()
-    {
-        return (playerTransform.position.y - body.position.y) / 2 + 
-               body.velocity.y / 10 /*для плавного перехода между анимациями ходьбы*/;
+        float horizontalVelocity;
+        float verticalVelocity;
+        
+        if (Geometry.GetLength(playerPosition, enemyPosition) < 0.3)
+        {
+            horizontalVelocity = 0.00001f * (playerPosition.x > enemyPosition.x ? 1 : -1);
+            verticalVelocity = 0.00001f * (playerPosition.y > enemyPosition.y ? 1 : -1);
+        }
+        else
+        {
+            var velocity = body.velocity;
+            horizontalVelocity = (playerPosition.x - enemyPosition.x) / 3 + 
+                                 velocity.x / 10 /*для плавного перехода между анимациями ходьбы*/;
+            verticalVelocity = (playerPosition.y - enemyPosition.y) / 3 + 
+                               velocity.y / 10 /*для плавного перехода между анимациями ходьбы*/;
+        }
+        return new Vector2(horizontalVelocity, verticalVelocity);
     }
 
     private void DamagePlayer()
@@ -49,8 +57,7 @@ public class Enemy : AliveEntity
             return;
         var enemyPosition = body.position;
         var playerPosition = playerTransform.position;
-        var length = Geometry.GetLength(enemyPosition.x, enemyPosition.y, 
-            playerPosition.x, playerPosition.y);
+        var length = Geometry.GetLength(enemyPosition, playerPosition);
         if (length < damageRadius && !GameManager.GM.isGameFreezed)
             player.TakeDamage(0.75f + length);
     }

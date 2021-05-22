@@ -34,19 +34,21 @@ public class EliWalk : AliveEntity
         }
     }
 
-    protected override float GetHorizontalVelocity()
+    protected override Vector2 GetVelocity()
     {
         var bodyPosition = body.transform.position;
+        float horizontalVelocity;
+        float verticalVelocity;
         if (Math.Abs(bodyPosition.x - destination.x) < 10e-2)
-            return 0;
-        return bodyPosition.x < destination.x ? speed : -speed;
-    }
-
-    protected override float GetVerticalVelocity()
-    {
-        var bodyPosition = body.transform.position;
+            horizontalVelocity = 0;
+        else
+            horizontalVelocity = bodyPosition.x < destination.x ? speed : -speed;
+        
         if (Math.Abs(bodyPosition.y - destination.y) < 10e-2)
-            return 0;
-        return bodyPosition.y < destination.y ? speed : -speed;
+            verticalVelocity = 0;
+        else
+            verticalVelocity = bodyPosition.y < destination.y ? speed : -speed;
+        
+        return new Vector2(horizontalVelocity, verticalVelocity);
     }
 }

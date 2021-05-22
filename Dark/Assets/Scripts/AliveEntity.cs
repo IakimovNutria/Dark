@@ -43,8 +43,9 @@ public class AliveEntity : MonoBehaviour
 
     private void Move()
     {
-        var horizontalVelocity = Health == 0 ? 0 : GetHorizontalVelocity();
-        var verticalVelocity = Health == 0 ? 0 : GetVerticalVelocity();
+        var velocity = GetVelocity();
+        var horizontalVelocity = Health == 0 ? 0 : velocity.x;
+        var verticalVelocity = Health == 0 ? 0 : velocity.y;
         
         animator.SetBool("isWalk", !(horizontalVelocity == 0 && verticalVelocity == 0));
         animator.SetBool("isWalkLeft", horizontalVelocity < 0);
@@ -100,13 +101,8 @@ public class AliveEntity : MonoBehaviour
             healthBar.SetValue(Health);
     }
     
-    protected virtual float GetHorizontalVelocity()
+    protected virtual Vector2 GetVelocity()
     {
-        return 0;
-    }
-
-    protected virtual float GetVerticalVelocity()
-    {
-        return 0;
+        return new Vector2(0,0);
     }
 }
