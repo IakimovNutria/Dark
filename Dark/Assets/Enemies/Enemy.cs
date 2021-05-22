@@ -8,7 +8,7 @@ public class Enemy : AliveEntity
     private AliveEntity aliveEntity;
     private Transform playerTransform;
     private readonly float damageRadius = 0.5f;
-    private readonly float maxEnemyHealth = 100;
+    private readonly float maxEnemyHealth = 70;
     private Player player;
     private void Awake()
     {
@@ -43,9 +43,9 @@ public class Enemy : AliveEntity
         else
         {
             var velocity = body.velocity;
-            horizontalVelocity = (playerPosition.x - enemyPosition.x) / 3 + 
+            horizontalVelocity = (playerPosition.x - enemyPosition.x) / 2.5f + 
                                  velocity.x / 10 /*для плавного перехода между анимациями ходьбы*/;
-            verticalVelocity = (playerPosition.y - enemyPosition.y) / 3 + 
+            verticalVelocity = (playerPosition.y - enemyPosition.y) / 2.5f + 
                                velocity.y / 10 /*для плавного перехода между анимациями ходьбы*/;
         }
         return new Vector2(horizontalVelocity, verticalVelocity);
