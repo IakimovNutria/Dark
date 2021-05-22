@@ -851,7 +851,7 @@ MonoBehaviour:
       changeStoryBoolToFalse: 0
   - storyBoolToGetDialogue: 
     toNode: 0
-    npcText: "\u042D\u043C\u0438\u043B\u0438: \u0418\u043B\u0430\u0439!"
+    npcText: "\u0414\u0435\u0432\u043E\u0447\u043A\u0430: \u0418\u043B\u0430\u0439!"
     playerAnswer:
     - cantRepeat: 0
       text: ...
