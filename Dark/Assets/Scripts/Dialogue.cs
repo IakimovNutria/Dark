@@ -9,7 +9,6 @@ public class Dialogue : Interaction
     protected bool isActivateDialogue;
     protected bool isDialogueEnd;
     private bool isGameResumed;
-    public bool canRepeat;
     protected Dialogue dialogue;
     
     public void Start()
@@ -27,7 +26,7 @@ public class Dialogue : Interaction
                 isGameResumed = true;
             }
 
-            isActivateDialogue = ActivateCondition() && (!isDialogueEnd || canRepeat) && StoryBoolActivateCondition();
+            isActivateDialogue = ActivateCondition() && isDialogueEnd && StoryBoolActivateCondition();
             return;
         }
         
@@ -79,8 +78,7 @@ public class Dialogue : Interaction
             if (!string.IsNullOrEmpty(storyBoolToChange))
                 GameManager.GM.ChangeStoryBool(storyBoolToChange, !answer.changeStoryBoolToFalse);
             if (answer.speakEnd) {
-                if (!canRepeat)
-                    canObjectBeInteracted = false;
+                canObjectBeInteracted = false;
                 isDialogueEnd = true;
                 isActivateDialogue = false;
             }
