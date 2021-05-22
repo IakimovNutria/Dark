@@ -4534,6 +4534,8 @@ MonoBehaviour:
       mustBeFalse: 1
     - storyBoolToActivate: isPlayerGiveToy
       mustBeFalse: 1
+    - storyBoolToActivate: isPlayerHelpEmily
+      mustBeFalse: 0
   node:
   - storyBoolToGetDialogue: 
     toNode: 0
