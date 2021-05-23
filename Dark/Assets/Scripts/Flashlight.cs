@@ -16,7 +16,7 @@ public class Flashlight : MonoBehaviour
     private bool isLightHealOn;
     public float Charge { get; private set; } = 1000f;
     public uint BatteriesCount { get; private set; }
-    public uint StartBatteriesCount { get; } = 3;
+    public uint StartBatteriesCount { get; } = 4;
     private float damageLightSize = 5;
     public float MAXFlashlightCharge { get; } = 1000f;
     private float damageLightConeAngle = 30;

@@ -14,7 +14,7 @@ public class SceneSaveManager : MonoBehaviour
     
     private static readonly List<string> notToSaveScenes = new List<string>
     {
-        "UlfRoom", "Aisle"
+        "UlfRoom", "Aisle", "UlfAisle"
     };
     [NonSerialized]
     public static string currentGameFolderPath;

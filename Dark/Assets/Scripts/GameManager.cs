@@ -7,8 +7,6 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public static bool firstRoomChestVisited;
-    
     public static GameObject Flashlight;
 
     public static GameManager GM;
@@ -52,6 +50,7 @@ public class GameManager : MonoBehaviour
         {"UlfKnowWhereMalcolm", false},
         {"isPlayerBelieveInMarioPacman", false},
         {"isPlayerKnowUlfStory", false},
+        {"isPlayerMeetStanleySecondTime", false},
         {"isPlayerAskMalcolm", false},
         {"isPlayerGiveBattery", false},
         {"isPlayerGetPaid", false}
@@ -60,10 +59,12 @@ public class GameManager : MonoBehaviour
     private GameObject ulf;
     private GameObject malcolm;
     private GameObject firstStanley;
+    private GameObject secondStanley;
     
     private bool isGMFindUlf;
     private bool isGMFindMalcolm;
     private bool isGMFindFirstStanley;
+    private bool isGMFindSecondStanley;
     
     private void Awake()
     {
@@ -111,6 +112,23 @@ public class GameManager : MonoBehaviour
             }
             else
                 isGMFindFirstStanley = false;
+
+            if (SceneManager.GetActiveScene().name == "UlfAisle")
+            {
+                if (!isGMFindSecondStanley)
+                {
+                    secondStanley = GameObject.FindGameObjectWithTag("Stanley");
+                    secondStanley.SetActive(!StoryBools["isPlayerMeetStanleySecondTime"] && 
+                                            (StoryBools["isPlayerMeetUlf"] || StoryBools["isPlayerTakeBattery"]));
+                    isGMFindSecondStanley = true;
+                }
+
+                StoryBools["isPlayerMeetStanleySecondTime"] = StoryBools["isPlayerMeetUlf"] || 
+                                                              StoryBools["isPlayerTakeBattery"];
+            }
+            else
+                isGMFindSecondStanley = false;
+            
             if (SceneManager.GetActiveScene().name == "UlfRoom")
             {
                 if (!isGMFindUlf)
