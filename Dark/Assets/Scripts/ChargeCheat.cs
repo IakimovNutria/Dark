@@ -17,7 +17,7 @@ public class ChargeCheat : ActivationCode
     void Update()
     {
         if (isActive)
-            flashLight.ChangeCharge(1000);
+            flashLight.AddCharge(1000);
         ActivationCodeUpdate();
     }
 

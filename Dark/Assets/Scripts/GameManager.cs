@@ -52,7 +52,8 @@ public class GameManager : MonoBehaviour
         {"isPlayerBelieveInMarioPacman", false},
         {"isPlayerKnowUlfStory", false},
         {"isPlayerAskMalcolm", false},
-        {"isPlayerGiveBattery", false}
+        {"isPlayerGiveBattery", false},
+        {"isPlayerGetPaid", false}
     };
     
     private GameObject ulfWalk;
@@ -85,13 +86,19 @@ public class GameManager : MonoBehaviour
             if (StoryBools["isPlayerGiveToy"])
                 StoryBools["draw"] = StoryBools["drawFlower"] || StoryBools["drawHorse"] 
                                                               || StoryBools["drawMarioPacman"];
-            
+
+            if (StoryBools["isPlayerGiveBattery"] && !StoryBools["isPlayerGetPaid"])
+            {
+                ChangeStoryBool("isPlayerGetPaid", true);
+                Flashlight.GetComponent<Flashlight>().AddBatteries(20);
+            }
             if (SceneManager.GetActiveScene().name == "UlfRoom")
             {
                 if (!isGMFindUlf)
                 {
                     ulfWalk = GameObject.FindGameObjectWithTag("UlfWalk");
-                    if (StoryBools["isPlayerMeetUlf"])
+                    if ((StoryBools["isPlayerMeetUlf"] || StoryBools["isPlayerTakeBattery"])
+                        && !StoryBools["UlfKnowWhereMalcolm"])
                         ulfWalk.transform.position = new Vector3(-1, 0.37f);
                     isGMFindUlf = true;
                 }

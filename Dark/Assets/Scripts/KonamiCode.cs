@@ -17,6 +17,6 @@ public class KonamiCode : ActivationCode
 
     protected override void Activate()
     {
-        flashlight.ChangeBatteriesCount(30);
+        flashlight.AddBatteries(30);
     }
 }

@@ -24,7 +24,7 @@ public class ChestScript : Interaction
         if (isPlayerReadyToInteract && canObjectBeInteracted && Input.GetKeyDown(GameManager.GM.KeyObgectsInteraction))
         {
             interactionIndicator.SetActive(false);
-            flashlight.ChangeBatteriesCount(battaries);
+            flashlight.AddBatteries(battaries);
             RefuseToInteract();
             chestVisitedField.SetValue(GameManager.GM, true);
         }

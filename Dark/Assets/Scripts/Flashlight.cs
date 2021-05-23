@@ -55,7 +55,7 @@ public class Flashlight : MonoBehaviour
             FlashLightUpdate();
         else if (BatteriesCount != 0)
         {
-            ChangeBatteriesCount(-1);
+            AddBatteries(-1);
             Charge = MAXFlashlightCharge;
         }
         else
@@ -86,10 +86,10 @@ public class Flashlight : MonoBehaviour
         if (!isLightDamageOn && !isLightHealOn)
             TurnOffFlashlight();
         else
-            ChangeCharge(-1);
+            AddCharge(-1);
     }
 
-    public void ChangeCharge(float change)
+    public void AddCharge(float change)
     {
         if (change + Charge <= 0)
             Charge = 0;
@@ -147,7 +147,7 @@ public class Flashlight : MonoBehaviour
         flashLight.transform.position = position + player.transform.position;
     }
     
-    public void ChangeBatteriesCount(int change)
+    public void AddBatteries(int change)
     {
         if (change + BatteriesCount <= 0)
             BatteriesCount = 0;

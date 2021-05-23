@@ -4287,7 +4287,7 @@ MonoBehaviour:
       text: "\u042F \u043F\u0440\u0438\u043D\u0435\u0441\u043B\u0430 \u0431\u0430\u0442\u0430\u0440\u0435\u0439\u043A\u0443."
       toNode: 71
       speakEnd: 0
-      storyBoolToChange: isPlayerGiveBattery
+      storyBoolToChange: 
       storyBoolToGetAnswer: isPlayerGiveBattery
       storyBoolMustBeFalse: 1
       changeStoryBoolToFalse: 0
@@ -4570,7 +4570,7 @@ MonoBehaviour:
       text: ...
       toNode: 75
       speakEnd: 0
-      storyBoolToChange: 
+      storyBoolToChange: isPlayerGiveBattery
       storyBoolToGetAnswer: 
       storyBoolMustBeFalse: 0
       changeStoryBoolToFalse: 0
