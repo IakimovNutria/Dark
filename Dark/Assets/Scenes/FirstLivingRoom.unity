@@ -4348,8 +4348,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mustNotBeInteraction: 0
   activateConditionsList: []
-  chestName: firstRoom
-  battaries: 3
+  batteries: 3
 --- !u!60 &1956846717
 PolygonCollider2D:
   m_ObjectHideFlags: 0

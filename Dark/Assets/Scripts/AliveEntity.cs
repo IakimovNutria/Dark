@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Xml.Linq;
 
-public class AliveEntity : MonoBehaviour
+public class AliveEntity : MonoBehaviour, ISavable
 {
     public float Health { get; private set; } = 1;
 
@@ -87,11 +87,12 @@ public class AliveEntity : MonoBehaviour
 
     public XElement GetElement()
     {
-        var objName = new XAttribute("name", name);
+        var entityName = new XAttribute("name", name);
+        var entityType = new XAttribute("type", "aliveEntity");
         var x = new XAttribute("x", transform.position.x);
         var y = new XAttribute("y", transform.position.y);
         var health = new XAttribute("health", aliveEntity.Health);
-        return new XElement("instance", objName, health, x, y);
+        return new XElement("instance", entityName, entityType, health, x, y);
     }
 
     public void SetHealth(float health)
