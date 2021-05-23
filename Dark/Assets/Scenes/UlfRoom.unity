@@ -565,21 +565,11 @@ MonoBehaviour:
       \u043D\u0435 \u0437\u043D\u0430\u044E."
     playerAnswer:
     - cantRepeat: 0
-      text: ...
-      toNode: 9
-      speakEnd: 0
-      storyBoolToChange: 
-      storyBoolToGetAnswer: 
-      storyBoolMustBeFalse: 0
-      changeStoryBoolToFalse: 0
-  - storyBoolToGetDialogue: 
-    toNode: 0
-    npcText: "\u041D\u0435\u0437\u043D\u0430\u043A\u043E\u043C\u0435\u0446: \u041D\u0438\u0447\u0435\u0433\u043E
-      \u0442\u043E\u043B\u043A\u043E\u043C \u043D\u0435 \u0437\u043D\u0430\u044E."
-    playerAnswer:
-    - cantRepeat: 0
-      text: ...
-      toNode: 9
+      text: "\u0422\u044B \u043D\u0435 \u0432\u0435\u0440\u0438\u0448\u044C \u0435\u043C\u0443,
+        \u043D\u043E \u043D\u0435 \u0441\u0447\u0438\u0442\u0430\u0435\u0448\u044C
+        \u0440\u0430\u0437\u0443\u043C\u043D\u044B\u043C \u043D\u0430\u0441\u0442\u0430\u0438\u0432\u0430\u0442\u044C
+        \u043D\u0430 \u043E\u0442\u0432\u0435\u0442\u0435."
+      toNode: 0
       speakEnd: 0
       storyBoolToChange: 
       storyBoolToGetAnswer: 
@@ -4162,7 +4152,7 @@ MonoBehaviour:
     playerAnswer:
     - cantRepeat: 0
       text: ...
-      toNode: 25
+      toNode: 0
       speakEnd: 1
       storyBoolToChange: 
       storyBoolToGetAnswer: 
@@ -4605,8 +4595,8 @@ MonoBehaviour:
     playerAnswer:
     - cantRepeat: 0
       text: ...
-      toNode: 25
-      speakEnd: 0
+      toNode: 0
+      speakEnd: 1
       storyBoolToChange: 
       storyBoolToGetAnswer: 
       storyBoolMustBeFalse: 0
