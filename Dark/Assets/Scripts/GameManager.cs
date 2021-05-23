@@ -43,6 +43,7 @@ public class GameManager : MonoBehaviour
         {"drawMarioPacman", false},
         {"draw", false},
         {"doesPlayerKnowStanley", false},
+        {"isPlayerMeetStanleyFirstTime", false},
         {"isPlayerKnowMalcolm", false},
         {"isPlayerHelpMalcolm", false},
         {"isPlayerMeetUlf", false},
@@ -56,10 +57,14 @@ public class GameManager : MonoBehaviour
         {"isPlayerGetPaid", false}
     };
     
-    private GameObject ulfWalk;
+    private GameObject ulf;
     private GameObject malcolm;
+    private GameObject firstStanley;
+    
     private bool isGMFindUlf;
     private bool isGMFindMalcolm;
+    private bool isGMFindFirstStanley;
+    
     private void Awake()
     {
         if (GM == null)
@@ -92,20 +97,34 @@ public class GameManager : MonoBehaviour
                 ChangeStoryBool("isPlayerGetPaid", true);
                 Flashlight.GetComponent<Flashlight>().AddBatteries(20);
             }
+
+            if (SceneManager.GetActiveScene().name == "Aisle")
+            {
+                if (!isGMFindFirstStanley)
+                {
+                    firstStanley = GameObject.FindGameObjectWithTag("Stanley");
+                    firstStanley.SetActive(!StoryBools["isPlayerMeetStanleyFirstTime"]);
+                    isGMFindFirstStanley = true;
+                }
+
+                StoryBools["isPlayerMeetStanleyFirstTime"] = true;
+            }
+            else
+                isGMFindFirstStanley = false;
             if (SceneManager.GetActiveScene().name == "UlfRoom")
             {
                 if (!isGMFindUlf)
                 {
-                    ulfWalk = GameObject.FindGameObjectWithTag("UlfWalk");
+                    ulf = GameObject.FindGameObjectWithTag("UlfWalk");
                     if ((StoryBools["isPlayerMeetUlf"] || StoryBools["isPlayerTakeBattery"])
                         && !StoryBools["UlfKnowWhereMalcolm"])
-                        ulfWalk.transform.position = new Vector3(0.36f, 1.14f);
+                        ulf.transform.position = new Vector3(0.36f, 1.14f);
                     isGMFindUlf = true;
                 }
                 if (!StoryBools["isPlayerHelpMalcolm"])
-                    ulfWalk.transform.position = new Vector3(0.36f, 1.14f);
+                    ulf.transform.position = new Vector3(0.36f, 1.14f);
                 else
-                    ulfWalk.SetActive((StoryBools["isPlayerMeetUlf"] || StoryBools["isPlayerTakeBattery"]) 
+                    ulf.SetActive((StoryBools["isPlayerMeetUlf"] || StoryBools["isPlayerTakeBattery"]) 
                                       && !StoryBools["UlfKnowWhereMalcolm"]);
             }
             else

@@ -13,7 +13,7 @@ public class SceneSaveManager : MonoBehaviour
     private List<AliveEntity> toSave = new List<AliveEntity>();
     private static readonly List<string> notToSaveScenes = new List<string>
     {
-        "UlfRoom"
+        "UlfRoom", "Aisle"
     };
     [NonSerialized]
     public static string currentGameFolderPath;
