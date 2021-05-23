@@ -21,7 +21,7 @@ public class Chest : Interaction, ISavable
     {
         if (batteries == 0)
             canObjectBeInteracted = false;
-        else if (isPlayerReadyToInteract && Input.GetKeyDown(GameManager.GM.KeyObgectsInteraction))
+        else if (isPlayerReadyToInteract && Input.GetKeyDown(GameManager.GM.KeyObjectsInteraction))
         {
             interactionIndicator.SetActive(false);
             flashlight.AddBatteries(batteries);

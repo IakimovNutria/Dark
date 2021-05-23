@@ -11,7 +11,7 @@ public class AlgorithmTests
     [Test]
     public void OneStepPath()
     {
-        var maze = new bool[,]
+        var maze = new[,]
         {
             { true, true },
             { true, true }
@@ -25,7 +25,7 @@ public class AlgorithmTests
     [Test]
     public void GetAroundTheWall()
     {
-        var maze = new bool[,]
+        var maze = new[,]
         {
             { true, false, true },
             { true, true, true }
@@ -39,7 +39,7 @@ public class AlgorithmTests
     [Test]
     public void StayIfNoPaths()
     {
-        var maze = new bool[,]
+        var maze = new[,]
         {
             { true, false, true },
             { true, false, true }

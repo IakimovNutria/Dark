@@ -57,7 +57,7 @@ public class Interaction : MonoBehaviour
 
     protected virtual bool ActivateCondition()
     {
-        return Input.GetKey(GameManager.GM.KeyObgectsInteraction);
+        return Input.GetKey(GameManager.GM.KeyObjectsInteraction);
     }
 
     protected bool StoryBoolActivateCondition()

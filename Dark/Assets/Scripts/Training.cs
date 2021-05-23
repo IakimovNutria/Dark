@@ -39,7 +39,7 @@ public class Training : Interaction
 
     private static readonly List<string> InteractionTrainingText = new List<string>
     {
-        "Чтобы взаимодействовать нажмите кнопку " + GameManager.GM.KeyObgectsInteraction
+        "Чтобы взаимодействовать нажмите кнопку " + GameManager.GM.KeyObjectsInteraction
     };
     
     private int currentMainTrainingTextIndex; 

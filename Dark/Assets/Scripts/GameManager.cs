@@ -7,17 +7,16 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameObject Flashlight;
+    private static GameObject flashlight;
 
     public static GameManager GM;
-    public KeyCode KeyUp { get; set; }
-    public KeyCode KeyDown { get; set; }
-    public KeyCode KeyLeft { get; set; }
-    public KeyCode KeyRight { get; set; }
-    public KeyCode KeyDamageLight { get; set; }
-    public KeyCode KeyHealLight { get; set; }
-    public KeyCode KeyObgectsInteraction { get; set; }
-    public KeyCode KeyDialogues { get; set; }
+    public KeyCode KeyUp { get; private set; }
+    public KeyCode KeyDown { get; private set; }
+    public KeyCode KeyLeft { get; private set; }
+    public KeyCode KeyRight { get; private set; }
+    public KeyCode KeyDamageLight { get; private set; }
+    public KeyCode KeyHealLight { get; private set; }
+    public KeyCode KeyObjectsInteraction { get; private set; }
 
     public bool isGameFreezed;
 
@@ -81,7 +80,7 @@ public class GameManager : MonoBehaviour
 
     private void InitGameManager()
     {
-        Flashlight = GameObject.FindGameObjectWithTag("Flashlight");
+        flashlight = GameObject.FindGameObjectWithTag("Flashlight");
         SetDefaultKeys();
     }
 
@@ -96,7 +95,7 @@ public class GameManager : MonoBehaviour
             if (StoryBools["isPlayerGiveBattery"] && !StoryBools["isPlayerGetPaid"])
             {
                 ChangeStoryBool("isPlayerGetPaid", true);
-                Flashlight.GetComponent<Flashlight>().AddBatteries(20);
+                flashlight.GetComponent<Flashlight>().AddBatteries(20);
             }
 
             if (SceneManager.GetActiveScene().name == "Aisle")
@@ -170,14 +169,14 @@ public class GameManager : MonoBehaviour
     public void FreezeGame()
     {
         isGameFreezed = true;
-        Flashlight.SetActive(false);
+        flashlight.SetActive(false);
         Time.timeScale = 0;
     }
 
     public void ResumeGame()
     {
         Time.timeScale = 1;
-        Flashlight.SetActive(true);
+        flashlight.SetActive(true);
         isGameFreezed = false;
     }
 
@@ -189,16 +188,15 @@ public class GameManager : MonoBehaviour
         KeyRight = KeyCode.D;
         KeyDamageLight = KeyCode.C;
         KeyHealLight = KeyCode.V;
-        KeyObgectsInteraction = KeyCode.Space;
-        KeyDialogues = KeyCode.E;
+        KeyObjectsInteraction = KeyCode.Space;
     }
 
-    private IEnumerable<GameObject> GetEnemiesInScene()
+    private static IEnumerable<GameObject> GetEnemiesInScene()
     {
         return GameObject.FindGameObjectsWithTag("Enemy");
     }
     
-    private IEnumerable<GameObject> GetDiedInScene()
+    private static IEnumerable<GameObject> GetDiedInScene()
     {
         return GameObject.FindGameObjectsWithTag("Died");
     }

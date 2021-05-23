@@ -61,6 +61,7 @@ public class PauseMenu : MonoBehaviour
     
     public void QuitGame()
     {
+        GameManager.GM.ResetGame();
         Application.Quit();
     }
 }
