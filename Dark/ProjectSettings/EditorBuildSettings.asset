@@ -59,4 +59,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Corner.unity
     guid: ce6914d85eb836c418607ef9478ce593
+  - enabled: 1
+    path: Assets/Scenes/Cross.unity
+    guid: 1aa73fe8df9427b468fc1c0f74e6c6fc
+  - enabled: 1
+    path: Assets/Scenes/LivingRoom.unity
+    guid: 798cc324fb50b7a4dbfe7b37653ca6fe
+  - enabled: 1
+    path: Assets/Scenes/Room.unity
+    guid: 671bd65230282e043b7ecc502d094014
   m_configObjects: {}
