@@ -3783,6 +3783,8 @@ MonoBehaviour:
       mustBeFalse: 1
     - storyBoolToActivate: isPlayerTakeBattery
       mustBeFalse: 1
+    - storyBoolToActivate: isPlayerKnowUlf
+      mustBeFalse: 1
   node:
   - storyBoolToGetDialogue: 
     toNode: 0
@@ -4227,6 +4229,10 @@ MonoBehaviour:
       mustBeFalse: 0
     - storyBoolToActivate: isPlayerKnowUlf
       mustBeFalse: 0
+    - storyBoolToActivate: isPlayerTakeBattery
+      mustBeFalse: 1
+    - storyBoolToActivate: isPlayerMeetUlf
+      mustBeFalse: 1
   node:
   - storyBoolToGetDialogue: 
     toNode: 0

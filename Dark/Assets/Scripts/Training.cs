@@ -15,14 +15,14 @@ public class Training : Interaction
                                          GameManager.GM.KeyLeft + 
                                          GameManager.GM.KeyDown + 
                                          GameManager.GM.KeyRight,
-        "Для того, чтобы включить фонарик на атаку нажмите " + GameManager.GM.KeyDamageLight, 
+        "Для того, чтобы включить фонарик нажмите " + GameManager.GM.KeyDamageLight, 
         "Чтобы поставить игру на паузу нажмите esc"
     };
 
     private static readonly List<string> HealTrainingText = new List<string>
     {
         "Когда тьма подходит к вам слишком близко, вы получаете урон",
-        "Для того, чтобы включить фонарик на лечение нажмите " + GameManager.GM.KeyHealLight
+        "Для того, чтобы направить фонарик на себя и согнать тьму нажмите " + GameManager.GM.KeyHealLight
     };
 
     private static readonly List<string> ChargeTrainingText = new List<string>
