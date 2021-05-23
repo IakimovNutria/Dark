@@ -565,11 +565,8 @@ MonoBehaviour:
       \u043D\u0435 \u0437\u043D\u0430\u044E."
     playerAnswer:
     - cantRepeat: 0
-      text: "\u0422\u044B \u043D\u0435 \u0432\u0435\u0440\u0438\u0448\u044C \u0435\u043C\u0443,
-        \u043D\u043E \u043D\u0435 \u0441\u0447\u0438\u0442\u0430\u0435\u0448\u044C
-        \u0440\u0430\u0437\u0443\u043C\u043D\u044B\u043C \u043D\u0430\u0441\u0442\u0430\u0438\u0432\u0430\u0442\u044C
-        \u043D\u0430 \u043E\u0442\u0432\u0435\u0442\u0435."
-      toNode: 0
+      text: ...
+      toNode: 9
       speakEnd: 0
       storyBoolToChange: 
       storyBoolToGetAnswer: 
@@ -581,10 +578,22 @@ MonoBehaviour:
       \u0442\u043E\u043B\u043A\u043E\u043C \u043D\u0435 \u0437\u043D\u0430\u044E."
     playerAnswer:
     - cantRepeat: 0
-      text: "\u0422\u044B \u043D\u0435 \u0432\u0435\u0440\u0438\u0448\u044C \u0435\u043C\u0443,
-        \u043D\u043E \u043D\u0435 \u0441\u0447\u0438\u0442\u0430\u0435\u0448\u044C
-        \u0440\u0430\u0437\u0443\u043C\u043D\u044B\u043C \u043D\u0430\u0441\u0442\u0430\u0438\u0432\u0430\u0442\u044C
-        \u043D\u0430 \u043E\u0442\u0432\u0435\u0442\u0435."
+      text: ...
+      toNode: 9
+      speakEnd: 0
+      storyBoolToChange: 
+      storyBoolToGetAnswer: 
+      storyBoolMustBeFalse: 0
+      changeStoryBoolToFalse: 0
+  - storyBoolToGetDialogue: 
+    toNode: 0
+    npcText: "\u0422\u044B \u043D\u0435 \u0432\u0435\u0440\u0438\u0448\u044C \u0435\u043C\u0443,
+      \u043D\u043E \u043D\u0435 \u0441\u0447\u0438\u0442\u0430\u0435\u0448\u044C
+      \u0440\u0430\u0437\u0443\u043C\u043D\u044B\u043C \u043D\u0430\u0441\u0442\u0430\u0438\u0432\u0430\u0442\u044C
+      \u043D\u0430 \u043E\u0442\u0432\u0435\u0442\u0435."
+    playerAnswer:
+    - cantRepeat: 0
+      text: ...
       toNode: 0
       speakEnd: 0
       storyBoolToChange: 
@@ -994,7 +1003,7 @@ MonoBehaviour:
     playerAnswer:
     - cantRepeat: 0
       text: ...
-      toNode: 22
+      toNode: 24
       speakEnd: 0
       storyBoolToChange: 
       storyBoolToGetAnswer: 
@@ -1008,7 +1017,7 @@ MonoBehaviour:
     playerAnswer:
     - cantRepeat: 0
       text: ...
-      toNode: 22
+      toNode: 0
       speakEnd: 0
       storyBoolToChange: 
       storyBoolToGetAnswer: 
@@ -1236,7 +1245,7 @@ MonoBehaviour:
       storyBoolMustBeFalse: 0
       changeStoryBoolToFalse: 0
   currentNode: 0
-  canRepeat: 0
+  canRepeat: 1
 --- !u!1 &440568527
 GameObject:
   m_ObjectHideFlags: 0
@@ -3746,7 +3755,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1356618152}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.33087492, y: 1.0134931, z: 2.0336316}
+  m_LocalPosition: {x: -0.58, y: 1.08, z: 2.0336316}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children:
   - {fileID: 1203179091}
@@ -4052,10 +4061,10 @@ MonoBehaviour:
     npcText: "\u041C\u0443\u0436\u0447\u0438\u043D\u0430 \u0432\u044B\u0431\u0435\u0433\u0430\u0435\u0442
       \u0438\u0437 \u043A\u043E\u043C\u043D\u0430\u0442\u044B"
     playerAnswer:
-    - cantRepeat: 1
+    - cantRepeat: 0
       text: ...
-      toNode: 18
-      speakEnd: 0
+      toNode: 0
+      speakEnd: 1
       storyBoolToChange: 
       storyBoolToGetAnswer: 
       storyBoolMustBeFalse: 0
@@ -4497,7 +4506,7 @@ MonoBehaviour:
     playerAnswer:
     - cantRepeat: 0
       text: ...
-      toNode: 18
+      toNode: 0
       speakEnd: 1
       storyBoolToChange: 
       storyBoolToGetAnswer: 

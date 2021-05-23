@@ -12,6 +12,7 @@ TagManager:
   - LoadingBar
   - HealthBar
   - UlfWalk
+  - Malcolm
   layers:
   - Default
   - TransparentFX

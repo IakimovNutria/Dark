@@ -93,7 +93,7 @@ public class GameManager : MonoBehaviour
                     ulfWalk = GameObject.FindGameObjectWithTag("UlfWalk");
                     isGMFindUlf = true;
                 }
-                if (!StoryBools["isPlayerHelpMalcolm"])
+                if (!StoryBools["isPlayerHelpMalcolm"] || StoryBools["isPlayerMeetUlf"])
                     ulfWalk.transform.position = new Vector3(-1, 0.37f);
                 else
                     ulfWalk.SetActive((StoryBools["isPlayerMeetUlf"] || StoryBools["isPlayerTakeBattery"]) 
