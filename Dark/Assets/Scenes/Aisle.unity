@@ -3209,7 +3209,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64666665, y: 0.6425}
+    oldSize: {x: 0.26, y: 0.5}
     newSize: {x: 0.42, y: 0.39}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -3241,7 +3241,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64666665, y: 0.6425}
+    oldSize: {x: 0.26, y: 0.5}
     newSize: {x: 0.42, y: 0.39}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -3326,7 +3326,7 @@ MonoBehaviour:
     - cantRepeat: 0
       text: "\u0422\u044B \u0441\u043B\u0443\u0447\u0430\u0439\u043D\u043E \u043D\u0435
         \u0432\u0438\u0434\u0435\u043B \u043A\u0443\u043A\u043B\u0443?"
-      toNode: 42
+      toNode: 41
       speakEnd: 0
       storyBoolToChange: 
       storyBoolToGetAnswer: isPlayerHelpEmily
