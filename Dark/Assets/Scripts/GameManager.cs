@@ -49,6 +49,8 @@ public class GameManager : MonoBehaviour
         {"isPlayerKnowUlf", false},
         {"isPlayerTakeBattery", false},
         {"UlfKnowWhereMalcolm", false},
+        {"isPlayerBelieveInMarioPacman", false},
+        {"isPlayerKnowUlfStory", false},
         {"isPlayerAskMalcolm", false},
         {"isPlayerGiveBattery", false}
     };
