@@ -11,13 +11,13 @@ public class Chest : Interaction, ISavable
     
     private Flashlight flashlight;
 
-    void Start()
+    private void Start()
     {
         flashlight = FindObjectOfType<Flashlight>();
         InteractionInitialize();
     }
 
-    void Update()
+    private void Update()
     {
         if (batteries == 0)
             canObjectBeInteracted = false;

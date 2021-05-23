@@ -8,11 +8,10 @@ public class HeatBox : MonoBehaviour
     private float damage;
     public GameObject enemyGameObject;
     private Enemy enemy;
-    //private SpriteRenderer enemySpriteRenderer;
+    
     private void Start()
     {
         enemy = enemyGameObject.GetComponent<Enemy>();
-        //enemySpriteRenderer = enemyGameObject.GetComponent<SpriteRenderer>();
         Light2DEmitter.OnBeamStay += OnBeamStay;
         Light2DEmitter.OnBeamEnter += OnBeamEnter;
         Light2DEmitter.OnBeamExit += OnBeamExit; 
@@ -22,6 +21,7 @@ public class HeatBox : MonoBehaviour
     {
         
     }
+    
     private void OnBeamStay(GameObject obj, Light2DEmitter emitter)
     {
         if (obj.GetInstanceID() == gameObject.GetInstanceID() && emitter.eventPassedFilter == "DamageEnemy")
@@ -29,6 +29,7 @@ public class HeatBox : MonoBehaviour
             enemy.TakeDamage(0.1f);
         }
     }
+    
     private void OnBeamExit(GameObject obj, Light2DEmitter emitter)
     {
         

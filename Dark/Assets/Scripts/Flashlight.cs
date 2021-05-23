@@ -29,8 +29,8 @@ public class Flashlight : MonoBehaviour
     private const float HealLightConeAngle = 360;
     private const string DamageLightEventFilter = "DamageEnemy";
     private const string HealLightEventFilter = "";
-    
-    void Start()
+
+    private void Start()
     {
         BatteriesCount = StartBatteriesCount;
         
@@ -43,7 +43,7 @@ public class Flashlight : MonoBehaviour
         UpdateBatteriesCountText();
     }
 
-    void Update()
+    private void Update()
     {
         if (player.Health == 0)
         {
@@ -75,19 +75,25 @@ public class Flashlight : MonoBehaviour
             ChangeLightParameters(damageLightConeAngle, damageLightSize, DamageLightColor, DamageLightEventFilter);
             ChangeFlashlightTransform();
         }
-        
-        if (Input.GetKeyDown(GameManager.GM.KeyDamageLight) && !isLightHealOn && !isLightDamageOn)
-            isLightDamageOn = true;
-        else if (Input.GetKeyDown(GameManager.GM.KeyDamageLight) && isLightDamageOn)
-            isLightDamageOn = false;
-        else if (Input.GetKeyDown(GameManager.GM.KeyDamageLight) && isLightHealOn)
-            isLightHealOn = false;
-        else if (Input.GetKeyDown(GameManager.GM.KeyHealLight) && isLightHealOn)
-            isLightHealOn = false;
-        else if (Input.GetKeyDown(GameManager.GM.KeyHealLight) && !isLightHealOn)
+
+        if (Input.GetKeyDown(GameManager.GM.KeyDamageLight))
         {
-            isLightHealOn = true;
-            isLightDamageOn = false;
+            if (!isLightHealOn && !isLightDamageOn)
+                isLightDamageOn = true;
+            else if (isLightDamageOn)
+                isLightDamageOn = false;
+            else if (isLightHealOn)
+                isLightHealOn = false;
+        }
+        else if (Input.GetKeyDown(GameManager.GM.KeyHealLight))
+        {
+            if (isLightHealOn)
+                isLightHealOn = false;
+            else 
+            {
+                isLightHealOn = true;
+                isLightDamageOn = false;
+            }
         }
 
         if (!isLightDamageOn && !isLightHealOn)
@@ -99,7 +105,11 @@ public class Flashlight : MonoBehaviour
     public void AddCharge(float change)
     {
         if (change + Charge <= 0)
+        {
             Charge = 0;
+            if (BatteriesCount == 0)
+                TurnOffFlashlight();
+        }
         else if (Charge + change >= MAXFlashlightCharge)
             Charge = MAXFlashlightCharge;
         else
@@ -107,7 +117,7 @@ public class Flashlight : MonoBehaviour
         chargeBar.SetValue(Charge);
     }
 
-    private void TurnOffFlashlight()
+    public void TurnOffFlashlight()
     {
         isLightDamageOn = false;
         isLightHealOn = false;
@@ -175,6 +185,4 @@ public class Flashlight : MonoBehaviour
         lightParameters.lightColor = lightColor;
         lightParameters.eventPassedFilter = eventFilter;
     }
-    
-    
 }

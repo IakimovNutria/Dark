@@ -7,7 +7,7 @@ public class ChargeCheat : ActivationCode
     public Flashlight flashLight;
 
     private bool isActive;
-    // Start is called before the first frame update
+    
     void Start()
     {
         SetKeysSequence(new List<string>{"c","h","e","a","t"});

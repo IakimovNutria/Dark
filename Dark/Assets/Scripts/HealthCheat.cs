@@ -7,14 +7,13 @@ public class HealthCheat : ActivationCode
     public Player player;
 
     private bool isActive;
-    // Start is called before the first frame update
-    void Start()
+
+    private void Start()
     {
         SetKeysSequence(new List<string>{"c","h","e","a","t"});
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if (isActive)
             player.ChangeHealthAmount(1000);

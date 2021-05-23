@@ -52,28 +52,28 @@ public static class Algorithms
                 if ((dx != 0 && dy != 0) || (dx == 0 && dy == 0)) continue;
                 var pointToVisit = new Point(point.X + dx, point.Y + dy);
                 if (visited.Contains(pointToVisit)) continue;
-                if (isPointAvailable(pointToVisit, maze))
-                    {
-                        pointsToVisit.Enqueue(new SinglyLinkedList<Point>(pointToVisit, node));
-                        visited.Add(pointToVisit);
-                    }
+                if (IsPointAvailable(pointToVisit, maze))
+                {
+                    pointsToVisit.Enqueue(new SinglyLinkedList<Point>(pointToVisit, node));
+                    visited.Add(pointToVisit);
+                }
             }
         }
         return null;
     }
 
-    private static bool isPointAvailable(Point point, bool[,] maze)
+    private static bool IsPointAvailable(Point point, bool[,] maze)
     {
-        return (point.X >= 0 && point.X < maze.GetLength(0) &&
-                point.Y >= 0 && point.Y < maze.GetLength(1) &&
-                maze[point.X, point.Y]);
+        return point.X >= 0 && point.X < maze.GetLength(0) &&
+               point.Y >= 0 && point.Y < maze.GetLength(1) &&
+               maze[point.X, point.Y];
     }
 }
 
-public struct Point
+public readonly struct Point
 {
-    public int X { get; set; }
-    public int Y { get; set; }
+    public int X { get; }
+    public int Y { get; }
     public Point(int x, int y)
     {
         X = x;
