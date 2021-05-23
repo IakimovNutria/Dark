@@ -1,0 +1,16 @@
+{
+    "name": "Light2DEditor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:00161547893186f4d9632ee0ecb40960"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
