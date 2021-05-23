@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Drawing;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -54,12 +53,23 @@ public static class Algorithms
             for (var dx = -1; dx <= 1; dx++)
             {
                 if (dx != 0 && dy != 0) continue;
-                var pointToVisit = new Point {X = point.X + dx, Y = point.Y + dy};
+                var pointToVisit = new Point(point.X + dx, point.Y + dy);
                 if (visited.Contains(pointToVisit)) continue;
                 pointsToVisit.Enqueue(new SinglyLinkedList<Point>(pointToVisit, node));
                 visited.Add(pointToVisit);
             }
         }
         return null;
+    }
+}
+
+public class Point
+{
+    public int X { get; set; }
+    public int Y { get; set; }
+    public Point(int x, int y)
+    {
+        X = x;
+        Y = y;
     }
 }
