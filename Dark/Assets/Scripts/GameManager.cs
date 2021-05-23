@@ -54,8 +54,9 @@ public class GameManager : MonoBehaviour
     };
     
     private GameObject ulfWalk;
-    private GameObject ulfStand;
-    private bool a;
+    private GameObject malcolm;
+    private bool isGMFindUlf;
+    private bool isGMFindMalcolm;
     private void Awake()
     {
         if (GM == null)
@@ -85,18 +86,32 @@ public class GameManager : MonoBehaviour
             
             if (SceneManager.GetActiveScene().name == "UlfRoom")
             {
-                if (!a)
+                if (!isGMFindUlf)
                 {
-                    ulfStand = GameObject.FindGameObjectWithTag("StandUlf");
-                    ulfWalk = GameObject.FindGameObjectWithTag("WalkUlf");
-                    a = true;
+                    ulfWalk = GameObject.FindGameObjectWithTag("UlfWalk");
+                    isGMFindUlf = true;
                 }
-                ulfStand.SetActive(!StoryBools["isPlayerHelpMalcolm"]);
-                ulfWalk.SetActive((StoryBools["isPlayerMeetUlf"] || StoryBools["isPlayerTakeBattery"]) 
-                                  && !StoryBools["UlfKnowWhereMalcolm"]);
+                if (!StoryBools["isPlayerHelpMalcolm"])
+                    ulfWalk.transform.position = new Vector3(-1, 0.37f);
+                else
+                    ulfWalk.SetActive((StoryBools["isPlayerMeetUlf"] || StoryBools["isPlayerTakeBattery"]) 
+                                      && !StoryBools["UlfKnowWhereMalcolm"]);
             }
             else
-                a = false;
+                isGMFindUlf = false;
+
+            if (SceneManager.GetActiveScene().name == "MalcolmRoom")
+            {
+                if (!isGMFindMalcolm)
+                {
+                    malcolm = GameObject.FindGameObjectWithTag("Malcolm");
+                    isGMFindMalcolm = true;
+                }
+                if (StoryBools["UlfKnowWhereMalcolm"])
+                    malcolm.SetActive(false);
+            }
+            else
+                isGMFindMalcolm = false;
         }
         else if (!GetEnemiesInScene().Any() && !GetDiedInScene().Any() && StoryBools["isGameStarted"])
             ChangeStoryBool("isFirstRoomCleaned", true);

@@ -4285,8 +4285,8 @@ MonoBehaviour:
       toNode: 71
       speakEnd: 0
       storyBoolToChange: isPlayerGiveBattery
-      storyBoolToGetAnswer: 
-      storyBoolMustBeFalse: 0
+      storyBoolToGetAnswer: isPlayerGiveBattery
+      storyBoolMustBeFalse: 1
       changeStoryBoolToFalse: 0
     - cantRepeat: 0
       text: "\u041A\u0430\u0436\u0435\u0442\u0441\u044F, \u0442\u044B \u043D\u0435

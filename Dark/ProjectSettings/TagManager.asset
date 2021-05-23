@@ -11,6 +11,7 @@ TagManager:
   - PauseMenu
   - LoadingBar
   - HealthBar
+  - UlfWalk
   layers:
   - Default
   - TransparentFX

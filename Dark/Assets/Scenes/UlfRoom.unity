@@ -237,7 +237,7 @@ GameObject:
   - component: {fileID: 334944053}
   m_Layer: 0
   m_Name: Ulf
-  m_TagString: Untagged
+  m_TagString: UlfWalk
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -255,7 +255,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 0}
-  destination: {x: 0.49, y: 1.04}
+  destination: {x: -1, y: 0.37}
 --- !u!212 &334944047
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -315,7 +315,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 334944045}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.54, y: -0.628, z: -3.7148035}
+  m_LocalPosition: {x: 1.626, y: -0.654, z: -3.7148035}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -434,7 +434,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mustNotBeInteraction: 0
-  activateConditionsList: []
+  activateConditionsList:
+  - activateConditions:
+    - storyBoolToActivate: isPlayerHelpMalcolm
+      mustBeFalse: 1
+  - activateConditions:
+    - storyBoolToActivate: isPlayerTakeBattery
+      mustBeFalse: 0
   node:
   - storyBoolToGetDialogue: 
     toNode: 0
@@ -3328,7 +3334,7 @@ MonoBehaviour:
     npcText: "\u041C\u0443\u0436\u0447\u0438\u043D\u0430 \u0432\u044B\u0431\u0435\u0433\u0430\u0435\u0442
       \u0438\u0437 \u043A\u043E\u043C\u043D\u0430\u0442\u044B"
     playerAnswer:
-    - cantRepeat: 0
+    - cantRepeat: 1
       text: ...
       toNode: 18
       speakEnd: 0
@@ -3774,7 +3780,7 @@ MonoBehaviour:
     - cantRepeat: 0
       text: ...
       toNode: 18
-      speakEnd: 0
+      speakEnd: 1
       storyBoolToChange: 
       storyBoolToGetAnswer: 
       storyBoolMustBeFalse: 0

@@ -11,7 +11,10 @@ using UnityEngine.SceneManagement;
 public class SceneSaveManager : MonoBehaviour
 {
     private List<AliveEntity> toSave = new List<AliveEntity>();
-    
+    private static readonly List<string> notToSaveScenes = new List<string>
+    {
+        "UlfRoom"
+    };
     [NonSerialized]
     public static string currentGameFolderPath;
     
@@ -24,6 +27,8 @@ public class SceneSaveManager : MonoBehaviour
 
     public void SaveScene()
     {
+        if (notToSaveScenes.Any(scene => SceneManager.GetActiveScene().name == scene))
+            return;
         toSave = FindObjectsOfType<AliveEntity>()
             .Where(aliveEntity => aliveEntity.GetComponent<Player>() == null)
             .ToList();
