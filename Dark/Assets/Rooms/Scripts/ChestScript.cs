@@ -32,6 +32,7 @@ public class ChestScript : Interaction
 
     private void SetBattaries()
     {
+        GameManager.GM.ChestSound.Play();
         chestVisitedField = GameManager.GM.GetType().GetField(chestName + "ChestVisited");
         if ((bool)chestVisitedField.GetValue(chestVisitedField))
             RefuseToInteract();

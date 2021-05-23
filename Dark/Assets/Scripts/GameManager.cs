@@ -22,6 +22,8 @@ public class GameManager : MonoBehaviour
     public KeyCode KeyDialogues { get; set; }
 
     public bool isGameFreezed;
+    public AudioSource ChestSound;
+    public AudioSource DoorSound;
 
     public readonly Dictionary<string, bool> StoryBools = new Dictionary<string, bool>
     {

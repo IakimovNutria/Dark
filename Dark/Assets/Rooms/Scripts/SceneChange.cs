@@ -28,6 +28,7 @@ public class SceneChange : Interaction
 
     private void ChangeScene()
     {
+        GameManager.GM.DoorSound.Play();
         SceneLoadManager.prevSceneIndex = SceneManager.GetActiveScene().buildIndex;
         DontDestroyOnLoad(GameObject.FindGameObjectWithTag("Canvas"));
         DontDestroyOnLoad(GameObject.FindGameObjectWithTag("MainCamera"));
