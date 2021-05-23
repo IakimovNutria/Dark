@@ -32,7 +32,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: EliRightStandAnimation
+  m_Name: UlfRightStandAnimation
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -49,7 +49,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: b3a8891caeab544659e499b71b377d60, type: 2}
+  m_Motion: {fileID: 7400000, guid: 92941b424547049aa95a5eb6e50c780b, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -137,7 +137,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: EliLeftWalkAnimation
+  m_Name: UlfLeftWalkAnimation
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -154,7 +154,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 60271a0aae4484028910323239e6ce28, type: 2}
+  m_Motion: {fileID: 7400000, guid: b7152b6c30e014b34ab8854f8c9a3645, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -192,7 +192,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: EliBackStandAnimation
+  m_Name: UlfBackStandAnimation
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -209,7 +209,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: ecce96966493847e6bd5207818c7013a, type: 2}
+  m_Motion: {fileID: 7400000, guid: bbee6766248a94f16a8207ad598d69da, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -465,7 +465,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: EliRightWalkAnimation
+  m_Name: UlfRightWalkAnimation
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -482,7 +482,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: e85e84d56ed8942f18edada04ab39b36, type: 2}
+  m_Motion: {fileID: 7400000, guid: 482f4462a0d904fc1b9eace537b543ba, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -495,7 +495,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: EliBackWalkAnimation
+  m_Name: UlfBackWalkAnimation
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -512,7 +512,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: c860aa4a529b5458789a2e368b4abacc, type: 2}
+  m_Motion: {fileID: 7400000, guid: e93f8d8a039c24f69953e3aeb789622b, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -551,7 +551,43 @@ AnimatorController:
   m_PrefabAsset: {fileID: 0}
   m_Name: Ulf
   serializedVersion: 5
-  m_AnimatorParameters: []
+  m_AnimatorParameters:
+  - m_Name: isWalk
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
+  - m_Name: isDied
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
+  - m_Name: isWalkLeft
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
+  - m_Name: isWalkRight
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
+  - m_Name: isWalkFront
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
+  - m_Name: isWalkBack
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -597,7 +633,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: EliForwardStandAnimation
+  m_Name: UlfForwardStandAnimation
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -614,7 +650,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: a04d941cc5f564962af19916c11a90bf, type: 2}
+  m_Motion: {fileID: 7400000, guid: 94c38c1eb813743379132726e2b699fc, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -852,7 +888,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: EliLeftStandAnimation
+  m_Name: UlfLeftStandAnimation
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -869,7 +905,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 23f0b9a0aaec24d138f8c6395e214277, type: 2}
+  m_Motion: {fileID: 7400000, guid: b001cc6dc9b274750b9b14ffb430a2c0, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -982,7 +1018,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: EliForwardWalkAnimation
+  m_Name: UlfForwardWalkAnimation
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -999,7 +1035,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 1c0ca8583745040b2a499e376e5fcab3, type: 2}
+  m_Motion: {fileID: 7400000, guid: 7a45a87810f9a43c1adf8e59624ac8a9, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
