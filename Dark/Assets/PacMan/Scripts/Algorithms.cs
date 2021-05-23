@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Drawing;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -45,21 +44,39 @@ public static class Algorithms
         {
             var node = pointsToVisit.Dequeue();
             var point = node.Value;
-            if (point.X < 0 || point.X >= maze.GetLength(0) || 
-                point.Y < 0 || point.Y >= maze.GetLength(1) || 
-                !maze[point.X, point.Y]) continue;
             
-            if (point == finish) return node;
+            if (point.Equals(finish)) return node;
             for (var dy = -1; dy <= 1; dy++)
             for (var dx = -1; dx <= 1; dx++)
             {
-                if (dx != 0 && dy != 0) continue;
-                var pointToVisit = new Point {X = point.X + dx, Y = point.Y + dy};
+                if ((dx != 0 && dy != 0) || (dx == 0 && dy == 0)) continue;
+                var pointToVisit = new Point(point.X + dx, point.Y + dy);
                 if (visited.Contains(pointToVisit)) continue;
-                pointsToVisit.Enqueue(new SinglyLinkedList<Point>(pointToVisit, node));
-                visited.Add(pointToVisit);
+                if (isPointAvailable(pointToVisit, maze))
+                    {
+                        pointsToVisit.Enqueue(new SinglyLinkedList<Point>(pointToVisit, node));
+                        visited.Add(pointToVisit);
+                    }
             }
         }
         return null;
+    }
+
+    private static bool isPointAvailable(Point point, bool[,] maze)
+    {
+        return (point.X >= 0 && point.X < maze.GetLength(0) &&
+                point.Y >= 0 && point.Y < maze.GetLength(1) &&
+                maze[point.X, point.Y]);
+    }
+}
+
+public struct Point
+{
+    public int X { get; set; }
+    public int Y { get; set; }
+    public Point(int x, int y)
+    {
+        X = x;
+        Y = y;
     }
 }
