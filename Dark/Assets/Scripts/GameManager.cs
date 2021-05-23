@@ -99,11 +99,11 @@ public class GameManager : MonoBehaviour
                     ulfWalk = GameObject.FindGameObjectWithTag("UlfWalk");
                     if ((StoryBools["isPlayerMeetUlf"] || StoryBools["isPlayerTakeBattery"])
                         && !StoryBools["UlfKnowWhereMalcolm"])
-                        ulfWalk.transform.position = new Vector3(-1, 0.37f);
+                        ulfWalk.transform.position = new Vector3(0.36f, 1.14f);
                     isGMFindUlf = true;
                 }
                 if (!StoryBools["isPlayerHelpMalcolm"])
-                    ulfWalk.transform.position = new Vector3(-1, 0.37f);
+                    ulfWalk.transform.position = new Vector3(0.36f, 1.14f);
                 else
                     ulfWalk.SetActive((StoryBools["isPlayerMeetUlf"] || StoryBools["isPlayerTakeBattery"]) 
                                       && !StoryBools["UlfKnowWhereMalcolm"]);
