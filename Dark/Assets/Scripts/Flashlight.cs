@@ -76,13 +76,20 @@ public class Flashlight : MonoBehaviour
             ChangeFlashlightTransform();
         }
         
-        if (Input.GetKeyDown(GameManager.GM.KeyDamageLight) && !isLightHealOn)
-            isLightDamageOn = !isLightDamageOn;
-        else if (Input.GetKeyDown(GameManager.GM.KeyHealLight) && !isLightDamageOn)
-            isLightHealOn = !isLightHealOn;
+        if (Input.GetKeyDown(GameManager.GM.KeyDamageLight) && !isLightHealOn && !isLightDamageOn)
+            isLightDamageOn = true;
+        else if (Input.GetKeyDown(GameManager.GM.KeyDamageLight) && isLightDamageOn)
+            isLightDamageOn = false;
         else if (Input.GetKeyDown(GameManager.GM.KeyDamageLight) && isLightHealOn)
             isLightHealOn = false;
-        
+        else if (Input.GetKeyDown(GameManager.GM.KeyHealLight) && isLightHealOn)
+            isLightHealOn = false;
+        else if (Input.GetKeyDown(GameManager.GM.KeyHealLight) && !isLightHealOn)
+        {
+            isLightHealOn = true;
+            isLightDamageOn = false;
+        }
+
         if (!isLightDamageOn && !isLightHealOn)
             TurnOffFlashlight();
         else
