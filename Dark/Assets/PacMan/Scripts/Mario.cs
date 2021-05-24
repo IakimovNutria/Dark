@@ -6,10 +6,11 @@ public class Mario : MonoBehaviour
     public bool IsEnergized { get; private set; }
     private const int EnergizedTime = 500;
     private int currentEnergizedTime;
-    public Vector2 destination = Vector2.zero;
+    private Vector2 destination = Vector2.zero;
     private Rigidbody2D _rigidbody2D;
     private Animator _animator;
-    public Collider2D mazeCollider;
+    [SerializeField]
+    private Collider2D mazeCollider;
     private static readonly int IsWalkLeft = Animator.StringToHash("isWalkLeft");
     private static readonly int IsWalkRight = Animator.StringToHash("isWalkRight");
     private static readonly int IsWalk = Animator.StringToHash("isWalk");

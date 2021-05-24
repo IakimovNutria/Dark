@@ -6,7 +6,10 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     private static GameObject flashlight;
-
+    private static GameObject player;
+    private static GameObject mainCamera;
+    private static GameObject canvas;
+    
     public static GameManager GM;
     public KeyCode KeyUp { get; private set; }
     public KeyCode KeyDown { get; private set; }
@@ -56,7 +59,8 @@ public class GameManager : MonoBehaviour
         {"PlayerAgreeToPlayMarioPacman", false},
         {"isPlayerStanley", false}, 
         {"isPlayerHaveGoodKarma", false},
-        {"isPlayerHaveMaxKarma", false}
+        {"isPlayerHaveMaxKarma", false},
+        {"isPlayerEndMarioPacman", false}
     };
     
     private GameObject ulf;
@@ -87,6 +91,10 @@ public class GameManager : MonoBehaviour
     private void InitGameManager()
     {
         flashlight = GameObject.FindGameObjectWithTag("Flashlight");
+        player = GameObject.FindGameObjectWithTag("Player");
+        mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
+        canvas = GameObject.FindGameObjectWithTag("Canvas");
+        
         SetDefaultKeys();
     }
 
@@ -242,10 +250,10 @@ public class GameManager : MonoBehaviour
 
     public void ResetGame()
     {
-        Destroy(GameObject.FindGameObjectWithTag("Player"));
-        Destroy(GameObject.FindGameObjectWithTag("MainCamera"));
-        Destroy(GameObject.FindGameObjectWithTag("Flashlight"));
-        Destroy(GameObject.FindGameObjectWithTag("Canvas"));
+        Destroy(player);
+        Destroy(mainCamera);
+        Destroy(flashlight);
+        Destroy(canvas);
         SceneSaveManager.DeleteSave("CurrentGame");
         SceneManager.LoadScene("GameStartMenu");
         Destroy(gameObject);
@@ -266,6 +274,17 @@ public class GameManager : MonoBehaviour
 
     private void PlayMarioPacman()
     {
-        
+        player.SetActive(false);
+        flashlight.SetActive(false);
+        canvas.SetActive(false);
+        SceneManager.LoadScene("PacMan");
+    }
+
+    public void ContinueMainGame()
+    {
+        player.SetActive(true);
+        flashlight.SetActive(true);
+        canvas.SetActive(true);
+        SceneManager.LoadScene("LastRoom");
     }
 }

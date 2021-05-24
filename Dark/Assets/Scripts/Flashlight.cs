@@ -70,7 +70,6 @@ public class Flashlight : MonoBehaviour
             ChangeLightParameters(HealLightConeAngle, HealLightSize, HealLightColor, HealLightEventFilter);
             player.ChangeHealthAmount(healPower);
         }
-        
         else if (isLightDamageOn)
         {
             ChangeLightParameters(damageLightConeAngle, damageLightSize, DamageLightColor, DamageLightEventFilter);

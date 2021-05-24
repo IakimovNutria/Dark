@@ -69,7 +69,10 @@ public class Blinky : MonoBehaviour
             score.UpdateScore(100);
         }
         else
+        {
             Destroy(mario.gameObject);
+            GameManager.GM.ContinueMainGame();
+        }
     }
 
     private void GetMaze()

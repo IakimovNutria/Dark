@@ -8,6 +8,8 @@ public class Score : MonoBehaviour
 
     public void UpdateScore(int change)
     {
+        if (score >= 1900)
+            GameManager.GM.ContinueMainGame();
         score += change;
         scoreText.text = score.ToString();
     }
