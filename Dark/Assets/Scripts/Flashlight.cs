@@ -16,6 +16,10 @@ public class Flashlight : MonoBehaviour
     public float Charge { get; private set; } = 1000f;
     public uint BatteriesCount { get; private set; }
     public uint StartBatteriesCount { get; } = 4;
+
+    public AudioSource TurnOnSound;
+    public AudioSource TurnOffSound;
+
     private float damageLightSize = 5;
     public float MAXFlashlightCharge { get; } = 1000f;
     private float damageLightConeAngle = 30;
@@ -79,18 +83,29 @@ public class Flashlight : MonoBehaviour
         if (Input.GetKeyDown(GameManager.GM.KeyDamageLight))
         {
             if (!isLightHealOn && !isLightDamageOn)
+            {
+                TurnOnSound.Play();
                 isLightDamageOn = true;
-            else if (isLightDamageOn)
-                isLightDamageOn = false;
-            else if (isLightHealOn)
-                isLightHealOn = false;
+            }
+            else
+            {
+                TurnOffSound.Play();
+                if (isLightDamageOn)
+                    isLightDamageOn = false;
+                else if (isLightHealOn)
+                    isLightHealOn = false;
+            }
         }
         else if (Input.GetKeyDown(GameManager.GM.KeyHealLight))
         {
             if (isLightHealOn)
-                isLightHealOn = false;
-            else 
             {
+                TurnOffSound.Play();
+                isLightHealOn = false;
+            }
+            else
+            {
+                TurnOnSound.Play();
                 isLightHealOn = true;
                 isLightDamageOn = false;
             }
