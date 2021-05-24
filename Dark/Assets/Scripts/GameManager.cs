@@ -276,7 +276,8 @@ public class GameManager : MonoBehaviour
 
     private int? GetPlayerKarma()
     {
-        if (StoryBools["isPlayerHelpEli"] && !StoryBools["isPlayerAskedAboutToy"] && !StoryBools["isPlayerHelpMalcolm"])
+        if (StoryBools["isPlayerHelpEli"] && !StoryBools["isPlayerAskedAboutToy"] && 
+            !(StoryBools["isPlayerMeetUlf"] || StoryBools["isPlayerTakeBattery"]))
             return null;
         var karma = (StoryBools["draw"] ? 1 : 0) + (StoryBools["isPlayerTakeBattery"] ? -1 : 0) + 
                     (StoryBools["isPlayerHelpEli"] ? 0 : -1);
