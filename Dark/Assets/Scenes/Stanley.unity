@@ -234,7 +234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35dd9645c579ca54e98200816f410537, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftScene: 0
+  leftScene: 22
   rightScene: 0
   topScene: 0
   bottomScene: 0
@@ -2222,12 +2222,41 @@ MonoBehaviour:
   m_GameObject: {fileID: 1712987191}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46611e9584b479148a22c1f5bc8915cc, type: 3}
+  m_Script: {fileID: 11500000, guid: 49140ed064af94d39a249ded909ecf55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   mustNotBeInteraction: 0
   activateConditionsList: []
-  nextScene: 
+  node:
+  - storyBoolToGetDialogue: 
+    toNode: 0
+    npcText: "\u0422\u044B \u0441\u043B\u0438\u0448\u043A\u043E\u043C \u0443\u0441\u0442\u0430\u043B\u0430
+      \u043E\u0442 \u044D\u0442\u043E\u0433\u043E \u043B\u0430\u0431\u0438\u0440\u0438\u043D\u0442\u0430."
+    playerAnswer:
+    - cantRepeat: 0
+      text: 
+      toNode: 1
+      speakEnd: 0
+      storyBoolToChange: 
+      storyBoolToGetAnswer: 
+      storyBoolMustBeFalse: 0
+      changeStoryBoolToFalse: 0
+  - storyBoolToGetDialogue: 
+    toNode: 0
+    npcText: "\u0418\u0441\u043A\u0430\u0442\u044C \u0432\u044B\u0445\u043E\u0434
+      \u0431\u043E\u043B\u044C\u0448\u0435 \u043D\u0435 \u0438\u043C\u0435\u0435\u0442
+      \u0441\u043C\u044B\u0441\u043B\u0430."
+    playerAnswer:
+    - cantRepeat: 0
+      text: 
+      toNode: 0
+      speakEnd: 1
+      storyBoolToChange: 
+      storyBoolToGetAnswer: 
+      storyBoolMustBeFalse: 0
+      changeStoryBoolToFalse: 0
+  currentNode: 0
+  canRepeat: 0
 --- !u!60 &1712987196
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2253,12 +2282,11 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 1.7438892, y: -0.6543382}
-      - {x: 1.3099016, y: -0.86974025}
-      - {x: 1.5750856, y: -1.0183132}
-      - {x: 1.6575795, y: -1.0097004}
-      - {x: 1.9400928, y: -0.86481094}
-      - {x: 1.9955468, y: -0.7827786}
+    - - {x: -1.9740666, y: 0.66159064}
+      - {x: -2.227421, y: 0.5688171}
+      - {x: -2.2689788, y: 0.42644992}
+      - {x: -1.9797859, y: 0.28627095}
+      - {x: -1.5807474, y: 0.5001113}
 --- !u!1 &1768509575
 GameObject:
   m_ObjectHideFlags: 0

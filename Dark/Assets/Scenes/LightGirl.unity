@@ -231,7 +231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   leftScene: 0
-  rightScene: 0
+  rightScene: 16
   topScene: 0
   bottomScene: 0
   leftStart: {x: 0, y: 0}
@@ -3392,6 +3392,7 @@ GameObject:
   - component: {fileID: 1712987193}
   - component: {fileID: 1712987195}
   - component: {fileID: 1712987196}
+  - component: {fileID: 1712987197}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -3561,8 +3562,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mustNotBeInteraction: 0
-  activateConditionsList: []
-  nextScene: LastRoom
+  activateConditionsList:
+  - activateConditions:
+    - storyBoolToActivate: isPlayerStanley
+      mustBeFalse: 1
+    - storyBoolToActivate: isPlayerHaveGoodKarma
+      mustBeFalse: 1
+  nextScene: MonsterRoom
 --- !u!60 &1712987196
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -3594,6 +3600,24 @@ PolygonCollider2D:
       - {x: 1.6575795, y: -1.0097004}
       - {x: 1.9400928, y: -0.86481094}
       - {x: 1.9955468, y: -0.7827786}
+--- !u!114 &1712987197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1712987191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46611e9584b479148a22c1f5bc8915cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mustNotBeInteraction: 0
+  activateConditionsList:
+  - activateConditions:
+    - storyBoolToActivate: isPlayerStanley
+      mustBeFalse: 0
+  nextScene: Stanley
 --- !u!1 &1768509575
 GameObject:
   m_ObjectHideFlags: 0
