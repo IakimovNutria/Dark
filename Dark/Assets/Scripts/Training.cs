@@ -1,7 +1,4 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 
 public class Training : Interaction
@@ -11,9 +8,9 @@ public class Training : Interaction
 
     private static readonly List<string> MainTrainingText = new List<string>
     {
-        "Для передвижения используйте кнопки " + GameManager.GM.KeyUp + 
-                                         GameManager.GM.KeyLeft + 
-                                         GameManager.GM.KeyDown + 
+        "Для передвижения используйте кнопки " + GameManager.GM.KeyUp + " " +
+                                         GameManager.GM.KeyLeft + " " +
+                                         GameManager.GM.KeyDown + " " +
                                          GameManager.GM.KeyRight,
         "Для того, чтобы включить фонарик нажмите " + GameManager.GM.KeyDamageLight, 
         "Чтобы поставить игру на паузу нажмите esc"
@@ -39,7 +36,7 @@ public class Training : Interaction
 
     private static readonly List<string> InteractionTrainingText = new List<string>
     {
-        "Чтобы взаимодействовать нажмите кнопку " + GameManager.GM.KeyObgectsInteraction
+        "Чтобы взаимодействовать нажмите кнопку " + GameManager.GM.KeyObjectsInteraction
     };
     
     private int currentMainTrainingTextIndex; 

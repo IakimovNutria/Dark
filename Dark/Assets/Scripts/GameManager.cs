@@ -1,5 +1,3 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -7,19 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public static bool firstRoomChestVisited;
+    private static GameObject flashlight;
+    private static GameObject player;
+    private static GameObject mainCamera;
+    private static GameObject canvas;
     
-    public static GameObject Flashlight;
-
     public static GameManager GM;
-    public KeyCode KeyUp { get; set; }
-    public KeyCode KeyDown { get; set; }
-    public KeyCode KeyLeft { get; set; }
-    public KeyCode KeyRight { get; set; }
-    public KeyCode KeyDamageLight { get; set; }
-    public KeyCode KeyHealLight { get; set; }
-    public KeyCode KeyObgectsInteraction { get; set; }
-    public KeyCode KeyDialogues { get; set; }
+    public KeyCode KeyUp { get; private set; }
+    public KeyCode KeyDown { get; private set; }
+    public KeyCode KeyLeft { get; private set; }
+    public KeyCode KeyRight { get; private set; }
+    public KeyCode KeyDamageLight { get; private set; }
+    public KeyCode KeyHealLight { get; private set; }
+    public KeyCode KeyObjectsInteraction { get; private set; }
 
     public bool isGameFreezed;
     public AudioSource ChestSound;
@@ -32,6 +30,7 @@ public class GameManager : MonoBehaviour
         {"isFirstRoomCleaned", false},
         {"isFirstDialogueEnd", false},
         {"isPlayerHelpEli", false},
+        {"isPlayerMeetEmily", false},
         {"playerCanInteractFirstTime", false},
         {"isEliReachedRoom", false},
         {"isFirstEmilyAndEliDialogueEnd", false},
@@ -40,6 +39,7 @@ public class GameManager : MonoBehaviour
         {"isPlayerAskedAboutLeg", false},
         {"isPlayerGetToy", false},
         {"isPlayerGiveToy", false},
+        {"isPlayerToyGetPaid", false},
         {"drawHorse", false},
         {"drawFlower", false},
         {"drawMarioPacman", false},
@@ -54,18 +54,30 @@ public class GameManager : MonoBehaviour
         {"UlfKnowWhereMalcolm", false},
         {"isPlayerBelieveInMarioPacman", false},
         {"isPlayerKnowUlfStory", false},
+        {"isPlayerMeetStanleySecondTime", false},
         {"isPlayerAskMalcolm", false},
         {"isPlayerGiveBattery", false},
-        {"isPlayerGetPaid", false}
+        {"isPlayerGetPaid", false},
+        {"isPlayerMeetStanleyThirdTime", false},
+        {"PlayerAgreeToPlayMarioPacman", false},
+        {"PlayerPlayPacMario", false},
+        {"isPlayerStanley", false}, 
+        {"isPlayerHaveGoodKarma", false},
+        {"isPlayerHaveMaxKarma", false},
+        {"isPlayerEndMarioPacman", false}
     };
     
     private GameObject ulf;
     private GameObject malcolm;
     private GameObject firstStanley;
+    private GameObject secondStanley;
+    private GameObject thirdStanley;
     
     private bool isGMFindUlf;
     private bool isGMFindMalcolm;
     private bool isGMFindFirstStanley;
+    private bool isGMFindSecondStanley;
+    private bool isGMFindThirdStanley;
     
     private void Awake()
     {
@@ -82,7 +94,11 @@ public class GameManager : MonoBehaviour
 
     private void InitGameManager()
     {
-        Flashlight = GameObject.FindGameObjectWithTag("Flashlight");
+        flashlight = GameObject.FindGameObjectWithTag("Flashlight");
+        player = GameObject.FindGameObjectWithTag("Player");
+        mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
+        canvas = GameObject.FindGameObjectWithTag("Canvas");
+        
         SetDefaultKeys();
     }
 
@@ -94,10 +110,49 @@ public class GameManager : MonoBehaviour
                 StoryBools["draw"] = StoryBools["drawFlower"] || StoryBools["drawHorse"] 
                                                               || StoryBools["drawMarioPacman"];
 
+            if (!StoryBools["isPlayerToyGetPaid"] && StoryBools["isPlayerGiveToy"])
+            {
+                ChangeStoryBool("isPlayerToyGetPaid", true);
+                flashlight.GetComponent<Flashlight>().AddBatteries(3);
+            }
+            
+            if (SceneManager.GetActiveScene().name == "LastRoom")
+            {
+                if (!isGMFindThirdStanley)
+                {
+                    thirdStanley = GameObject.FindGameObjectWithTag("Stanley");
+                    thirdStanley.SetActive(!StoryBools["isPlayerMeetStanleyThirdTime"]);
+                    isGMFindThirdStanley = true;
+                }
+
+                ChangeStoryBool("isPlayerMeetStanleyThirdTime", true);
+                
+                
+                if (StoryBools["PlayerAgreeToPlayMarioPacman"])
+                    if (!StoryBools["PlayerPlayPacMario"])
+                    {
+                        PlayMarioPacman();
+                        ChangeStoryBool("PlayerPlayPacMario", true);
+                    }
+                    
+
+                var karma = GetPlayerKarma();
+                if (karma is null)
+                    ChangeStoryBool("isPlayerStanley", true);
+                else
+                    ChangeStoryBool("isPlayerHaveGoodKarma", karma > 0);
+
+                if (karma == 3)
+                    ChangeStoryBool("isPlayerHaveMaxKarma", true);
+
+            }
+            else
+                isGMFindThirdStanley = false;
+            
             if (StoryBools["isPlayerGiveBattery"] && !StoryBools["isPlayerGetPaid"])
             {
                 ChangeStoryBool("isPlayerGetPaid", true);
-                Flashlight.GetComponent<Flashlight>().AddBatteries(20);
+                flashlight.GetComponent<Flashlight>().AddBatteries(20);
             }
 
             if (SceneManager.GetActiveScene().name == "Aisle")
@@ -113,6 +168,23 @@ public class GameManager : MonoBehaviour
             }
             else
                 isGMFindFirstStanley = false;
+
+            if (SceneManager.GetActiveScene().name == "UlfAisle")
+            {
+                if (!isGMFindSecondStanley)
+                {
+                    secondStanley = GameObject.FindGameObjectWithTag("Stanley");
+                    secondStanley.SetActive(!StoryBools["isPlayerMeetStanleySecondTime"] && 
+                                            (StoryBools["isPlayerMeetUlf"] || StoryBools["isPlayerTakeBattery"]));
+                    isGMFindSecondStanley = true;
+                }
+
+                StoryBools["isPlayerMeetStanleySecondTime"] = StoryBools["isPlayerMeetUlf"] || 
+                                                              StoryBools["isPlayerTakeBattery"];
+            }
+            else
+                isGMFindSecondStanley = false;
+            
             if (SceneManager.GetActiveScene().name == "UlfRoom")
             {
                 if (!isGMFindUlf)
@@ -154,14 +226,14 @@ public class GameManager : MonoBehaviour
     public void FreezeGame()
     {
         isGameFreezed = true;
-        Flashlight.SetActive(false);
+        flashlight.SetActive(false);
         Time.timeScale = 0;
     }
 
     public void ResumeGame()
     {
         Time.timeScale = 1;
-        Flashlight.SetActive(true);
+        flashlight.SetActive(true);
         isGameFreezed = false;
     }
 
@@ -173,16 +245,15 @@ public class GameManager : MonoBehaviour
         KeyRight = KeyCode.D;
         KeyDamageLight = KeyCode.C;
         KeyHealLight = KeyCode.V;
-        KeyObgectsInteraction = KeyCode.Space;
-        KeyDialogues = KeyCode.E;
+        KeyObjectsInteraction = KeyCode.Space;
     }
 
-    private IEnumerable<GameObject> GetEnemiesInScene()
+    private static IEnumerable<GameObject> GetEnemiesInScene()
     {
         return GameObject.FindGameObjectsWithTag("Enemy");
     }
     
-    private IEnumerable<GameObject> GetDiedInScene()
+    private static IEnumerable<GameObject> GetDiedInScene()
     {
         return GameObject.FindGameObjectsWithTag("Died");
     }
@@ -194,12 +265,41 @@ public class GameManager : MonoBehaviour
 
     public void ResetGame()
     {
-        Destroy(GameObject.FindGameObjectWithTag("Player"));
-        Destroy(GameObject.FindGameObjectWithTag("MainCamera"));
-        Destroy(GameObject.FindGameObjectWithTag("Flashlight"));
-        Destroy(GameObject.FindGameObjectWithTag("Canvas"));
+        Destroy(player);
+        Destroy(mainCamera);
+        Destroy(flashlight);
+        Destroy(canvas);
         SceneSaveManager.DeleteSave("CurrentGame");
         SceneManager.LoadScene("GameStartMenu");
         Destroy(gameObject);
+    }
+
+    private int? GetPlayerKarma()
+    {
+        if (StoryBools["isPlayerHelpEli"] && !StoryBools["isPlayerAskedAboutToy"] && !StoryBools["isPlayerHelpMalcolm"])
+            return null;
+        var karma = (StoryBools["draw"] ? 1 : 0) + (StoryBools["isPlayerTakeBattery"] ? -1 : 0) + 
+                    (StoryBools["isPlayerHelpEli"] ? 0 : -1);
+        if (StoryBools["isPlayerMeetUlf"])
+            karma += StoryBools["UlfKnowWhereMalcolm"] ? -1 : 1;
+        if (StoryBools["isPlayerAskedAboutToy"])
+            karma += StoryBools["isPlayerHelpEmily"] ? 1 : -1;
+        return karma;
+    }
+
+    private void PlayMarioPacman()
+    {
+        player.SetActive(false);
+        flashlight.SetActive(false);
+        canvas.SetActive(false);
+        SceneManager.LoadScene("PacMan");
+    }
+
+    public void ContinueMainGame()
+    {
+        player.SetActive(true);
+        flashlight.SetActive(true);
+        canvas.SetActive(true);
+        SceneManager.LoadScene("LastRoom");
     }
 }

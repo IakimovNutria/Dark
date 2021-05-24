@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Mario : MonoBehaviour
@@ -9,10 +6,11 @@ public class Mario : MonoBehaviour
     public bool IsEnergized { get; private set; }
     private const int EnergizedTime = 500;
     private int currentEnergizedTime;
-    public Vector2 destination = Vector2.zero;
+    private Vector2 destination = Vector2.zero;
     private Rigidbody2D _rigidbody2D;
     private Animator _animator;
-    public Collider2D mazeCollider;
+    [SerializeField]
+    private Collider2D mazeCollider;
     private static readonly int IsWalkLeft = Animator.StringToHash("isWalkLeft");
     private static readonly int IsWalkRight = Animator.StringToHash("isWalkRight");
     private static readonly int IsWalk = Animator.StringToHash("isWalk");
@@ -37,7 +35,6 @@ public class Mario : MonoBehaviour
             destination = transform.position;
         var p = Vector2.MoveTowards(transform.position, destination, speed);
         _rigidbody2D.MovePosition(p);
-
         if ((Vector2) transform.position == destination)
         {
             if (Input.GetKey(GameManager.GM.KeyUp) && gameObject.IsValid(Vector2.up, mazeCollider))

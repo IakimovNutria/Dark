@@ -15,33 +15,20 @@ public class Settings : MonoBehaviour
 
     public void SetSettings()
     {
-        for (int i = 0; i < buttonsObject.childCount; i++)
+        for (var i = 0; i < buttonsObject.childCount; i++)
         {
             var button = buttonsObject.GetChild(i);
-            switch (button.name)
+            button.GetComponentInChildren<TextMeshProUGUI>().text = button.name switch
             {
-                case ("ForwardButton"):
-                    button.GetComponentInChildren<TextMeshProUGUI>().text = GameManager.GM.KeyUp.ToString();
-                    break;
-                case ("BackwardButton"):
-                    button.GetComponentInChildren<TextMeshProUGUI>().text = GameManager.GM.KeyDown.ToString();
-                    break;
-                case ("LeftButton"):
-                    button.GetComponentInChildren<TextMeshProUGUI>().text = GameManager.GM.KeyLeft.ToString();
-                    break;
-                case ("RightButton"):
-                    button.GetComponentInChildren<TextMeshProUGUI>().text = GameManager.GM.KeyRight.ToString();
-                    break;
-                case ("DamageButton"):
-                    button.GetComponentInChildren<TextMeshProUGUI>().text = GameManager.GM.KeyDamageLight.ToString();
-                    break;
-                case ("HealButton"):
-                    button.GetComponentInChildren<TextMeshProUGUI>().text = GameManager.GM.KeyHealLight.ToString();
-                    break;
-                case ("ObjInteractionButton"):
-                    button.GetComponentInChildren<TextMeshProUGUI>().text = GameManager.GM.KeyObgectsInteraction.ToString();
-                    break;
-            }
+                "ForwardButton" => GameManager.GM.KeyUp.ToString(),
+                "BackwardButton" => GameManager.GM.KeyDown.ToString(),
+                "LeftButton" => GameManager.GM.KeyLeft.ToString(),
+                "RightButton" => GameManager.GM.KeyRight.ToString(),
+                "DamageButton" => GameManager.GM.KeyDamageLight.ToString(),
+                "HealButton" => GameManager.GM.KeyHealLight.ToString(),
+                "ObjInteractionButton" => GameManager.GM.KeyObjectsInteraction.ToString(),
+                _ => button.GetComponentInChildren<TextMeshProUGUI>().text
+            };
         }
     }
 
@@ -67,26 +54,26 @@ public class Settings : MonoBehaviour
 
         switch(keyName)
         {
-            case ("ForwardButton"):
+            case "ForwardButton":
                 SetKey("KeyUp");
                 break;
-            case ("BackwardButton"):
+            case "BackwardButton":
                 SetKey("KeyDown");
                 break;
-            case ("LeftButton"):
+            case "LeftButton":
                 SetKey("KeyLeft");
                 break;
-            case ("RightButton"):
+            case "RightButton":
                 SetKey("KeyRight");
                 break;
-            case ("DamageButton"):
+            case "DamageButton":
                 SetKey("KeyDamageLight");
                 break;
-            case ("HealButton"):
+            case "HealButton":
                 SetKey("KeyHealLight");
                 break;
-            case ("ObjInteractionButton"):
-                SetKey("KeyObgectsInteraction");
+            case "ObjInteractionButton":
+                SetKey("KeyObjectsInteraction");
                 break;
         }
         yield return null;

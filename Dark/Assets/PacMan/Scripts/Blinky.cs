@@ -1,7 +1,4 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using Color = UnityEngine.Color;
@@ -72,7 +69,10 @@ public class Blinky : MonoBehaviour
             score.UpdateScore(100);
         }
         else
+        {
             Destroy(mario.gameObject);
+            GameManager.GM.ContinueMainGame();
+        }
     }
 
     private void GetMaze()

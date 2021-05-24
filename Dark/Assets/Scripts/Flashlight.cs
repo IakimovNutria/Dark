@@ -1,26 +1,21 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Flashlight : MonoBehaviour
 {
-    public Player player;
-    public GameObject flashLight;
-    public Bar chargeBar;
-    public Text batteriesCountText;
+    private Player player;
+    [SerializeField]
+    private Bar chargeBar;
+    [SerializeField]
+    private Text batteriesCountText;
     
     private Light2DEmitter lightParameters;
     private bool isLightDamageOn;
     private bool isLightHealOn;
     public float Charge { get; private set; } = 1000f;
     public uint BatteriesCount { get; private set; }
-    public uint StartBatteriesCount { get; } = 3;
-
-    public AudioSource TurnOn;
-    public AudioSource TurnOff;
-
+    public uint StartBatteriesCount { get; } = 4;
     private float damageLightSize = 5;
     public float MAXFlashlightCharge { get; } = 1000f;
     private float damageLightConeAngle = 30;
@@ -33,12 +28,14 @@ public class Flashlight : MonoBehaviour
     private const float HealLightConeAngle = 360;
     private const string DamageLightEventFilter = "DamageEnemy";
     private const string HealLightEventFilter = "";
-    
-    void Start()
+
+    private void Start()
     {
+        player = FindObjectOfType<Player>();
+        
         BatteriesCount = StartBatteriesCount;
         
-        lightParameters = flashLight.GetComponent<Light2DEmitter>();
+        lightParameters = gameObject.GetComponent<Light2DEmitter>();
         
         chargeBar.SetMaxValue(MAXFlashlightCharge);
         Charge = MAXFlashlightCharge;
@@ -47,7 +44,7 @@ public class Flashlight : MonoBehaviour
         UpdateBatteriesCountText();
     }
 
-    void Update()
+    private void Update()
     {
         if (player.Health == 0)
         {
@@ -73,39 +70,32 @@ public class Flashlight : MonoBehaviour
             ChangeLightParameters(HealLightConeAngle, HealLightSize, HealLightColor, HealLightEventFilter);
             player.ChangeHealthAmount(healPower);
         }
-        
         else if (isLightDamageOn)
         {
             ChangeLightParameters(damageLightConeAngle, damageLightSize, DamageLightColor, DamageLightEventFilter);
             ChangeFlashlightTransform();
         }
-        
-        if (Input.GetKeyDown(GameManager.GM.KeyDamageLight) && !isLightHealOn && !isLightDamageOn)
+
+        if (Input.GetKeyDown(GameManager.GM.KeyDamageLight))
         {
-            TurnOn.Play();
-            isLightDamageOn = true;
+            if (!isLightHealOn && !isLightDamageOn)
+                isLightDamageOn = true;
+            else if (isLightDamageOn)
+                isLightDamageOn = false;
+            else if (isLightHealOn)
+                isLightHealOn = false;
         }
-        else if (Input.GetKeyDown(GameManager.GM.KeyDamageLight) && isLightDamageOn)
+        else if (Input.GetKeyDown(GameManager.GM.KeyHealLight))
         {
-            TurnOff.Play();
-            isLightDamageOn = false;
+            if (isLightHealOn)
+                isLightHealOn = false;
+            else 
+            {
+                isLightHealOn = true;
+                isLightDamageOn = false;
+            }
         }
-        else if (Input.GetKeyDown(GameManager.GM.KeyDamageLight) && isLightHealOn)
-        {
-            TurnOn.Play();
-            isLightHealOn = false;
-        }
-        else if (Input.GetKeyDown(GameManager.GM.KeyHealLight) && isLightHealOn)
-        {
-            TurnOff.Play();
-            isLightHealOn = false;
-        }
-        else if (Input.GetKeyDown(GameManager.GM.KeyHealLight) && !isLightHealOn)
-        {
-            TurnOn.Play();
-            isLightHealOn = true;
-            isLightDamageOn = false;
-        }
+
         if (!isLightDamageOn && !isLightHealOn)
             TurnOffFlashlight();
         else
@@ -115,7 +105,11 @@ public class Flashlight : MonoBehaviour
     public void AddCharge(float change)
     {
         if (change + Charge <= 0)
+        {
             Charge = 0;
+            if (BatteriesCount == 0)
+                TurnOffFlashlight();
+        }
         else if (Charge + change >= MAXFlashlightCharge)
             Charge = MAXFlashlightCharge;
         else
@@ -123,7 +117,7 @@ public class Flashlight : MonoBehaviour
         chargeBar.SetValue(Charge);
     }
 
-    private void TurnOffFlashlight()
+    public void TurnOffFlashlight()
     {
         isLightDamageOn = false;
         isLightHealOn = false;
@@ -166,8 +160,8 @@ public class Flashlight : MonoBehaviour
         }
         else 
             throw new NotImplementedException();
-        flashLight.transform.rotation = Quaternion.Euler(0,0,rotation);
-        flashLight.transform.position = position + player.transform.position;
+        gameObject.transform.rotation = Quaternion.Euler(0,0,rotation);
+        gameObject.transform.position = position + player.transform.position;
     }
     
     public void AddBatteries(int change)
@@ -191,6 +185,4 @@ public class Flashlight : MonoBehaviour
         lightParameters.lightColor = lightColor;
         lightParameters.eventPassedFilter = eventFilter;
     }
-    
-    
 }

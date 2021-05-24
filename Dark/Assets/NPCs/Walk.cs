@@ -1,12 +1,11 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Walk : AliveEntity
 {
     protected float speed = 0.2f;
-    public Vector2 destination;
+    [SerializeField]
+    protected Vector2 destination;
     
     protected override Vector2 GetVelocity()
     {

@@ -1,12 +1,11 @@
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 
 public class KonamiCode : ActivationCode
 {
-    public Flashlight flashlight;
+    private Flashlight flashlight;
     private void Start()
     {
+        flashlight = gameObject.GetComponent<Flashlight>();
         SetKeysSequence(new List<string>{ "up", "up", "down", "down", "left", "right", "left", "right", "b", "a"});
     }
 

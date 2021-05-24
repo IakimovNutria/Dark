@@ -30,12 +30,13 @@ public class StartMenu : MonoBehaviour
 
     public void QuitGame()
     {
+        GameManager.GM.ResetGame();
         Application.Quit();
     }
 
     private IEnumerator LoadStartScene()
     {
-        AsyncOperation operation = UnityEngine.SceneManagement.SceneManager.LoadSceneAsync("StartingRoom");
+        var operation = SceneManager.LoadSceneAsync("StartingRoom");
         var slider = LoadingBar.GetComponent<Slider>();
 
         while (!operation.isDone)
