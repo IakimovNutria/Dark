@@ -5,7 +5,7 @@ public class Enemy : AliveEntity
     private AliveEntity aliveEntity;
     private Transform playerTransform;
     private readonly float damageRadius = 0.5f;
-    private readonly float maxEnemyHealth = 40;
+    public static float maxEnemyHealth = 40;
     private Player player;
     private void Awake()
     {

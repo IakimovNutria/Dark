@@ -184,7 +184,15 @@ public class Flashlight : MonoBehaviour
         if (change + BatteriesCount <= 0)
             BatteriesCount = 0;
         else
-            BatteriesCount = (uint) (BatteriesCount + change);
+        {
+            if (BatteriesCount == 0 && Charge == 0)
+            {
+                BatteriesCount = (uint)change - 1;
+                AddCharge(MAXFlashlightCharge);
+            }
+            else 
+                BatteriesCount = (uint) (BatteriesCount + change);
+        }
         UpdateBatteriesCountText();
     }
     

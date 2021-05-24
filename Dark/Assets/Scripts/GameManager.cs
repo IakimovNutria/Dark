@@ -304,4 +304,19 @@ public class GameManager : MonoBehaviour
         canvas.SetActive(true);
         SceneManager.LoadScene("LastRoom");
     }
+
+    public void SetEasyDifficult()
+    {
+        Enemy.maxEnemyHealth = 35;
+    }
+    
+    public void SetMiddleDifficult()
+    {
+        Enemy.maxEnemyHealth = 55;
+    }
+    
+    public void SetHardDifficult()
+    {
+        Enemy.maxEnemyHealth = 80;
+    }
 }

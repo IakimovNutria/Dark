@@ -8,11 +8,11 @@ public class StartMenu : MonoBehaviour
 {
     public GameObject MenuButtons;
     public GameObject SettingsPanel;
-    public GameObject LoadingBar;
+    public GameObject DifficultButtons;
     public void StartGame()
     {
-        LoadingBar.SetActive(true);
-        StartCoroutine(LoadStartScene());
+        MenuButtons.SetActive(false);
+        DifficultButtons.SetActive(true);
     }
 
     public void OpenSettings()
@@ -32,18 +32,5 @@ public class StartMenu : MonoBehaviour
     {
         GameManager.GM.ResetGame();
         Application.Quit();
-    }
-
-    private IEnumerator LoadStartScene()
-    {
-        var operation = SceneManager.LoadSceneAsync("StartingRoom");
-        var slider = LoadingBar.GetComponent<Slider>();
-
-        while (!operation.isDone)
-        {
-            var progress = Mathf.Clamp01(operation.progress / 0.9f);
-            slider.value = progress;
-            yield return null;
-        }
     }
 }
