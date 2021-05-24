@@ -284,7 +284,7 @@ public class GameManager : MonoBehaviour
         if (StoryBools["isPlayerMeetUlf"])
             karma += StoryBools["UlfKnowWhereMalcolm"] ? -1 : 1;
         if (StoryBools["isPlayerAskedAboutToy"])
-            karma += StoryBools["isPlayerHelpEmily"] ? 1 : -1;
+            karma += StoryBools["isPlayerHelpEmily"] ? StoryBools["isPlayerGiveToy"] ? 1 : 0 : -1;
         return karma;
     }
 
