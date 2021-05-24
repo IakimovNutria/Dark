@@ -4,10 +4,11 @@ using UnityEngine.UI;
 
 public class Flashlight : MonoBehaviour
 {
-    public Player player;
-    public GameObject flashLight;
-    public Bar chargeBar;
-    public Text batteriesCountText;
+    private Player player;
+    [SerializeField]
+    private Bar chargeBar;
+    [SerializeField]
+    private Text batteriesCountText;
     
     private Light2DEmitter lightParameters;
     private bool isLightDamageOn;
@@ -30,9 +31,11 @@ public class Flashlight : MonoBehaviour
 
     private void Start()
     {
+        player = FindObjectOfType<Player>();
+        
         BatteriesCount = StartBatteriesCount;
         
-        lightParameters = flashLight.GetComponent<Light2DEmitter>();
+        lightParameters = gameObject.GetComponent<Light2DEmitter>();
         
         chargeBar.SetMaxValue(MAXFlashlightCharge);
         Charge = MAXFlashlightCharge;
@@ -158,8 +161,8 @@ public class Flashlight : MonoBehaviour
         }
         else 
             throw new NotImplementedException();
-        flashLight.transform.rotation = Quaternion.Euler(0,0,rotation);
-        flashLight.transform.position = position + player.transform.position;
+        gameObject.transform.rotation = Quaternion.Euler(0,0,rotation);
+        gameObject.transform.position = position + player.transform.position;
     }
     
     public void AddBatteries(int change)

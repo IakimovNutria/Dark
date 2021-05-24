@@ -1,13 +1,15 @@
 using System.Collections.Generic;
+using UnityEngine;
 
 public class HealthCheat : ActivationCode
 {
-    public Player player;
+    private Player player;
 
     private bool isActive;
 
     private void Start()
     {
+        player = gameObject.GetComponent<Player>();
         SetKeysSequence(new List<string>{"c","h","e","a","t"});
     }
 

@@ -501,11 +501,8 @@ GameObject:
   - component: {fileID: 194882281}
   - component: {fileID: 194882280}
   - component: {fileID: 194882279}
-  - component: {fileID: 194882285}
   - component: {fileID: 194882278}
-  - component: {fileID: 194882287}
   - component: {fileID: 194882286}
-  - component: {fileID: 194882288}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -525,7 +522,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7c6be4a2bbb842c9a6bfb525318a4ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 194882281}
 --- !u!50 &194882279
 Rigidbody2D:
   serializedVersion: 4
@@ -670,19 +666,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &194882285
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 194882277}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bdc0ac7c8a47d4d2bbfcc73be866f803, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  flashLight: {fileID: 1165224367}
 --- !u!114 &194882286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -698,31 +681,6 @@ MonoBehaviour:
   mustNotBeInteraction: 0
   activateConditionsList: []
   flashlight: {fileID: 1165224367}
---- !u!114 &194882287
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 194882277}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac651b7789fd14e9ab25390631df92ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  flashlight: {fileID: 1165224367}
---- !u!114 &194882288
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 194882277}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5e19578dd14a42e3b51dc098c81b9e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &217770730
 GameObject:
   m_ObjectHideFlags: 0
@@ -6227,6 +6185,8 @@ GameObject:
   - component: {fileID: 1165224365}
   - component: {fileID: 1165224364}
   - component: {fileID: 1165224367}
+  - component: {fileID: 1165224369}
+  - component: {fileID: 1165224368}
   m_Layer: 0
   m_Name: Flashlight
   m_TagString: Flashlight
@@ -6302,10 +6262,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 932392183333344688bc65ed3b8bb908, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 194882281}
-  flashLight: {fileID: 1165224363}
   chargeBar: {fileID: 300827244}
   batteriesCountText: {fileID: 879176903}
+--- !u!114 &1165224368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165224363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac651b7789fd14e9ab25390631df92ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1165224369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165224363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdc0ac7c8a47d4d2bbfcc73be866f803, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1174738441
 GameObject:
   m_ObjectHideFlags: 0
