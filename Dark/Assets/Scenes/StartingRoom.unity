@@ -6320,7 +6320,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6318398eef0fde64e9430a4582e25dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PreviewThis: 1
+  PreviewThis: 0
   isStatic: 0
   enableEvents: 1
   assignedRenderers:
@@ -7281,7 +7281,7 @@ RectTransform:
   - {fileID: 1713878938}
   - {fileID: 34459916}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -9949,7 +9949,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7014872056164400312, guid: 63502d97967dc407ba05da07ee7fd596, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7014872056164400312, guid: 63502d97967dc407ba05da07ee7fd596, type: 3}
       propertyPath: m_LocalPosition.x

@@ -247,6 +247,7 @@ GameObject:
   m_Component:
   - component: {fileID: 438585844}
   - component: {fileID: 438585845}
+  - component: {fileID: 438585846}
   m_Layer: 0
   m_Name: wallHalf_SE
   m_TagString: Untagged
@@ -319,6 +320,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &438585846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 438585843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46611e9584b479148a22c1f5bc8915cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mustNotBeInteraction: 0
+  activateConditionsList: []
+  nextScene: LightGirl
 --- !u!1001 &657478331
 PrefabInstance:
   m_ObjectHideFlags: 0
