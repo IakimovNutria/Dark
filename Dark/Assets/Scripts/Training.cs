@@ -8,9 +8,9 @@ public class Training : Interaction
 
     private static readonly List<string> MainTrainingText = new List<string>
     {
-        "Для передвижения используйте кнопки " + GameManager.GM.KeyUp + 
-                                         GameManager.GM.KeyLeft + 
-                                         GameManager.GM.KeyDown + 
+        "Для передвижения используйте кнопки " + GameManager.GM.KeyUp + " " +
+                                         GameManager.GM.KeyLeft + " " +
+                                         GameManager.GM.KeyDown + " " +
                                          GameManager.GM.KeyRight,
         "Для того, чтобы включить фонарик нажмите " + GameManager.GM.KeyDamageLight, 
         "Чтобы поставить игру на паузу нажмите esc"

@@ -6454,7 +6454,7 @@ MonoBehaviour:
     - cantRepeat: 0
       text: "\u0414\u0430."
       toNode: 3
-      speakEnd: 0
+      speakEnd: 1
       storyBoolToChange: PlayerAgreeToPlayMarioPacman
       storyBoolToGetAnswer: 
       storyBoolMustBeFalse: 0

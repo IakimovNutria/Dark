@@ -5098,7 +5098,7 @@ MonoBehaviour:
     playerAnswer:
     - cantRepeat: 0
       text: "\u0412\u0437\u044F\u0442\u044C \u043A\u0443\u043A\u043B\u0443."
-      toNode: 4
+      toNode: 0
       speakEnd: 1
       storyBoolToChange: isPlayerGetToy
       storyBoolToGetAnswer: 
@@ -5107,8 +5107,8 @@ MonoBehaviour:
     - cantRepeat: 0
       text: "\u041E\u0441\u0442\u0430\u0432\u0438\u0442\u044C \u043A\u0443\u043A\u043B\u0443
         \u0437\u0434\u0435\u0441\u044C."
-      toNode: 4
-      speakEnd: 1
+      toNode: 0
+      speakEnd: 0
       storyBoolToChange: 
       storyBoolToGetAnswer: 
       storyBoolMustBeFalse: 0

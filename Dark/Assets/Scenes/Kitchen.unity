@@ -429,7 +429,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9045926065741294101, guid: 002a9d5146a9940a2a213279494cdb7e, type: 3}
       propertyPath: batteries
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 002a9d5146a9940a2a213279494cdb7e, type: 3}

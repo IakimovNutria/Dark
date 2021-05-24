@@ -6585,7 +6585,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 2192450021786810173, guid: 41dbebe7e608940c3b142ce9a1b429f2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -10294,7 +10294,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 2192450021786810173, guid: 41dbebe7e608940c3b142ce9a1b429f2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -14471,7 +14471,6 @@ GameObject:
   m_Component:
   - component: {fileID: 995272500}
   - component: {fileID: 995272499}
-  - component: {fileID: 995272498}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -14479,14 +14478,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &995272498
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 995272497}
-  m_Enabled: 1
 --- !u!20 &995272499
 Camera:
   m_ObjectHideFlags: 0
@@ -14542,7 +14533,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &999729187
 GameObject:
@@ -20579,7 +20570,7 @@ GameObject:
   - component: {fileID: 1551558077}
   m_Layer: 0
   m_Name: Mario
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20761,7 +20752,7 @@ Transform:
   m_LocalScale: {x: 0.9963164, y: 0.9963164, z: 0.9963164}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1557824383
 Animator:

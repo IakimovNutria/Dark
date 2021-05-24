@@ -37,6 +37,7 @@ public class GameManager : MonoBehaviour
         {"isPlayerAskedAboutLeg", false},
         {"isPlayerGetToy", false},
         {"isPlayerGiveToy", false},
+        {"isPlayerToyGetPaid", false},
         {"drawHorse", false},
         {"drawFlower", false},
         {"drawMarioPacman", false},
@@ -57,6 +58,7 @@ public class GameManager : MonoBehaviour
         {"isPlayerGetPaid", false},
         {"isPlayerMeetStanleyThirdTime", false},
         {"PlayerAgreeToPlayMarioPacman", false},
+        {"PlayerPlayPacMario", false},
         {"isPlayerStanley", false}, 
         {"isPlayerHaveGoodKarma", false},
         {"isPlayerHaveMaxKarma", false},
@@ -105,6 +107,12 @@ public class GameManager : MonoBehaviour
             if (StoryBools["isPlayerGiveToy"])
                 StoryBools["draw"] = StoryBools["drawFlower"] || StoryBools["drawHorse"] 
                                                               || StoryBools["drawMarioPacman"];
+
+            if (!StoryBools["isPlayerToyGetPaid"] && StoryBools["isPlayerGiveToy"])
+            {
+                ChangeStoryBool("isPlayerToyGetPaid", true);
+                flashlight.GetComponent<Flashlight>().AddBatteries(3);
+            }
             
             if (SceneManager.GetActiveScene().name == "LastRoom")
             {
@@ -115,20 +123,25 @@ public class GameManager : MonoBehaviour
                     isGMFindThirdStanley = true;
                 }
 
-                StoryBools["isPlayerMeetStanleyThirdTime"] = true;
+                ChangeStoryBool("isPlayerMeetStanleyThirdTime", true);
                 
                 
                 if (StoryBools["PlayerAgreeToPlayMarioPacman"])
-                    PlayMarioPacman();
-                
+                    if (!StoryBools["PlayerPlayPacMario"])
+                    {
+                        PlayMarioPacman();
+                        ChangeStoryBool("PlayerPlayPacMario", true);
+                    }
+                    
+
                 var karma = GetPlayerKarma();
                 if (karma is null)
-                    StoryBools["isPlayerStanley"] = true;
+                    ChangeStoryBool("isPlayerStanley", true);
                 else
-                    StoryBools["isPlayerHaveGoodKarma"] = karma > 0;
+                    ChangeStoryBool("isPlayerHaveGoodKarma", karma > 0);
 
                 if (karma == 3)
-                    StoryBools["isPlayerHaveMaxKarma"] = true;
+                    ChangeStoryBool("isPlayerHaveMaxKarma", true);
 
             }
             else

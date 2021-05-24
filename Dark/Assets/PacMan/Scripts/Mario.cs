@@ -35,7 +35,6 @@ public class Mario : MonoBehaviour
             destination = transform.position;
         var p = Vector2.MoveTowards(transform.position, destination, speed);
         _rigidbody2D.MovePosition(p);
-
         if ((Vector2) transform.position == destination)
         {
             if (Input.GetKey(GameManager.GM.KeyUp) && gameObject.IsValid(Vector2.up, mazeCollider))
