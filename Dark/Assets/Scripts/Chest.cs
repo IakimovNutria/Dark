@@ -20,6 +20,7 @@ public class Chest : Interaction, ISavable
             canObjectBeInteracted = false;
         else if (isPlayerReadyToInteract && Input.GetKeyDown(GameManager.GM.KeyObjectsInteraction))
         {
+            GameManager.GM.ChestSound.Play();
             interactionIndicator.SetActive(false);
             flashlight.AddBatteries(batteries);
             batteries = 0;
