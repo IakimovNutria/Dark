@@ -855,7 +855,7 @@ MonoBehaviour:
       text: 
       toNode: 1
       speakEnd: 0
-      storyBoolToChange: 
+      storyBoolToChange: isPlayerMeetLight
       storyBoolToGetAnswer: 
       storyBoolMustBeFalse: 0
       changeStoryBoolToFalse: 0
@@ -996,7 +996,7 @@ MonoBehaviour:
       text: 
       toNode: 11
       speakEnd: 0
-      storyBoolToChange: 
+      storyBoolToChange: isPlayerMeetLight
       storyBoolToGetAnswer: 
       storyBoolMustBeFalse: 0
       changeStoryBoolToFalse: 0
@@ -1106,7 +1106,7 @@ MonoBehaviour:
       text: 
       toNode: 0
       speakEnd: 1
-      storyBoolToChange: 
+      storyBoolToChange: isPlayerMeetLight
       storyBoolToGetAnswer: 
       storyBoolMustBeFalse: 0
       changeStoryBoolToFalse: 0

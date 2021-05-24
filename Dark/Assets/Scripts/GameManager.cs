@@ -64,7 +64,8 @@ public class GameManager : MonoBehaviour
         {"isPlayerStanley", false}, 
         {"isPlayerHaveGoodKarma", false},
         {"isPlayerHaveMaxKarma", false},
-        {"isPlayerEndMarioPacman", false}
+        {"isPlayerEndMarioPacman", false},
+        {"isPlayerMeetLight", false}
     };
     
     private GameObject ulf;
