@@ -76,7 +76,7 @@ public class Training : Interaction
 
         if (currentHealTrainingTextIndex != HealTrainingText.Count)
         {
-            if (player.Health < player.MAXPlayerHealth * 0.8f)
+            if (player.Health < Player.maxPlayerHealth * 0.8f)
                 OnGuiTraining(HealTrainingText, ref currentHealTrainingTextIndex);
         }
         else if (!isHealTrainingGameContinued)

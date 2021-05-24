@@ -3,7 +3,7 @@ using UnityEngine;
 public class Player : AliveEntity
 {
     public static Player Instance;
-    public float MAXPlayerHealth { get; } = 1000f;
+    public static float maxPlayerHealth = 1000f;
 
     private float speed = 1;
 
@@ -23,7 +23,7 @@ public class Player : AliveEntity
     {
         aliveEntity = this;
         aliveEntity.Start();
-        SetMaxHealth(MAXPlayerHealth);
+        SetMaxHealth(maxPlayerHealth);
     }
 
     private new void Update()

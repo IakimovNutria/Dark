@@ -10,6 +10,7 @@ public class DifficultChoice : MonoBehaviour
     public GameObject EasyLoadingBar;
     public GameObject MiddleLoadingBar;
     public GameObject HardLoadingBar;
+    public GameObject VeryHardLoadingBar;
     
     public void SetEasyDifficult()
     {
@@ -30,6 +31,13 @@ public class DifficultChoice : MonoBehaviour
         GameManager.GM.SetHardDifficult();
         HardLoadingBar.SetActive(true);
         StartCoroutine(LoadStartScene(HardLoadingBar));
+    }
+
+    public void SetVeryHardDifficult()
+    {
+        GameManager.GM.SetVeryHardDifficult();
+        VeryHardLoadingBar.SetActive(true);
+        StartCoroutine(LoadStartScene(VeryHardLoadingBar));
     }
     
     private IEnumerator LoadStartScene(GameObject loadingBar)
