@@ -2002,7 +2002,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7c6be4a2bbb842c9a6bfb525318a4ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1537141265}
 --- !u!114 &1537141271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2015,7 +2014,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac651b7789fd14e9ab25390631df92ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flashlight: {fileID: 0}
 --- !u!114 &1537141272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2028,7 +2026,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdc0ac7c8a47d4d2bbfcc73be866f803, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flashLight: {fileID: 1596911696}
 --- !u!1 &1596911692
 GameObject:
   m_ObjectHideFlags: 0
@@ -2102,8 +2099,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 932392183333344688bc65ed3b8bb908, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1537141265}
-  flashLight: {fileID: 1596911692}
   chargeBar: {fileID: 372497956}
   batteriesCountText: {fileID: 866668988}
 --- !u!1 &1610879968
