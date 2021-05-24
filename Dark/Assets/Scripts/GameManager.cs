@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
         {"isFirstRoomCleaned", false},
         {"isFirstDialogueEnd", false},
         {"isPlayerHelpEli", false},
+        {"isPlayerMeetEmily", false},
         {"playerCanInteractFirstTime", false},
         {"isEliReachedRoom", false},
         {"isFirstEmilyAndEliDialogueEnd", false},
@@ -50,18 +51,25 @@ public class GameManager : MonoBehaviour
         {"isPlayerMeetStanleySecondTime", false},
         {"isPlayerAskMalcolm", false},
         {"isPlayerGiveBattery", false},
-        {"isPlayerGetPaid", false}
+        {"isPlayerGetPaid", false},
+        {"isPlayerMeetStanleyThirdTime", false},
+        {"PlayerAgreeToPlayMarioPacman", false},
+        {"isPlayerStanley", false}, 
+        {"isPlayerHaveGoodKarma", false},
+        {"isPlayerHaveMaxKarma", false}
     };
     
     private GameObject ulf;
     private GameObject malcolm;
     private GameObject firstStanley;
     private GameObject secondStanley;
+    private GameObject thirdStanley;
     
     private bool isGMFindUlf;
     private bool isGMFindMalcolm;
     private bool isGMFindFirstStanley;
     private bool isGMFindSecondStanley;
+    private bool isGMFindThirdStanley;
     
     private void Awake()
     {
@@ -89,7 +97,35 @@ public class GameManager : MonoBehaviour
             if (StoryBools["isPlayerGiveToy"])
                 StoryBools["draw"] = StoryBools["drawFlower"] || StoryBools["drawHorse"] 
                                                               || StoryBools["drawMarioPacman"];
+            
+            if (SceneManager.GetActiveScene().name == "LastRoom")
+            {
+                if (!isGMFindThirdStanley)
+                {
+                    thirdStanley = GameObject.FindGameObjectWithTag("Stanley");
+                    thirdStanley.SetActive(!StoryBools["isPlayerMeetStanleyThirdTime"]);
+                    isGMFindThirdStanley = true;
+                }
 
+                StoryBools["isPlayerMeetStanleyThirdTime"] = true;
+                
+                
+                if (StoryBools["PlayerAgreeToPlayMarioPacman"])
+                    PlayMarioPacman();
+                
+                var karma = GetPlayerKarma();
+                if (karma is null)
+                    StoryBools["isPlayerStanley"] = true;
+                else
+                    StoryBools["isPlayerHaveGoodKarma"] = karma > 0;
+
+                if (karma == 3)
+                    StoryBools["isPlayerHaveMaxKarma"] = true;
+
+            }
+            else
+                isGMFindThirdStanley = false;
+            
             if (StoryBools["isPlayerGiveBattery"] && !StoryBools["isPlayerGetPaid"])
             {
                 ChangeStoryBool("isPlayerGetPaid", true);
@@ -213,5 +249,23 @@ public class GameManager : MonoBehaviour
         SceneSaveManager.DeleteSave("CurrentGame");
         SceneManager.LoadScene("GameStartMenu");
         Destroy(gameObject);
+    }
+
+    private int? GetPlayerKarma()
+    {
+        if (StoryBools["isPlayerHelpEli"] && !StoryBools["isPlayerAskedAboutToy"] && !StoryBools["isPlayerHelpMalcolm"])
+            return null;
+        var karma = (StoryBools["draw"] ? 1 : 0) + (StoryBools["isPlayerTakeBattery"] ? -1 : 0) + 
+                    (StoryBools["isPlayerHelpEli"] ? 0 : -1);
+        if (StoryBools["isPlayerMeetUlf"])
+            karma += StoryBools["UlfKnowWhereMalcolm"] ? -1 : 1;
+        if (StoryBools["isPlayerAskedAboutToy"])
+            karma += StoryBools["isPlayerHelpEmily"] ? 1 : -1;
+        return karma;
+    }
+
+    private void PlayMarioPacman()
+    {
+        
     }
 }

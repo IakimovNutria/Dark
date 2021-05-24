@@ -4364,7 +4364,7 @@ MonoBehaviour:
       text: ...
       toNode: 0
       speakEnd: 1
-      storyBoolToChange: 
+      storyBoolToChange: isPlayerMeetEmily
       storyBoolToGetAnswer: 
       storyBoolMustBeFalse: 0
       changeStoryBoolToFalse: 0
@@ -5597,6 +5597,10 @@ PrefabInstance:
     - target: {fileID: 3154385303820602918, guid: 002a9d5146a9940a2a213279494cdb7e, type: 3}
       propertyPath: m_Name
       value: chestClosed_E
+      objectReference: {fileID: 0}
+    - target: {fileID: 9045926065741294101, guid: 002a9d5146a9940a2a213279494cdb7e, type: 3}
+      propertyPath: batteries
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 002a9d5146a9940a2a213279494cdb7e, type: 3}

@@ -3108,6 +3108,14 @@ MonoBehaviour:
       storyBoolToGetAnswer: 
       storyBoolMustBeFalse: 0
       changeStoryBoolToFalse: 0
+    - cantRepeat: 0
+      text: "\u0423\u0439\u0442\u0438."
+      toNode: 0
+      speakEnd: 1
+      storyBoolToChange: 
+      storyBoolToGetAnswer: 
+      storyBoolMustBeFalse: 0
+      changeStoryBoolToFalse: 0
   - storyBoolToGetDialogue: 
     toNode: 0
     npcText: "\u0421\u0442\u044D\u043D\u043B\u0438: \u041F\u0440\u043E\u0441\u0442\u043E

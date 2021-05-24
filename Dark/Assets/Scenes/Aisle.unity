@@ -3300,8 +3300,8 @@ MonoBehaviour:
       toNode: 33
       speakEnd: 0
       storyBoolToChange: 
-      storyBoolToGetAnswer: isPlayerHelpEli
-      storyBoolMustBeFalse: 1
+      storyBoolToGetAnswer: isPlayerMeetEmily
+      storyBoolMustBeFalse: 0
       changeStoryBoolToFalse: 0
     - cantRepeat: 0
       text: "\u0422\u044B \u0437\u043D\u0430\u0435\u0448\u044C \u0447\u0442\u043E-\u043D\u0438\u0431\u0443\u0434\u044C
