@@ -29,6 +29,8 @@ public class Player : AliveEntity
     private new void Update()
     {
         aliveEntity.Update();
+        if (Instance.Health == 0)
+            Invoke(nameof(ResetGame), 3);
     }
 
     protected override Vector2 GetVelocity()
@@ -40,5 +42,10 @@ public class Player : AliveEntity
                                (Input.GetKey(GameManager.GM.KeyDown) ? -speed : 0) +
                                body.velocity.y / 10 /*для плавного перехода между анимациями ходьбы*/;
         return new Vector2(horizontalVelocity, verticalVelocity);
+    }
+
+    private void ResetGame()
+    {
+        GameManager.GM.ResetGame();
     }
 }

@@ -65,7 +65,8 @@ public class GameManager : MonoBehaviour
         {"isPlayerHaveGoodKarma", false},
         {"isPlayerHaveMaxKarma", false},
         {"isPlayerEndMarioPacman", false},
-        {"isPlayerMeetLight", false}
+        {"isPlayerMeetLight", false},
+        {"isGameEnd", false}
     };
     
     private GameObject ulf;
@@ -107,10 +108,17 @@ public class GameManager : MonoBehaviour
     {
         if (StoryBools["isFirstRoomCleaned"])
         {
+            if (StoryBools["isGameEnd"])
+                Invoke(nameof(ResetGame), 3);
             if (StoryBools["isPlayerGiveToy"])
                 StoryBools["draw"] = StoryBools["drawFlower"] || StoryBools["drawHorse"] 
                                                               || StoryBools["drawMarioPacman"];
 
+            if (SceneManager.GetActiveScene().name == "MonsterRoom")
+            {
+                Invoke(nameof(KillPlayer), 10);
+            }
+            
             if (!StoryBools["isPlayerToyGetPaid"] && StoryBools["isPlayerGiveToy"])
             {
                 ChangeStoryBool("isPlayerToyGetPaid", true);
@@ -264,12 +272,17 @@ public class GameManager : MonoBehaviour
         StoryBools[storyBoolName] = storyBoolValue;
     }
 
+    private void KillPlayer()
+    {
+        player.GetComponent<AliveEntity>().ChangeHealthAmount(-100000);
+    }
+    
     public void ResetGame()
     {
         Destroy(player);
-        Destroy(mainCamera);
         Destroy(flashlight);
         Destroy(canvas);
+        Destroy(mainCamera);
         SceneSaveManager.DeleteSave("CurrentGame");
         SceneManager.LoadScene("GameStartMenu");
         Destroy(gameObject);

@@ -983,7 +983,7 @@ MonoBehaviour:
       text: 
       toNode: 0
       speakEnd: 1
-      storyBoolToChange: 
+      storyBoolToChange: isGameEnd
       storyBoolToGetAnswer: 
       storyBoolMustBeFalse: 0
       changeStoryBoolToFalse: 0
@@ -1093,7 +1093,7 @@ MonoBehaviour:
       text: 
       toNode: 0
       speakEnd: 1
-      storyBoolToChange: 
+      storyBoolToChange: isGameEnd
       storyBoolToGetAnswer: 
       storyBoolMustBeFalse: 0
       changeStoryBoolToFalse: 0
@@ -1120,7 +1120,7 @@ MonoBehaviour:
       text: 
       toNode: 20
       speakEnd: 0
-      storyBoolToChange: 
+      storyBoolToChange: isPlayerMeetLight
       storyBoolToGetAnswer: 
       storyBoolMustBeFalse: 0
       changeStoryBoolToFalse: 0
@@ -3568,6 +3568,8 @@ MonoBehaviour:
       mustBeFalse: 1
     - storyBoolToActivate: isPlayerHaveGoodKarma
       mustBeFalse: 1
+    - storyBoolToActivate: isPlayerMeetLight
+      mustBeFalse: 0
   nextScene: MonsterRoom
 --- !u!60 &1712987196
 PolygonCollider2D:
@@ -3616,6 +3618,8 @@ MonoBehaviour:
   activateConditionsList:
   - activateConditions:
     - storyBoolToActivate: isPlayerStanley
+      mustBeFalse: 0
+    - storyBoolToActivate: isPlayerMeetLight
       mustBeFalse: 0
   nextScene: Stanley
 --- !u!1 &1768509575
