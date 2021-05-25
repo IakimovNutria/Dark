@@ -21,7 +21,7 @@ public class Flashlight : MonoBehaviour
     public AudioSource TurnOffSound;
 
     private float damageLightSize = 5;
-    public float MAXFlashlightCharge { get; } = 1000f;
+    public float MAXFlashlightCharge { get; } = 400f;
     private float damageLightConeAngle = 30;
     private float healPower = 1;
     

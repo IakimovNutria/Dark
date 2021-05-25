@@ -324,25 +324,25 @@ public class GameManager : MonoBehaviour
 
     public void SetEasyDifficult()
     {
-        Enemy.maxEnemyHealth = 35;
-        Player.maxPlayerHealth = 1100f;
+        Enemy.maxEnemyHealth = 25;
+        Player.maxPlayerHealth = 700f;
     }
     
     public void SetMiddleDifficult()
     {
-        Enemy.maxEnemyHealth = 55;
-        Player.maxPlayerHealth = 1000f;
+        Enemy.maxEnemyHealth = 45;
+        Player.maxPlayerHealth = 550f;
     }
     
     public void SetHardDifficult()
     {
-        Enemy.maxEnemyHealth = 80;
-        Player.maxPlayerHealth = 900f;
+        Enemy.maxEnemyHealth = 70;
+        Player.maxPlayerHealth = 400f;
     }
 
     public void SetVeryHardDifficult()
     {
-        Enemy.maxEnemyHealth = 100;
-        Player.maxPlayerHealth = 300f;
+        Enemy.maxEnemyHealth = 90;
+        Player.maxPlayerHealth = 150f;
     }
 }
