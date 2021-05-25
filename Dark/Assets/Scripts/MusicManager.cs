@@ -10,7 +10,11 @@ public class MusicManager : MonoBehaviour
     public AudioSource PacMario;
     private void OnLevelWasLoaded(int level)
     {
-        if (level == 22)
+        if (level == 1)
+        {
+            Stream.Play();
+        }
+        else if (level == 22)
         {
             Stream.Pause();
             Waltz.Play();
