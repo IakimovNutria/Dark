@@ -66,7 +66,8 @@ public class GameManager : MonoBehaviour
         {"isPlayerHaveMaxKarma", false},
         {"isPlayerEndMarioPacman", false},
         {"isPlayerMeetLight", false},
-        {"isGameEnd", false}
+        {"isGameEnd", false},
+        {"isMarioCheatOn", false}
     };
     
     private GameObject ulf;
@@ -293,6 +294,9 @@ public class GameManager : MonoBehaviour
         if (StoryBools["isPlayerHelpEli"] && !StoryBools["isPlayerAskedAboutToy"] && 
             !(StoryBools["isPlayerMeetUlf"] || StoryBools["isPlayerTakeBattery"]))
             return null;
+        if (StoryBools["isPlayerHelpEli"] && StoryBools["isPlayerAskedAboutToy"] &&
+            !(StoryBools["isPlayerMeetUlf"] || StoryBools["isPlayerTakeBattery"]))
+            return 1;
         var karma = (StoryBools["draw"] ? 1 : 0) + (StoryBools["isPlayerTakeBattery"] ? -1 : 0) + 
                     (StoryBools["isPlayerHelpEli"] ? 0 : -1);
         if (StoryBools["isPlayerMeetUlf"])
@@ -320,25 +324,25 @@ public class GameManager : MonoBehaviour
 
     public void SetEasyDifficult()
     {
-        Enemy.maxEnemyHealth = 35;
-        Player.maxPlayerHealth = 1100f;
+        Enemy.maxEnemyHealth = 25;
+        Player.maxPlayerHealth = 700f;
     }
     
     public void SetMiddleDifficult()
     {
-        Enemy.maxEnemyHealth = 55;
-        Player.maxPlayerHealth = 1000f;
+        Enemy.maxEnemyHealth = 45;
+        Player.maxPlayerHealth = 550f;
     }
     
     public void SetHardDifficult()
     {
-        Enemy.maxEnemyHealth = 80;
-        Player.maxPlayerHealth = 900f;
+        Enemy.maxEnemyHealth = 70;
+        Player.maxPlayerHealth = 400f;
     }
 
     public void SetVeryHardDifficult()
     {
-        Enemy.maxEnemyHealth = 100;
-        Player.maxPlayerHealth = 300f;
+        Enemy.maxEnemyHealth = 90;
+        Player.maxPlayerHealth = 150f;
     }
 }

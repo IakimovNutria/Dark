@@ -16,6 +16,7 @@ public class PacMarioCheat : ActivationCode
 
     protected override void Activate()
     {
+        GameManager.GM.ChangeStoryBool("isMarioCheatOn", true);
         GameManager.GM.PlayMarioPacman();
     }
 }
