@@ -77,4 +77,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MonsterRoom.unity
     guid: ed7e16db6e44d3340842074a5d625ed9
+  - enabled: 1
+    path: Assets/Scenes/Stanley.unity
+    guid: 228ce980add5f2c4ba1cd965e8b8d9cf
   m_configObjects: {}
