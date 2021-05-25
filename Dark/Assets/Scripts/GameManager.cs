@@ -302,7 +302,7 @@ public class GameManager : MonoBehaviour
         return karma;
     }
 
-    private void PlayMarioPacman()
+    public void PlayMarioPacman()
     {
         player.SetActive(false);
         flashlight.SetActive(false);
