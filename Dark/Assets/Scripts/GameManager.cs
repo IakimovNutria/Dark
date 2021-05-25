@@ -66,7 +66,8 @@ public class GameManager : MonoBehaviour
         {"isPlayerHaveMaxKarma", false},
         {"isPlayerEndMarioPacman", false},
         {"isPlayerMeetLight", false},
-        {"isGameEnd", false}
+        {"isGameEnd", false},
+        {"isMarioCheatOn", false}
     };
     
     private GameObject ulf;
@@ -293,6 +294,9 @@ public class GameManager : MonoBehaviour
         if (StoryBools["isPlayerHelpEli"] && !StoryBools["isPlayerAskedAboutToy"] && 
             !(StoryBools["isPlayerMeetUlf"] || StoryBools["isPlayerTakeBattery"]))
             return null;
+        if (StoryBools["isPlayerHelpEli"] && StoryBools["isPlayerAskedAboutToy"] &&
+            !(StoryBools["isPlayerMeetUlf"] || StoryBools["isPlayerTakeBattery"]))
+            return 1;
         var karma = (StoryBools["draw"] ? 1 : 0) + (StoryBools["isPlayerTakeBattery"] ? -1 : 0) + 
                     (StoryBools["isPlayerHelpEli"] ? 0 : -1);
         if (StoryBools["isPlayerMeetUlf"])

@@ -22,6 +22,7 @@ public class ExitCheat : ActivationCode
 
     private void OnDestroy()
     {
-        GameManager.GM.ResetGame();
+        if (GameManager.GM.StoryBools["isMarioCheatOn"])
+            GameManager.GM.ResetGame();
     }
 }
